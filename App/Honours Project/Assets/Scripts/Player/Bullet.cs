@@ -22,17 +22,24 @@ public class Bullet : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
 
-        //Destroy(gameObject);
-        var speed = lastVelocity.magnitude;
-        var direction = Vector3.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
-
-        rb.velocity = direction * Mathf.Max(speed, 0.0f);
-        counter++;
-
-        if(counter >= 3)
+        if (collision.gameObject.tag != "Bullet")
         {
-            Destroy(gameObject);
-            counter = 0;
+            //Destroy(gameObject);
+            var speed = lastVelocity.magnitude;
+            var direction = Vector3.Reflect(lastVelocity.normalized, collision.contacts[0].normal);
+
+            rb.velocity = direction * Mathf.Max(speed, 0.0f);
+            rb.drag += 0.2f;
+
+            counter++;
+
+            if (counter >= 3)
+            {
+
+                Destroy(gameObject);
+                counter = 0;
+            }
         }
+
     }
 }

@@ -30,7 +30,9 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetMouseButtonDown(0))
         {
-            weapon.Fire();
+            // weapon.Fire();
+            StartCoroutine(FireWait());
+            
         }
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
@@ -44,5 +46,15 @@ public class PlayerMovement : MonoBehaviour
         Vector2 aimDirection = mousePosition - playerBody.position;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90.0f;
         playerBody.rotation = aimAngle;
+    }
+
+    IEnumerator FireWait()
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            
+            weapon.Fire();
+            yield return new WaitForSeconds(0.05f);
+        }
     }
 }
