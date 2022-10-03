@@ -6,12 +6,14 @@ public class PlayerMovement : MonoBehaviour
 {
     public Weapon weapon;
 
-    public int bulletNum = 3;
     public int speed = 10;
+
     private Rigidbody2D playerBody;//References rigidbody applied to prefab
     private Vector2 velocity; //x,y movement
     private Vector2 inputMovement;
     private Vector2 mousePosition;
+
+
 
     // Start is called before the first frame update
     void Start()
@@ -29,12 +31,6 @@ public class PlayerMovement : MonoBehaviour
             Input.GetAxisRaw("Vertical")
             );
 
-        if(Input.GetMouseButtonDown(0))
-        {
-            // weapon.Fire();
-            StartCoroutine(FireWait());
-            
-        }
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
     }
 
@@ -53,19 +49,9 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.gameObject.name == "Bullet1Up")
         {
-            bulletNum++;
+            weapon.bulletNum++;
             Destroy(collision.gameObject);
         }
 
-    }
-
-    IEnumerator FireWait()
-    {
-        for (int i = 0; i < bulletNum; i++)
-        {
-            
-            weapon.Fire();
-            yield return new WaitForSeconds(0.05f);
-        }
     }
 }
