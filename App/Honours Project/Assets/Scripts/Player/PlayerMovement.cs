@@ -6,6 +6,7 @@ public class PlayerMovement : MonoBehaviour
 {
     public Weapon weapon;
 
+    public int bulletNum = 3;
     public int speed = 10;
     private Rigidbody2D playerBody;//References rigidbody applied to prefab
     private Vector2 velocity; //x,y movement
@@ -48,9 +49,19 @@ public class PlayerMovement : MonoBehaviour
         playerBody.rotation = aimAngle;
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.name == "Bullet1Up")
+        {
+            bulletNum++;
+            Destroy(collision.gameObject);
+        }
+
+    }
+
     IEnumerator FireWait()
     {
-        for (int i = 0; i < 3; i++)
+        for (int i = 0; i < bulletNum; i++)
         {
             
             weapon.Fire();
