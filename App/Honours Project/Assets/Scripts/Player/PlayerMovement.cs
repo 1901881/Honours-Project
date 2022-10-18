@@ -13,7 +13,7 @@ public class PlayerMovement : MonoBehaviour
     private Vector2 inputMovement;
     private Vector2 mousePosition;
 
-
+    public int health = 3;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +32,11 @@ public class PlayerMovement : MonoBehaviour
             );
 
         mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        if (health <= 0)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void FixedUpdate()//update that runs on a fixed cycle
@@ -51,6 +56,11 @@ public class PlayerMovement : MonoBehaviour
         {
             weapon.bulletNum++;
             Destroy(collision.gameObject);
+        }
+
+        if (collision.gameObject.tag == "Bullet")
+        {
+            health--;
         }
 
     }

@@ -25,16 +25,6 @@ public class Weapon : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.name == "Bullet1Up")
-        {
-            bulletNum++;
-            Destroy(collision.gameObject);
-        }
-
-    }
-
     public void Fire()
     {
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
