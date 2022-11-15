@@ -7,6 +7,7 @@ public class Weapon : MonoBehaviour
 
     public GameObject bulletPrefab;
     public Transform firePoint;
+    public Animator gunAnimator;
     public float fireForce = 20.0f;
     public int bulletNum = 3;
 
@@ -30,6 +31,7 @@ public class Weapon : MonoBehaviour
         GameObject bullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
         bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
         //bullet.GetComponent<Rigidbody2D>().drag = 20;
+        gunAnimator.SetTrigger("Shoot");
     }
 
     IEnumerator FireWait()
