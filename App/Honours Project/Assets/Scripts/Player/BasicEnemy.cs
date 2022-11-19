@@ -11,6 +11,7 @@ public class BasicEnemy : MonoBehaviour
 
     public LayerMask whatIsPlayer;
 
+    
     private Transform target;
     private Rigidbody2D rb;
     private Vector2 movement;
@@ -19,11 +20,16 @@ public class BasicEnemy : MonoBehaviour
     private bool isInChaseRange;
     private bool isInAttackRange;
 
+    //Changing Enemy Color
+    private SpriteRenderer SpriteRend;
+    private Color originalColor;
+
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
+        SpriteRend = GetComponent<SpriteRenderer>();
+        originalColor = SpriteRend.color;
         target = GameObject.FindWithTag("Player").transform;
     }
 
@@ -61,7 +67,7 @@ public class BasicEnemy : MonoBehaviour
     {
         if(collision.gameObject.tag == "Bullet")
         {
-            health--;
+            StartCoroutine(Hit());
         }
         
     }
@@ -69,6 +75,18 @@ public class BasicEnemy : MonoBehaviour
     private void MoveCharacter(Vector2 direction)
     {
         rb.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
+    }
+
+    IEnumerator Hit()
+    {
+        SpriteRend.color = Color.white;
+        Time.timeScale = 0;
+        yield return new WaitForSecondsRealtime(0.08f);
+        Time.timeScale = 1;
+        SpriteRend.color = originalColor;
+        
+        health--;
+        
     }
 }
 

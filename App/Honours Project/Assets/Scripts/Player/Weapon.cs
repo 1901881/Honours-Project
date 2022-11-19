@@ -37,12 +37,13 @@ public class Weapon : MonoBehaviour
     IEnumerator FireWait()
     {
         Camera Cam = Camera.main;
-        Cam.GetComponent<ScreenShake>().ShakeCam(0.08f,0.08f);
+    
 
         reloaded = false;
         for (int i = 0; i < bulletNum; i++)
         {
             Fire();
+            Cam.GetComponent<ScreenShake>().ShakeCam(0.08f, 0.08f);
             yield return new WaitForSeconds(0.05f);
         }
         yield return new WaitForSeconds(reloadTime);

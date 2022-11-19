@@ -9,9 +9,12 @@ public class Bullet : MonoBehaviour
 
     private int counter;
 
+    [SerializeField] private TrailRenderer tr;
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();//sets rigid body to variable
+        tr.emitting = true;
     }
 
     private void Update()
