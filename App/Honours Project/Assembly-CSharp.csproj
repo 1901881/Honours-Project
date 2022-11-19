@@ -60,6 +60,7 @@
     <Compile Include="Assets\Scripts\Player\Weapon.cs" />
     <Compile Include="Assets\Scripts\Player\Bullet.cs" />
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
+    <Compile Include="Assets\Scripts\ScreenShake.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
