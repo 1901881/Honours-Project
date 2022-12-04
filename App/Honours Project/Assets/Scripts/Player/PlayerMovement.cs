@@ -12,7 +12,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D playerBody;//References rigidbody applied to prefab
     private Vector2 velocity; //x,y movement
     private Vector2 inputMovement;
-    private Vector2 mousePosition;
+    private Vector3 mousePosInWorld;
     Vector3 aimDirection;
 
     private bool canDash = true;
@@ -34,7 +34,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        aimDirection = mousePosition - playerBody.position;
+        aimDirection = new Vector2(mousePosInWorld.x, mousePosInWorld.y) - playerBody.position;
 
         if (isDashing)
         {
@@ -52,7 +52,11 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(Dash());
         }
 
-        mousePosition = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        //Converts mouse position into world position
+        var mousePos = Input.mousePosition;
+        mousePos.z = -Camera.main.transform.position.z;
+        mousePosInWorld = Camera.main.ScreenToWorldPoint(mousePos);
+        //mousePosition = Camera.allCameras.
 
         if (health <= 0)
         {
@@ -67,11 +71,12 @@ public class PlayerMovement : MonoBehaviour
             return;
         }
 
-        Vector2 delta = inputMovement * velocity * Time.deltaTime;//takes the key being pressed * player speed * delta time(to make the movement smooth)
+        //takes the key being pressed * player speed * delta time(to make the movement smooth)
+        Vector2 delta = inputMovement * velocity * Time.deltaTime;
         Vector2 newPosition = playerBody.position + delta;
         playerBody.MovePosition(newPosition);
 
-        aimDirection = mousePosition - playerBody.position;
+        aimDirection = new Vector2(mousePosInWorld.x, mousePosInWorld.y) - playerBody.position;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90.0f;
         playerBody.rotation = aimAngle;
     }

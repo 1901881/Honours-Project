@@ -84,7 +84,6 @@ public class BasicEnemy : MonoBehaviour
         yield return new WaitForSecondsRealtime(0.08f);
         Time.timeScale = 1;
         SpriteRend.color = originalColor;
-        
         health--;
         
     }
