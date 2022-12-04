@@ -21,7 +21,7 @@ public class ScreenShake : MonoBehaviour
         if(shakeTime > 0)
         {
             transform.localPosition = (Vector2)BasePos + (Random.insideUnitCircle * shakeMag);
-            transform.position = new Vector3(transform.position.x, transform.position.y, -10);
+
             shakeTime -= Time.deltaTime;
         }
         else
@@ -40,4 +40,5 @@ public class ScreenShake : MonoBehaviour
     {
         shakeTime = 0f;
     }
+
 }
