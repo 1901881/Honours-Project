@@ -34,6 +34,11 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Converts mouse position into world position
+        var mousePos = Input.mousePosition;
+        mousePos.z = -Camera.main.transform.position.z;
+        mousePosInWorld = Camera.main.ScreenToWorldPoint(mousePos);
+
         aimDirection = new Vector2(mousePosInWorld.x, mousePosInWorld.y) - playerBody.position;
 
         if (isDashing)
@@ -52,11 +57,6 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(Dash());
         }
 
-        //Converts mouse position into world position
-        var mousePos = Input.mousePosition;
-        mousePos.z = -Camera.main.transform.position.z;
-        mousePosInWorld = Camera.main.ScreenToWorldPoint(mousePos);
-        //mousePosition = Camera.allCameras.
 
         if (health <= 0)
         {
