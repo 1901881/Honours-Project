@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Weapon weapon;
+    public Camera camera2;
 
     public int speed = 10;
     public int health = 10;
@@ -21,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     private const float dashingTime = 0.3f;
     private const float dashingCooldown = 1f;
 
-
+    [SerializeField] private LayerMask groundMask;
     [SerializeField] private TrailRenderer tr;
 
     // Start is called before the first frame update
@@ -38,8 +39,9 @@ public class PlayerMovement : MonoBehaviour
         var mousePos = Input.mousePosition;
         mousePos.z = -Camera.main.transform.position.z;
         mousePosInWorld = Camera.main.ScreenToWorldPoint(mousePos);
-
         aimDirection = new Vector2(mousePosInWorld.x, mousePosInWorld.y) - playerBody.position;
+
+        //Aim();
 
         if (isDashing)
         {
@@ -114,4 +116,5 @@ public class PlayerMovement : MonoBehaviour
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
     }
+
 }
