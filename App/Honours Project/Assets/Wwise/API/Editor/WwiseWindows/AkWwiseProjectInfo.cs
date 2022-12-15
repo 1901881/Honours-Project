@@ -92,7 +92,7 @@ public static class AkWwiseProjectInfo
 			}
 			catch (System.Exception e)
 			{
-				UnityEngine.Debug.LogError("WwiseUnity: Unable to load Wwise Data: " + e);
+				//UnityEngine.Debug.LogError("WwiseUnity: Unable to load Wwise Data: " + e);
 			}
 		}
 
