@@ -11,6 +11,9 @@ public class Weapon : MonoBehaviour
     public float fireForce = 20.0f;
     public int bulletNum = 3;
 
+    /// The Wwise event to trigger a shoot sound.
+    public AK.Wwise.Event shootSound = new AK.Wwise.Event();
+
     private bool reloaded = true;
     private float reloadTime = 1.5f;
 
@@ -32,6 +35,7 @@ public class Weapon : MonoBehaviour
         bullet.GetComponent<Rigidbody2D>().AddForce(firePoint.up * fireForce, ForceMode2D.Impulse);
         //bullet.GetComponent<Rigidbody2D>().drag = 20;
         gunAnimator.SetTrigger("Shoot");
+        shootSound.Post(gameObject);
     }
 
     IEnumerator FireWait()

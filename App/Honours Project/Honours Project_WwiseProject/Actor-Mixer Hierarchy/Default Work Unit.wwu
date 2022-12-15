@@ -1,6 +1,193 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}" SchemaVersion="103">
 	<AudioObjects>
-		<WorkUnit Name="Default Work Unit" ID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}" PersistMode="Standalone">
+			<ChildrenList>
+				<Sound Name="block-hit" ID="{2E114858-5ADE-4111-9D55-3CC8D540C56B}" ShortID="639425735">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DD8F3317-607F-4DFC-8345-AA0A1BF4B176}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{964E5123-7B63-46FD-ACD8-C72F3513DC0F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="block-hit" ID="{4F3CD095-1D69-406B-A3BB-AC5FCEBB0C1D}">
+							<Language>SFX</Language>
+							<AudioFile>block-hit.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="571736089"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="block-hit" ID="{4F3CD095-1D69-406B-A3BB-AC5FCEBB0C1D}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Boom-Blox-Hum Stutter" ID="{3CCA6F6F-0B43-4850-B49D-8D5EFBF1E6B4}" ShortID="537744209">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DD8F3317-607F-4DFC-8345-AA0A1BF4B176}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{964E5123-7B63-46FD-ACD8-C72F3513DC0F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Boom-Blox-Hum Stutter" ID="{ACB1E78C-E022-46E3-B199-07ADC87ABD03}">
+							<Language>SFX</Language>
+							<AudioFile>Boom-Blox-Hum Stutter.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="712089014"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Boom-Blox-Hum Stutter" ID="{ACB1E78C-E022-46E3-B199-07ADC87ABD03}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="Boom-Blox-Main-Theme" ID="{A0916DF8-C683-4D9C-88FD-53E3B82800AE}" ShortID="1058418467">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DD8F3317-607F-4DFC-8345-AA0A1BF4B176}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{964E5123-7B63-46FD-ACD8-C72F3513DC0F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="Boom-Blox-Main-Theme" ID="{8900FD9F-6262-4354-B17F-4FF2133CE5C8}">
+							<Language>SFX</Language>
+							<AudioFile>Boom-Blox-Main-Theme.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="613577197"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="Boom-Blox-Main-Theme" ID="{8900FD9F-6262-4354-B17F-4FF2133CE5C8}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="button-click" ID="{FD3764FF-B40D-4FCD-81C9-10B2F5F7382D}" ShortID="444634651">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DD8F3317-607F-4DFC-8345-AA0A1BF4B176}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{964E5123-7B63-46FD-ACD8-C72F3513DC0F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="button-click" ID="{1B014DF3-B161-424E-BD84-7E849F527EB6}">
+							<Language>SFX</Language>
+							<AudioFile>button-click.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="1049720265"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="button-click" ID="{1B014DF3-B161-424E-BD84-7E849F527EB6}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="despawn" ID="{6C3B13CD-B416-472D-82C6-430B1DC875D1}" ShortID="467878543">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DD8F3317-607F-4DFC-8345-AA0A1BF4B176}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{964E5123-7B63-46FD-ACD8-C72F3513DC0F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="despawn" ID="{9D75674F-2A6E-4B5C-936D-46FD1FE26F73}">
+							<Language>SFX</Language>
+							<AudioFile>despawn.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="160836335"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="despawn" ID="{9D75674F-2A6E-4B5C-936D-46FD1FE26F73}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="despawn-trim" ID="{E71CB3C8-B3D7-40A5-AA98-CB98B6301CC0}" ShortID="1032372695">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DD8F3317-607F-4DFC-8345-AA0A1BF4B176}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{964E5123-7B63-46FD-ACD8-C72F3513DC0F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="despawn-trim" ID="{B3564E4C-D8F7-42B0-941F-9EE94B33C9F7}">
+							<Language>SFX</Language>
+							<AudioFile>despawn-trim.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="50940445"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="despawn-trim" ID="{B3564E4C-D8F7-42B0-941F-9EE94B33C9F7}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="shoot" ID="{7A32F505-6423-4084-82BF-5DE830AD5FD6}" ShortID="664751661">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DD8F3317-607F-4DFC-8345-AA0A1BF4B176}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{964E5123-7B63-46FD-ACD8-C72F3513DC0F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="shoot" ID="{6215EBDC-96B6-4CF7-8EB8-B89D9BA31B94}">
+							<Language>SFX</Language>
+							<AudioFile>shoot.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="919918530"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="shoot" ID="{6215EBDC-96B6-4CF7-8EB8-B89D9BA31B94}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="spawn" ID="{C9F683A3-E2BD-4BB0-BECB-5051D9844328}" ShortID="718989390">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DD8F3317-607F-4DFC-8345-AA0A1BF4B176}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{964E5123-7B63-46FD-ACD8-C72F3513DC0F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="spawn" ID="{F5B676B6-1355-40A8-95C2-2B4EEC5E6D27}">
+							<Language>SFX</Language>
+							<AudioFile>spawn.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="967728139"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="spawn" ID="{F5B676B6-1355-40A8-95C2-2B4EEC5E6D27}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+			</ChildrenList>
+		</WorkUnit>
 	</AudioObjects>
 </WwiseDocument>

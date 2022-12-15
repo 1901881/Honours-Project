@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e012f0fee2933743b43e2928d763f623
     GuidInternal: 
-    m_lastTime: -8585305764315380796
+    m_lastTime: -8585304887111829751
     List:
     - name: Main_SoundBank
       guid: 1fd17201ef5580468616f59cad221366
@@ -94,8 +94,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: da09d9ff32957f408ab7df7be7ced7ae
     GuidInternal: 
-    m_lastTime: -8585305769420126878
-    List: []
+    m_lastTime: -8585304887111954908
+    List:
+    - name: Shoot_Event
+      guid: bb6b9b05e3115244a7f418203f60b9bf
+      id: 1429961119
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: da09d9ff32957f408ab7df7be7ced7ae
+      - ElementName: Shoot_Event
+        ObjectType: 3
+        guid: bb6b9b05e3115244a7f418203f60b9bf
+      Path: Events\Default Work Unit\Shoot_Event
+      maxAttenuation: 0
+      maxDuration: 0.128
+      minDuration: 0.128
   RtpcWwu:
   - PhysicalPath: Game Parameters\Default Work Unit.wwu
     PathAndIcons:
@@ -152,9 +169,9 @@ MonoBehaviour:
     GuidInternal: 
     m_lastTime: -8585305769418157698
     List: []
-  ExpandedFileSystemItemIds: 
+  ExpandedFileSystemItemIds: 010000000200000003000000050000000600000008000000090000000a0000000b0000000d0000000f00000011000000
   ExpandedWaapiItemIds: 
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
-  currentDataSource: 0
+  currentDataSource: 1
   CurrentPluginConfig: 

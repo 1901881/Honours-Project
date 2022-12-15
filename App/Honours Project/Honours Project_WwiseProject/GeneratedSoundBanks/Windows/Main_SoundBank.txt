@@ -1,0 +1,6 @@
+Event	ID	Name			Wwise Object Path	Notes
+	1429961119	Shoot_Event			\Default Work Unit\Shoot_Event	
+
+In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	919918530	shoot	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\shoot_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\shoot		24640
+
