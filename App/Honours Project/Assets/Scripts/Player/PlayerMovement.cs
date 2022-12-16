@@ -25,11 +25,18 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private LayerMask groundMask;
     [SerializeField] private TrailRenderer tr;
 
+    //Changing Player Color
+    private SpriteRenderer SpriteRend;
+    private Color originalColor;
+
     // Start is called before the first frame update
     void Start()
     {
         velocity = new Vector2(speed, speed);//sets velocity x and y
         playerBody = GetComponent<Rigidbody2D>();//sets rigid body to variable
+
+        SpriteRend = GetComponent<SpriteRenderer>();
+        originalColor = SpriteRend.color;
     }
 
     // Update is called once per frame
@@ -94,7 +101,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.gameObject.tag == "Bullet")
         {
-            health--;
+            StartCoroutine(Hit());
         }
 
     }
@@ -116,6 +123,17 @@ public class PlayerMovement : MonoBehaviour
         isDashing = false;
         yield return new WaitForSeconds(dashingCooldown);
         canDash = true;
+    }
+
+    IEnumerator Hit()
+    {
+        SpriteRend.color = Color.white;
+        Time.timeScale = 0;
+        yield return new WaitForSecondsRealtime(0.08f);
+        Time.timeScale = 1;
+        SpriteRend.color = originalColor;
+        health--;
+
     }
 
     public void QuitGame()
