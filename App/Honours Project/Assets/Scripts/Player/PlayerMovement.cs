@@ -62,7 +62,8 @@ public class PlayerMovement : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            QuitGame();
+            //Destroy(gameObject);
         }
     }
 
@@ -117,4 +118,11 @@ public class PlayerMovement : MonoBehaviour
         canDash = true;
     }
 
+    public void QuitGame()
+    {
+    #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+    #endif
+            Application.Quit();
+    }
 }
