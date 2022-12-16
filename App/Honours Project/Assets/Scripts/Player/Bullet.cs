@@ -15,11 +15,15 @@ public class Bullet : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();//sets rigid body to variable
         tr.emitting = true;
+
+        StartCoroutine(DespawnTimer());
     }
 
     private void Update()
     {
         lastVelocity = rb.velocity;
+
+     
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -45,4 +49,12 @@ public class Bullet : MonoBehaviour
         }
 
     }
+
+    IEnumerator DespawnTimer()
+    {
+        yield return new WaitForSecondsRealtime(3.0f);
+        Destroy(gameObject);
+        counter = 0;
+    }
 }
+
