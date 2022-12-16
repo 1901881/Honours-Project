@@ -18,7 +18,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool canDash = true;
     private bool isDashing;
-    private const float dashingPower = 2.2f;
+    private const float dashingPower = 15.2f;
     private const float dashingTime = 0.3f;
     private const float dashingCooldown = 1f;
 
@@ -104,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
         canDash = false;
         isDashing = true;
      
-        playerBody.AddForce(aimDirection * dashingPower, ForceMode2D.Impulse);
+        playerBody.AddForce(aimDirection.normalized * dashingPower, ForceMode2D.Impulse);
 
         tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
