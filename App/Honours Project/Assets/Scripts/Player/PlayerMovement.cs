@@ -9,6 +9,8 @@ public class PlayerMovement : MonoBehaviour
 
     public int speed = 10;
     public int health = 10;
+    public float DeathTime = 5;
+    private float Timer = 0;
 
     private Rigidbody2D playerBody;//References rigidbody applied to prefab
     private Vector2 velocity; //x,y movement
@@ -72,6 +74,8 @@ public class PlayerMovement : MonoBehaviour
             QuitGame();
             //Destroy(gameObject);
         }
+
+        
     }
 
     private void FixedUpdate()//update that runs on a fixed cycle
@@ -89,6 +93,8 @@ public class PlayerMovement : MonoBehaviour
         aimDirection = new Vector2(mousePosInWorld.x, mousePosInWorld.y) - playerBody.position;
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90.0f;
         playerBody.rotation = aimAngle;
+
+        DeathTimer();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -142,5 +148,15 @@ public class PlayerMovement : MonoBehaviour
             UnityEditor.EditorApplication.isPlaying = false;
     #endif
             Application.Quit();
+    }
+
+    public void DeathTimer()
+    {
+        Timer += Time.deltaTime;
+        if(Timer >= DeathTime)
+        {
+            Timer = 0;
+            QuitGame();
+        }
     }
 }
