@@ -7940,6 +7940,10 @@ PrefabInstance:
       propertyPath: camera2
       value: 
       objectReference: {fileID: 519420031}
+    - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
+      propertyPath: DeathTime
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 1401400863688779221, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
       propertyPath: m_Name
       value: Player
