@@ -1,8 +1,10 @@
 Event	ID	Name			Wwise Object Path	Notes
 	763920020	Dash_Event			\Default Work Unit\Dash_Event	
 	1429961119	Shoot_Event			\Default Work Unit\Shoot_Event	
+	2335227409	MusicPlay_Event			\Default Work Unit\MusicPlay_Event	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
-	724078564	DashTrim	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\DashTrim_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\DashTrim		154304
-	919918530	shoot	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\shoot_10C4C929.wem		\Actor-Mixer Hierarchy\Default Work Unit\shoot		24640
+	316846577	Tengo Ritmo (I Got Rhythm)	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Tengo Ritmo (I Got Rhythm)_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Tengo Ritmo (I Got Rhythm)		2386008
+	724078564	DashTrim	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\DashTrim_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\DashTrim		13096
+	919918530	shoot	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\shoot_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\shoot		2128
 
