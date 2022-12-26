@@ -16,13 +16,13 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="449138441">
+		<SoundBank Id="2228651116" Language="SFX" Hash="835909662">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank</ObjectPath>
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="763920020" Name="Dash_Event" ObjectPath="\Events\Default Work Unit\Dash_Event" DurationType="OneShot" DurationMin="0.874376" DurationMax="0.874376"/>
-				<Event Id="2335227409" Name="MusicPlay_Event" ObjectPath="\Events\Default Work Unit\MusicPlay_Event" DurationType="OneShot" DurationMin="152.595352" DurationMax="152.595352"/>
+				<Event Id="2335227409" Name="MusicPlay_Event" ObjectPath="\Events\Default Work Unit\MusicPlay_Event" MaxAttenuation="25." DurationType="OneShot" DurationMin="152.595352" DurationMax="152.595352"/>
 				<Event Id="1429961119" Name="Shoot_Event" ObjectPath="\Events\Default Work Unit\Shoot_Event" DurationType="OneShot" DurationMin="0.128" DurationMax="0.128"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
