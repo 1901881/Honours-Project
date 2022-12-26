@@ -8186,6 +8186,10 @@ PrefabInstance:
       propertyPath: DeathTime
       value: 1000
       objectReference: {fileID: 0}
+    - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
+      propertyPath: dashSound.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 454f4e5a974564f48b0413dfbb602d84, type: 2}
     - target: {fileID: 1401400863688779221, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
       propertyPath: m_Name
       value: Player

@@ -66,7 +66,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e012f0fee2933743b43e2928d763f623
     GuidInternal: 
-    m_lastTime: -8585304887111829751
+    m_lastTime: -8585295359985229990
     List:
     - name: Main_SoundBank
       guid: 1fd17201ef5580468616f59cad221366
@@ -94,8 +94,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: da09d9ff32957f408ab7df7be7ced7ae
     GuidInternal: 
-    m_lastTime: -8585304887111954908
+    m_lastTime: -8585295359985446180
     List:
+    - name: Dash_Event
+      guid: 95e188bb4070ed45ba868bf3086cb565
+      id: 763920020
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: da09d9ff32957f408ab7df7be7ced7ae
+      - ElementName: Dash_Event
+        ObjectType: 3
+        guid: 95e188bb4070ed45ba868bf3086cb565
+      Path: Events\Default Work Unit\Dash_Event
+      maxAttenuation: 0
+      maxDuration: 0.874376
+      minDuration: 0.874376
     - name: Shoot_Event
       guid: bb6b9b05e3115244a7f418203f60b9bf
       id: 1429961119
@@ -170,7 +187,7 @@ MonoBehaviour:
     m_lastTime: -8585305769418157698
     List: []
   ExpandedFileSystemItemIds: 
-  ExpandedWaapiItemIds: 
+  ExpandedWaapiItemIds: 0500000006000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

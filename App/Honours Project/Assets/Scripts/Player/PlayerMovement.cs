@@ -7,6 +7,9 @@ public class PlayerMovement : MonoBehaviour
     public Weapon weapon;
     public Camera camera2;
 
+    /// The Wwise event to trigger a dash sound.
+    public AK.Wwise.Event dashSound = new AK.Wwise.Event();
+
     public int speed = 10;
     public int health = 10;
     public float DeathTime = 5;
@@ -118,6 +121,7 @@ public class PlayerMovement : MonoBehaviour
         isDashing = true;
      
         playerBody.AddForce(aimDirection.normalized * dashingPower, ForceMode2D.Impulse);
+        dashSound.Post(gameObject);
 
         tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);

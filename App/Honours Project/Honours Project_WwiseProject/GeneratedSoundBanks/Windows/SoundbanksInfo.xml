@@ -16,14 +16,19 @@
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="3154402276">
+		<SoundBank Id="2228651116" Language="SFX" Hash="2537782544">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank</ObjectPath>
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
 			<IncludedEvents>
+				<Event Id="763920020" Name="Dash_Event" ObjectPath="\Events\Default Work Unit\Dash_Event" DurationType="OneShot" DurationMin="0.874376" DurationMax="0.874376"/>
 				<Event Id="1429961119" Name="Shoot_Event" ObjectPath="\Events\Default Work Unit\Shoot_Event" DurationType="OneShot" DurationMin="0.128" DurationMax="0.128"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
+				<File Id="724078564" Language="SFX">
+					<ShortName>DashTrim.wav</ShortName>
+					<Path>SFX\DashTrim_10C4C929.wem</Path>
+				</File>
 				<File Id="919918530" Language="SFX">
 					<ShortName>shoot.wav</ShortName>
 					<Path>SFX\shoot_10C4C929.wem</Path>

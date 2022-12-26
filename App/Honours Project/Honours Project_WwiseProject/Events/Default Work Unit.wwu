@@ -14,6 +14,17 @@
 						</Action>
 					</ChildrenList>
 				</Event>
+				<Event Name="Dash_Event" ID="{BB88E195-7040-45ED-BA86-8BF3086CB565}">
+					<ChildrenList>
+						<Action Name="" ID="{B0BE6C3E-4A18-4F3A-911B-B8DD046C8223}" ShortID="64033950">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="DashTrim" ID="{841A7984-341F-4FC7-B838-27F17DCC2E76}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
 			</ChildrenList>
 		</WorkUnit>
 	</Events>
