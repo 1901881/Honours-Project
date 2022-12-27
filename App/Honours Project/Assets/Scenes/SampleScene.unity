@@ -8574,6 +8574,10 @@ PrefabInstance:
       propertyPath: dashSound.WwiseObjectReference
       value: 
       objectReference: {fileID: 11400000, guid: 454f4e5a974564f48b0413dfbb602d84, type: 2}
+    - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
+      propertyPath: footstepSound.WwiseObjectReference
+      value: 
+      objectReference: {fileID: 11400000, guid: 64dfa37b9312d9046bf130ab46d5dc77, type: 2}
     - target: {fileID: 1401400863688779221, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
       propertyPath: m_Name
       value: PlayerBody

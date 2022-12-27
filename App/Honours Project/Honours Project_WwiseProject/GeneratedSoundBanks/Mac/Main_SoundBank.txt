@@ -1,10 +1,14 @@
 Event	ID	Name			Wwise Object Path	Notes
 	763920020	Dash_Event			\Default Work Unit\Dash_Event	
+	1006977509	RandomFootstepPlay_Event			\Default Work Unit\RandomFootstepPlay_Event	
 	1429961119	Shoot_Event			\Default Work Unit\Shoot_Event	
 	2335227409	MusicPlay_Event			\Default Work Unit\MusicPlay_Event	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
+	35001823	Footstep3	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Mac\SFX\Footstep3_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomFootsteps\Footstep3		3255
 	316846577	Tengo Ritmo (I Got Rhythm)	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Mac\SFX\Tengo Ritmo (I Got Rhythm)_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Tengo Ritmo (I Got Rhythm)		2386008
+	582917780	Footstep1	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Mac\SFX\Footstep1_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomFootsteps\Footstep1		2880
 	724078564	DashTrim	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Mac\SFX\DashTrim_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\DashTrim		13096
 	919918530	shoot	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Mac\SFX\shoot_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\shoot		2128
+	1003974162	Footstep2	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Mac\SFX\Footstep2_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomFootsteps\Footstep2		3724
 

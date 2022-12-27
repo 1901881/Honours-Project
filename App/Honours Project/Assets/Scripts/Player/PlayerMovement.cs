@@ -34,6 +34,19 @@ public class PlayerMovement : MonoBehaviour
     private SpriteRenderer SpriteRend;
     private Color originalColor;
 
+    //walking
+    /// The Wwise event to trigger a footstep sound.
+    public AK.Wwise.Event footstepSound = new AK.Wwise.Event();
+    ///	Used to determine when to trigger footstep sounds.
+    private bool walking = false;
+    ///	Used to determine when to trigger footstep sounds.
+    private float walkCount = 0.0f;
+
+    /// The speed at which footstep sounds are triggered.
+    [Range(0.01f, 1.0f)]
+    public float footstepRate = 0.3f;
+    /// /////////////////////////////////////////////////////
+
     // Start is called before the first frame update
     void Start()
     {
@@ -65,6 +78,33 @@ public class PlayerMovement : MonoBehaviour
             Input.GetAxisRaw("Horizontal"),
             Input.GetAxisRaw("Vertical")
             );
+
+        //////////////////////////////////////////////////////////////////////
+        ///Walking
+        if (((Mathf.Abs(Input.GetAxisRaw("Horizontal")) > 0.0f) ||
+            (Mathf.Abs(Input.GetAxisRaw("Vertical")) > 0.0f)))
+        {
+            walking = true;
+        }
+        else
+        {
+            walking = false;
+
+            walkCount = footstepRate;
+        }
+
+        if (walking)
+        {
+            walkCount += Time.deltaTime * (speed / 10.0f);
+
+            if (walkCount > footstepRate)
+            {
+                footstepSound.Post(gameObject);
+
+                walkCount = 0.0f;
+            }
+        }
+        //////////////////////////////////////////////////////////////////
 
         if (Input.GetKeyDown(KeyCode.Space) && canDash)
         {
