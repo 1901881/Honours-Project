@@ -3,6 +3,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	1006977509	RandomFootstepPlay_Event			\Default Work Unit\RandomFootstepPlay_Event	
 	1429961119	Shoot_Event			\Default Work Unit\Shoot_Event	
 	2335227409	MusicPlay_Event			\Default Work Unit\MusicPlay_Event	
+	3050945240	New_Event			\Default Work Unit\New_Event	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	35001823	Footstep3	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Footstep3_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomFootsteps\Footstep3		3255

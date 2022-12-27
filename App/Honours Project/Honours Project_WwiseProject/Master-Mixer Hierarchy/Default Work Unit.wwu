@@ -9,6 +9,28 @@
 							<ObjectRef Name="System" ID="{12ACC4E4-BBC3-475D-ADA7-4A6E733B8AA9}" WorkUnitID="{CC90B58F-231E-4AF2-908B-C31856AD46C6}"/>
 						</Reference>
 					</ReferenceList>
+					<ChildrenList>
+						<Bus Name="Reverbs" ID="{47922118-A5D4-4710-9470-4B8450519D34}">
+							<ChildrenList>
+								<AuxBus Name="Footstep_Reverb_Bus" ID="{C37191DB-D6C1-4D95-AD5F-06C70DB4079B}">
+									<PropertyList>
+										<Property Name="BusVolume" Type="Real64">
+											<ValueList>
+												<Value>8</Value>
+											</ValueList>
+										</Property>
+									</PropertyList>
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
+											<ObjectRef Name="Room_Medium" ID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</AuxBus>
+							</ChildrenList>
+							<ObjectLists/>
+						</Bus>
+					</ChildrenList>
 					<ObjectLists/>
 				</Bus>
 			</ChildrenList>

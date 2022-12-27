@@ -38,8 +38,25 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 23514e96637bfd46acd8c72f3513dc0f
     GuidInternal: 
-    m_lastTime: -8585305769420236597
+    m_lastTime: -8585294430855115242
     List:
+    - name: Footstep_Reverb_Bus
+      guid: db9171c3c1d6954dad5f06c70db4079b
+      id: 2584113389
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 23514e96637bfd46acd8c72f3513dc0f
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Footstep_Reverb_Bus
+        ObjectType: 1
+        guid: db9171c3c1d6954dad5f06c70db4079b
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Footstep_Reverb_Bus
     - name: Master Audio Bus
       guid: d8a41415a61d2a41a17e75ca0c2149f3
       id: 3803692087
@@ -66,7 +83,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e012f0fee2933743b43e2928d763f623
     GuidInternal: 
-    m_lastTime: -8585295260922663147
+    m_lastTime: -8585294430854149858
     List:
     - name: Main_SoundBank
       guid: 1fd17201ef5580468616f59cad221366
@@ -94,7 +111,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: da09d9ff32957f408ab7df7be7ced7ae
     GuidInternal: 
-    m_lastTime: -8585295260922872579
+    m_lastTime: -8585294430855501879
     List:
     - name: Dash_Event
       guid: 95e188bb4070ed45ba868bf3086cb565
@@ -130,6 +147,40 @@ MonoBehaviour:
       maxAttenuation: 25
       maxDuration: 152.59535
       minDuration: 152.59535
+    - name: New_Event
+      guid: 9caaecb2dfdf984e9af6975c2528020e
+      id: 3050945240
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: da09d9ff32957f408ab7df7be7ced7ae
+      - ElementName: New_Event
+        ObjectType: 3
+        guid: 9caaecb2dfdf984e9af6975c2528020e
+      Path: Events\Default Work Unit\New_Event
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: RandomFootstepPlay_Event
+      guid: e33a86b5f5457047a572b24eb832616f
+      id: 1006977509
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: da09d9ff32957f408ab7df7be7ced7ae
+      - ElementName: RandomFootstepPlay_Event
+        ObjectType: 3
+        guid: e33a86b5f5457047a572b24eb832616f
+      Path: Events\Default Work Unit\RandomFootstepPlay_Event
+      maxAttenuation: 0
+      maxDuration: 0.326531
+      minDuration: 0.252517
     - name: Shoot_Event
       guid: bb6b9b05e3115244a7f418203f60b9bf
       id: 1429961119
@@ -204,7 +255,7 @@ MonoBehaviour:
     m_lastTime: -8585305769418157698
     List: []
   ExpandedFileSystemItemIds: 020000000300000005000000060000000700000031000000320000006400000065000000
-  ExpandedWaapiItemIds: 05000000060000000700000031000000320000006400000065000000
+  ExpandedWaapiItemIds: 010000000200000003000000040000000500000006000000070000001900000031000000320000006400000065000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -6,9 +6,9 @@ public class PlayerMovement : MonoBehaviour
 {
     public Weapon weapon;
     public Camera camera2;
+    public FollowPlayer PlayerAudio;
 
-    /// The Wwise event to trigger a dash sound.
-    public AK.Wwise.Event dashSound = new AK.Wwise.Event();
+
 
     public int speed = 10;
     public int health = 10;
@@ -99,7 +99,8 @@ public class PlayerMovement : MonoBehaviour
 
             if (walkCount > footstepRate)
             {
-                footstepSound.Post(gameObject);
+                //footstepSound.Post(gameObject);
+                PlayerAudio.PlayFootstep();
 
                 walkCount = 0.0f;
             }
@@ -153,6 +154,10 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(Hit());
         }
 
+        if (collision.gameObject.tag == "ReverbZone")
+        {
+            Debug.Log("in reverb zone");
+        }
     }
 
     private IEnumerator Dash()
@@ -161,7 +166,7 @@ public class PlayerMovement : MonoBehaviour
         isDashing = true;
      
         playerBody.AddForce(aimDirection.normalized * dashingPower, ForceMode2D.Impulse);
-        dashSound.Post(gameObject);
+        PlayerAudio.PlayDash();
 
         tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
