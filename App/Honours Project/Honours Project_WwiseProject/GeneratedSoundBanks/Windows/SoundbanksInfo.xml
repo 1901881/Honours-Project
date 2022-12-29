@@ -11,51 +11,124 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="3072394659">
+		<SoundBank Id="1355168291" Language="SFX" Hash="1535446974">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<IncludedAuxBusses>
 				<AuxBus Id="2584113389" Name="Footstep_Reverb_Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Footstep_Reverb_Bus"/>
+				<AuxBus Id="3148878014" Name="Water_Reverb_Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Water_Reverb_Bus"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="2988270145">
+		<SoundBank Id="2228651116" Language="SFX" Hash="1291751166">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank</ObjectPath>
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="763920020" Name="Dash_Event" ObjectPath="\Events\Default Work Unit\Dash_Event" DurationType="OneShot" DurationMin="0.874376" DurationMax="0.874376"/>
+				<Event Id="2874369812" Name="FootstepPlay_Event" ObjectPath="\Events\Default Work Unit\FootstepPlay_Event" DurationType="OneShot" DurationMin="0.252517" DurationMax="0.705306"/>
 				<Event Id="2335227409" Name="MusicPlay_Event" ObjectPath="\Events\Default Work Unit\MusicPlay_Event" MaxAttenuation="25." DurationType="OneShot" DurationMin="152.595352" DurationMax="152.595352"/>
 				<Event Id="3050945240" Name="New_Event" ObjectPath="\Events\Default Work Unit\New_Event" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="1006977509" Name="RandomFootstepPlay_Event" ObjectPath="\Events\Default Work Unit\RandomFootstepPlay_Event" DurationType="OneShot" DurationMin="0.252517" DurationMax="0.326531"/>
-				<Event Id="1429961119" Name="Shoot_Event" ObjectPath="\Events\Default Work Unit\Shoot_Event" DurationType="OneShot" DurationMin="0.128" DurationMax="0.128"/>
+				<Event Id="1429961119" Name="Shoot_Event" ObjectPath="\Events\Default Work Unit\Shoot_Event" DurationType="OneShot" DurationMin="0.364263" DurationMax="0.364263"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
 				<File Id="35001823" Language="SFX">
 					<ShortName>Footstep3.wav</ShortName>
 					<Path>SFX\Footstep3_3F75BDB9.wem</Path>
 				</File>
+				<File Id="168156141" Language="SFX">
+					<ShortName>Foosteps\Water\Footstep_Water_3.wav</ShortName>
+					<Path>SFX\Foosteps\Water\Footstep_Water_3_3F75BDB9.wem</Path>
+				</File>
+				<File Id="269696238" Language="SFX">
+					<ShortName>Foosteps\Concrete\Footstep_Concrete_2.wav</ShortName>
+					<Path>SFX\Foosteps\Concrete\Footstep_Concrete_2_3F75BDB9.wem</Path>
+				</File>
+				<File Id="279846214" Language="SFX">
+					<ShortName>Foosteps\Water\Footstep_Water_1.wav</ShortName>
+					<Path>SFX\Foosteps\Water\Footstep_Water_1_3F75BDB9.wem</Path>
+				</File>
 				<File Id="316846577" Language="SFX">
 					<ShortName>Tengo Ritmo (I Got Rhythm).wav</ShortName>
 					<Path>SFX\Tengo Ritmo (I Got Rhythm)_3F75BDB9.wem</Path>
+				</File>
+				<File Id="327395850" Language="SFX">
+					<ShortName>Foosteps\Wood\Footstep_Wood_3.wav</ShortName>
+					<Path>SFX\Foosteps\Wood\Footstep_Wood_3_3F75BDB9.wem</Path>
+				</File>
+				<File Id="470815762" Language="SFX">
+					<ShortName>Foosteps\Gravel\Footstep_Gravel_2.wav</ShortName>
+					<Path>SFX\Foosteps\Gravel\Footstep_Gravel_2_3F75BDB9.wem</Path>
+				</File>
+				<File Id="573747786" Language="SFX">
+					<ShortName>Foosteps\Gravel\Footstep_Gravel_3.wav</ShortName>
+					<Path>SFX\Foosteps\Gravel\Footstep_Gravel_3_3F75BDB9.wem</Path>
 				</File>
 				<File Id="582917780" Language="SFX">
 					<ShortName>Footstep1.wav</ShortName>
 					<Path>SFX\Footstep1_3F75BDB9.wem</Path>
 				</File>
+				<File Id="604556664" Language="SFX">
+					<ShortName>Foosteps\Grass\Footstep_Grass_3.wav</ShortName>
+					<Path>SFX\Foosteps\Grass\Footstep_Grass_3_3F75BDB9.wem</Path>
+				</File>
+				<File Id="629351073" Language="SFX">
+					<ShortName>Foosteps\Wood\Footstep_Wood_2.wav</ShortName>
+					<Path>SFX\Foosteps\Wood\Footstep_Wood_2_3F75BDB9.wem</Path>
+				</File>
+				<File Id="686024931" Language="SFX">
+					<ShortName>Foosteps\Concrete\Footstep_Concrete_1.wav</ShortName>
+					<Path>SFX\Foosteps\Concrete\Footstep_Concrete_1_3F75BDB9.wem</Path>
+				</File>
 				<File Id="724078564" Language="SFX">
 					<ShortName>DashTrim.wav</ShortName>
 					<Path>SFX\DashTrim_3F75BDB9.wem</Path>
 				</File>
+				<File Id="747267352" Language="SFX">
+					<ShortName>Foosteps\Gravel\Footstep_Gravel_1.wav</ShortName>
+					<Path>SFX\Foosteps\Gravel\Footstep_Gravel_1_3F75BDB9.wem</Path>
+				</File>
+				<File Id="865006348" Language="SFX">
+					<ShortName>Foosteps\Water\Footstep_Water_2.wav</ShortName>
+					<Path>SFX\Foosteps\Water\Footstep_Water_2_3F75BDB9.wem</Path>
+				</File>
+				<File Id="912266567" Language="SFX">
+					<ShortName>Foosteps\Concrete\Footstep_Concrete_3.wav</ShortName>
+					<Path>SFX\Foosteps\Concrete\Footstep_Concrete_3_3F75BDB9.wem</Path>
+				</File>
 				<File Id="919918530" Language="SFX">
 					<ShortName>shoot.wav</ShortName>
 					<Path>SFX\shoot_3F75BDB9.wem</Path>
+				</File>
+				<File Id="934109307" Language="SFX">
+					<ShortName>Foosteps\Wood\Footstep_Wood_1.wav</ShortName>
+					<Path>SFX\Foosteps\Wood\Footstep_Wood_1_3F75BDB9.wem</Path>
+				</File>
+				<File Id="974048632" Language="SFX">
+					<ShortName>Foosteps\Grass\Footstep_Grass_2.wav</ShortName>
+					<Path>SFX\Foosteps\Grass\Footstep_Grass_2_3F75BDB9.wem</Path>
+				</File>
+				<File Id="975152429" Language="SFX">
+					<ShortName>Foosteps\Grass\Footstep_Grass_1.wav</ShortName>
+					<Path>SFX\Foosteps\Grass\Footstep_Grass_1_3F75BDB9.wem</Path>
 				</File>
 				<File Id="1003974162" Language="SFX">
 					<ShortName>Footstep2.wav</ShortName>
 					<Path>SFX\Footstep2_3F75BDB9.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
+			<SwitchGroups>
+				<SwitchGroup Id="3865314626" Name="Material" ObjectPath="\Switches\Default Work Unit\Material" GUID="{30CA885D-D904-44C6-A72B-D3D80B44674F}">
+					<Switches>
+						<Switch Id="841620460" Name="Concrete" ObjectPath="\Switches\Default Work Unit\Material\Concrete" GUID="{5349A313-9596-4B7F-9F40-0B3CAE39B399}"/>
+						<Switch Id="2654748154" Name="Water" ObjectPath="\Switches\Default Work Unit\Material\Water" GUID="{37A12701-ADF0-4CB2-91F6-08C20DB1218C}"/>
+						<Switch Id="4248645337" Name="Grass" ObjectPath="\Switches\Default Work Unit\Material\Grass" GUID="{15C0BDFC-0034-47BF-BD3F-5C49D9457419}"/>
+						<Switch Id="2058049674" Name="Wood" ObjectPath="\Switches\Default Work Unit\Material\Wood" GUID="{45E74B1A-F621-4E25-8B56-11B9D0C436A6}"/>
+						<Switch Id="2185786256" Name="Gravel" ObjectPath="\Switches\Default Work Unit\Material\Gravel" GUID="{B74B478B-D9AA-4A61-BB44-7D05403FC8C1}"/>
+					</Switches>
+				</SwitchGroup>
+			</SwitchGroups>
 		</SoundBank>
 	</SoundBanks>
 </SoundBanksInfo>

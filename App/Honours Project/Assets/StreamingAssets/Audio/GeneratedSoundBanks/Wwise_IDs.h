@@ -14,11 +14,30 @@ namespace AK
     namespace EVENTS
     {
         static const AkUniqueID DASH_EVENT = 763920020U;
+        static const AkUniqueID FOOTSTEPPLAY_EVENT = 2874369812U;
         static const AkUniqueID MUSICPLAY_EVENT = 2335227409U;
         static const AkUniqueID NEW_EVENT = 3050945240U;
         static const AkUniqueID RANDOMFOOTSTEPPLAY_EVENT = 1006977509U;
         static const AkUniqueID SHOOT_EVENT = 1429961119U;
     } // namespace EVENTS
+
+    namespace SWITCHES
+    {
+        namespace MATERIAL
+        {
+            static const AkUniqueID GROUP = 3865314626U;
+
+            namespace SWITCH
+            {
+                static const AkUniqueID CONCRETE = 841620460U;
+                static const AkUniqueID GRASS = 4248645337U;
+                static const AkUniqueID GRAVEL = 2185786256U;
+                static const AkUniqueID WATER = 2654748154U;
+                static const AkUniqueID WOOD = 2058049674U;
+            } // namespace SWITCH
+        } // namespace MATERIAL
+
+    } // namespace SWITCHES
 
     namespace BANKS
     {
@@ -35,6 +54,7 @@ namespace AK
     namespace AUX_BUSSES
     {
         static const AkUniqueID FOOTSTEP_REVERB_BUS = 2584113389U;
+        static const AkUniqueID WATER_REVERB_BUS = 3148878014U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES

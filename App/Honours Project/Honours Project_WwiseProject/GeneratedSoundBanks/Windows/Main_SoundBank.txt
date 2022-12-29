@@ -3,13 +3,39 @@ Event	ID	Name			Wwise Object Path	Notes
 	1006977509	RandomFootstepPlay_Event			\Default Work Unit\RandomFootstepPlay_Event	
 	1429961119	Shoot_Event			\Default Work Unit\Shoot_Event	
 	2335227409	MusicPlay_Event			\Default Work Unit\MusicPlay_Event	
+	2874369812	FootstepPlay_Event			\Default Work Unit\FootstepPlay_Event	
 	3050945240	New_Event			\Default Work Unit\New_Event	
+
+Switch Group	ID	Name			Wwise Object Path	Notes
+	3865314626	Material			\Default Work Unit\Material	
+
+Switch	ID	Name	Switch Group			Notes
+	841620460	Concrete	Material			
+	2058049674	Wood	Material			
+	2185786256	Gravel	Material			
+	2654748154	Water	Material			
+	4248645337	Grass	Material			
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	35001823	Footstep3	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Footstep3_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomFootsteps\Footstep3		3255
+	168156141	Footstep_Water_3	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Water\Footstep_Water_3_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Water\Footstep_Water_3		5631
+	269696238	Footstep_Concrete_2	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Concrete\Footstep_Concrete_2_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Concrete\Footstep_Concrete_2		3724
+	279846214	Footstep_Water_1	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Water\Footstep_Water_1_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Water\Footstep_Water_1		5514
 	316846577	Tengo Ritmo (I Got Rhythm)	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Tengo Ritmo (I Got Rhythm)_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Tengo Ritmo (I Got Rhythm)		2386008
+	327395850	Footstep_Wood_3	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Wood\Footstep_Wood_3_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Wood\Footstep_Wood_3		6060
+	470815762	Footstep_Gravel_2	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Gravel\Footstep_Gravel_2_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Gravel\Footstep_Gravel_2		4560
+	573747786	Footstep_Gravel_3	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Gravel\Footstep_Gravel_3_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Gravel\Footstep_Gravel_3		5060
 	582917780	Footstep1	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Footstep1_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomFootsteps\Footstep1		2880
+	604556664	Footstep_Grass_3	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Grass\Footstep_Grass_3_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Grass\Footstep_Grass_3		9681
+	629351073	Footstep_Wood_2	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Wood\Footstep_Wood_2_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Wood\Footstep_Wood_2		5681
+	686024931	Footstep_Concrete_1	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Concrete\Footstep_Concrete_1_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Concrete\Footstep_Concrete_1		2880
 	724078564	DashTrim	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\DashTrim_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\DashTrim		13096
-	919918530	shoot	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\shoot_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\shoot		2128
+	747267352	Footstep_Gravel_1	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Gravel\Footstep_Gravel_1_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Gravel\Footstep_Gravel_1		4370
+	865006348	Footstep_Water_2	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Water\Footstep_Water_2_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Water\Footstep_Water_2		5661
+	912266567	Footstep_Concrete_3	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Concrete\Footstep_Concrete_3_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Concrete\Footstep_Concrete_3		3255
+	919918530	shoot	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\shoot_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\shoot		4981
+	934109307	Footstep_Wood_1	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Wood\Footstep_Wood_1_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Wood\Footstep_Wood_1		5913
+	974048632	Footstep_Grass_2	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Grass\Footstep_Grass_2_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Grass\Footstep_Grass_2		9263
+	975152429	Footstep_Grass_1	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Grass\Footstep_Grass_1_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Grass\Footstep_Grass_1		9894
 	1003974162	Footstep2	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Footstep2_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomFootsteps\Footstep2		3724
 
