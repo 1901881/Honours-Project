@@ -444,9 +444,6 @@
 								<Reference Name="OutputBus">
 									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{964E5123-7B63-46FD-ACD8-C72F3513DC0F}"/>
 								</Reference>
-								<Reference Name="UserAuxSend0">
-									<ObjectRef Name="Water_Reverb_Bus" ID="{33BC6E4B-168F-41F8-BE95-D9FE3B9C343C}" WorkUnitID="{964E5123-7B63-46FD-ACD8-C72F3513DC0F}"/>
-								</Reference>
 							</ReferenceList>
 							<ChildrenList>
 								<AudioFileSource Name="Footstep1" ID="{3044B72D-5E63-46C9-BD75-0E8EE7E42806}">

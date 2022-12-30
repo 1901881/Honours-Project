@@ -4,10 +4,11 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	2584113389	Footstep_Reverb_Bus			\Default Work Unit\Master Audio Bus\Reverbs\Footstep_Reverb_Bus	
-	3148878014	Water_Reverb_Bus			\Default Work Unit\Master Audio Bus\Reverbs\Water_Reverb_Bus	
+	3527431049	Footstep_Reverb_Bus_01			\Default Work Unit\Master Audio Bus\Reverbs\Footstep_Reverb_Bus_01	
 
 Effect plug-ins	ID	Name	Type				Notes
 	1990128658	Room_Medium	Wwise RoomVerb			
+	3487820010	One_Tap_Half_Second	Wwise Delay			
 
 Audio Devices	ID	Name	Type				Notes
 	2317455096	No_Output	No Output			

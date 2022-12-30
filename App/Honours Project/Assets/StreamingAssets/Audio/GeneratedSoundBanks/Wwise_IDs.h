@@ -54,7 +54,7 @@ namespace AK
     namespace AUX_BUSSES
     {
         static const AkUniqueID FOOTSTEP_REVERB_BUS = 2584113389U;
-        static const AkUniqueID WATER_REVERB_BUS = 3148878014U;
+        static const AkUniqueID FOOTSTEP_REVERB_BUS_01 = 3527431049U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES
