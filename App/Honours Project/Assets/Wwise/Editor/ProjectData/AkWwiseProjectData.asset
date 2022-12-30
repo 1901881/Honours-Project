@@ -123,7 +123,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e012f0fee2933743b43e2928d763f623
     GuidInternal: 
-    m_lastTime: -8585294430854149858
+    m_lastTime: -8585292526071456365
     List:
     - name: Main_SoundBank
       guid: 1fd17201ef5580468616f59cad221366
@@ -151,7 +151,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: da09d9ff32957f408ab7df7be7ced7ae
     GuidInternal: 
-    m_lastTime: -8585294430855501879
+    m_lastTime: -8585292526071664541
     List:
     - name: Dash_Event
       guid: 95e188bb4070ed45ba868bf3086cb565
@@ -170,6 +170,23 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.874376
       minDuration: 0.874376
+    - name: FootstepPlay_Event
+      guid: 7ac0ca8a0ebb1a438b32c90422a41c14
+      id: 2874369812
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: da09d9ff32957f408ab7df7be7ced7ae
+      - ElementName: FootstepPlay_Event
+        ObjectType: 3
+        guid: 7ac0ca8a0ebb1a438b32c90422a41c14
+      Path: Events\Default Work Unit\FootstepPlay_Event
+      maxAttenuation: 0
+      maxDuration: 0.705306
+      minDuration: 0.252517
     - name: MusicPlay_Event
       guid: d731f8410ece8846986d57b8829897dc
       id: 2335227409
