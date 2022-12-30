@@ -11,6 +11,9 @@ public class FollowPlayer : MonoBehaviour
     /// The Wwise event to trigger a dash sound.
     public AK.Wwise.Event dashSound = new AK.Wwise.Event();
 
+    /// The Wwise event to trigger a shoot sound.
+    public AK.Wwise.Event shootSound = new AK.Wwise.Event();
+
     private string FloorMaterial;
     private string LastFloorMaterial;
 
@@ -52,5 +55,10 @@ public class FollowPlayer : MonoBehaviour
     public void PlayDash()
     {
         dashSound.Post(gameObject);
+    }
+
+    public void PlayShoot()
+    {
+        shootSound.Post(gameObject);
     }
 }

@@ -7416,6 +7416,10 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: 454f4e5a974564f48b0413dfbb602d84, type: 2}
+  shootSound:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 64496edc22c8e30419bef0097f64e912, type: 2}
 --- !u!65 &1166128521
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9011,6 +9015,10 @@ PrefabInstance:
       propertyPath: bulletNum
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1401400863664897267, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
+      propertyPath: PlayerAudio
+      value: 
+      objectReference: {fileID: 1166128520}
     - target: {fileID: 1401400863664897267, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
       propertyPath: gunAnimator
       value: 
