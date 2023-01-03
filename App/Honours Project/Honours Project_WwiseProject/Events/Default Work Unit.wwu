@@ -34,6 +34,13 @@
 								</Reference>
 							</ReferenceList>
 						</Action>
+						<Action Name="" ID="{ABE65AD6-D185-4AFB-9F15-FCAA4B49E4B9}" ShortID="476064704">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="Static_Noise" ID="{5D3ED39C-5428-4944-80BA-0408E3DF20A7}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
 					</ChildrenList>
 				</Event>
 				<Event Name="RandomFootstepPlay_Event" ID="{B5863AE3-45F5-4770-A572-B24EB832616F}">

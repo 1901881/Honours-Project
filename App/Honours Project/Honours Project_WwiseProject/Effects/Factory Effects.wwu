@@ -1765,7 +1765,7 @@
 								<Property Name="DryLevel" Type="Real32" Value="-96"/>
 								<Property Name="EnableCrossFeed" Type="bool" Value="True"/>
 								<Property Name="EnableFeedback" Type="bool" Value="True"/>
-								<Property Name="FilterFrequency" Type="Real32" Value="333"/>
+								<Property Name="FilterFrequency" Type="Real32" Value="835"/>
 								<Property Name="FilterGain" Type="Real32" Value="7"/>
 								<Property Name="FilterType" Type="int32" Value="4"/>
 								<Property Name="LeftCrossfeed" Type="Real32" Value="-3"/>

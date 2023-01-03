@@ -20,14 +20,14 @@
 				<AuxBus Id="3527431049" Name="Footstep_Reverb_Bus_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Footstep_Reverb_Bus_01"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="1514771988">
+		<SoundBank Id="2228651116" Language="SFX" Hash="478491718">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank</ObjectPath>
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
 			<IncludedEvents>
 				<Event Id="763920020" Name="Dash_Event" ObjectPath="\Events\Default Work Unit\Dash_Event" DurationType="OneShot" DurationMin="0.874376" DurationMax="0.874376"/>
 				<Event Id="2874369812" Name="FootstepPlay_Event" ObjectPath="\Events\Default Work Unit\FootstepPlay_Event" DurationType="OneShot" DurationMin="0.252517" DurationMax="0.705306"/>
-				<Event Id="2335227409" Name="MusicPlay_Event" ObjectPath="\Events\Default Work Unit\MusicPlay_Event" MaxAttenuation="25." DurationType="OneShot" DurationMin="152.595352" DurationMax="152.595352"/>
+				<Event Id="2335227409" Name="MusicPlay_Event" ObjectPath="\Events\Default Work Unit\MusicPlay_Event" MaxAttenuation="25." DurationType="Infinite"/>
 				<Event Id="3050945240" Name="New_Event" ObjectPath="\Events\Default Work Unit\New_Event" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
 				<Event Id="1006977509" Name="RandomFootstepPlay_Event" ObjectPath="\Events\Default Work Unit\RandomFootstepPlay_Event" DurationType="OneShot" DurationMin="0.252517" DurationMax="0.326531"/>
 				<Event Id="1429961119" Name="Shoot_Event" ObjectPath="\Events\Default Work Unit\Shoot_Event" DurationType="OneShot" DurationMin="0.364263" DurationMax="0.364263"/>
@@ -51,7 +51,7 @@
 				</File>
 				<File Id="316846577" Language="SFX">
 					<ShortName>Tengo Ritmo (I Got Rhythm).wav</ShortName>
-					<Path>SFX\Tengo Ritmo (I Got Rhythm)_3F75BDB9.wem</Path>
+					<Path>SFX\Tengo Ritmo (I Got Rhythm)_9EDFC787.wem</Path>
 				</File>
 				<File Id="327395850" Language="SFX">
 					<ShortName>Foosteps\Wood\Footstep_Wood_3.wav</ShortName>
@@ -88,6 +88,10 @@
 				<File Id="747267352" Language="SFX">
 					<ShortName>Foosteps\Gravel\Footstep_Gravel_1.wav</ShortName>
 					<Path>SFX\Foosteps\Gravel\Footstep_Gravel_1_3F75BDB9.wem</Path>
+				</File>
+				<File Id="828773037" Language="SFX">
+					<ShortName>Static_Noise.wav</ShortName>
+					<Path>SFX\Static_Noise_9EDFC787.wem</Path>
 				</File>
 				<File Id="865006348" Language="SFX">
 					<ShortName>Foosteps\Water\Footstep_Water_2.wav</ShortName>

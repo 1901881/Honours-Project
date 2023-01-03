@@ -123,7 +123,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e012f0fee2933743b43e2928d763f623
     GuidInternal: 
-    m_lastTime: -8585292526071456365
+    m_lastTime: -8585288279238334654
     List:
     - name: Main_SoundBank
       guid: 1fd17201ef5580468616f59cad221366
@@ -151,7 +151,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: da09d9ff32957f408ab7df7be7ced7ae
     GuidInternal: 
-    m_lastTime: -8585292526071664541
+    m_lastTime: -8585288279238111783
     List:
     - name: Dash_Event
       guid: 95e188bb4070ed45ba868bf3086cb565
@@ -202,8 +202,8 @@ MonoBehaviour:
         guid: d731f8410ece8846986d57b8829897dc
       Path: Events\Default Work Unit\MusicPlay_Event
       maxAttenuation: 25
-      maxDuration: 152.59535
-      minDuration: 152.59535
+      maxDuration: -1
+      minDuration: -1
     - name: New_Event
       guid: 9caaecb2dfdf984e9af6975c2528020e
       id: 3050945240
@@ -267,7 +267,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0f887e3eae74a44cb26ebf97c68431f8
     GuidInternal: 
-    m_lastTime: -8585289080683296685
+    m_lastTime: -8585288291600006737
     List:
     - name: radioVolume
       guid: 323805eb8c97c649a5abf60665126fc7
@@ -424,7 +424,7 @@ MonoBehaviour:
     m_lastTime: -8585305769418157698
     List: []
   ExpandedFileSystemItemIds: 020000000300000005000000060000000700000031000000320000006400000065000000
-  ExpandedWaapiItemIds: 010000000200000003000000040000000500000006000000070000001700000018000000190000001a0000001b00000031000000320000006400000065000000
+  ExpandedWaapiItemIds: 010000000200000003000000040000000500000006000000070000001700000018000000190000001a0000001b000000310000003200000060000000610000006400000065000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0
