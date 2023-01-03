@@ -7,16 +7,44 @@ public class Radio : MonoBehaviour
     /// The Wwise event to trigger a shoot sound.
     public AK.Wwise.Event radioMusicSound = new AK.Wwise.Event();
 
+    public float radioHealth = 3;
 
-    // Start is called before the first frame update
-    void Start()
+    public ChangeMaterialColour changeMaterialColourScript;
+
+    public RadioAudio radioAudioScript;
+
+    private void Start()
     {
-      //  radioMusicSound.Post(gameObject);
+       
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        if (radioHealth <= 0)
+        {
+           Destroy(gameObject);
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Bullet")
+        {
+            StartCoroutine(Hit());
+            Debug.Log("Hit Radio");
+        }
+    }
+
+    IEnumerator Hit()
+    {
+        changeMaterialColourScript.ChangeMaterialColourFunc(true);
+        Time.timeScale = 0;
+        yield return new WaitForSecondsRealtime(0.08f);
+        Time.timeScale = 1;
+        changeMaterialColourScript.ChangeMaterialColourFunc(false);
+        radioHealth--;
+        //AkSoundEngine.SetRTPCValue("radioVolume", radioHealth, AK_INVALID_GAME_OBJECT);
+        radioAudioScript.SetRadioAudioHealth(radioHealth);
+
     }
 }

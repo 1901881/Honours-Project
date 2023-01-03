@@ -16,6 +16,9 @@ Switch	ID	Name	Switch Group			Notes
 	2654748154	Water	Material			
 	4248645337	Grass	Material			
 
+Game Parameter	ID	Name			Wwise Object Path	Notes
+	2263952660	radioVolume			\Default Work Unit\radioVolume	
+
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	35001823	Footstep3	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Footstep3_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\RandomFootsteps\Footstep3		3255
 	168156141	Footstep_Water_3	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Water\Footstep_Water_3_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Water\Footstep_Water_3		5631

@@ -279,6 +279,34 @@
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{886170F5-1705-492F-B9E1-3F74CA6B1ED3}" ShortID="854104905">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="radioVolume" ID="{EB053832-978C-49C6-A5AB-F60665126FC7}" WorkUnitID="{3E7E880F-74AE-4CA4-B26E-BF97C68431F8}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{514A70C4-0DC9-407B-9A54-9D45DC2AD419}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>3</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Attenuation">

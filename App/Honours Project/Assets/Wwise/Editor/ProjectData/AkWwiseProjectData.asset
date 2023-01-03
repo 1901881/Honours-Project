@@ -267,8 +267,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0f887e3eae74a44cb26ebf97c68431f8
     GuidInternal: 
-    m_lastTime: -8585305769418361544
-    List: []
+    m_lastTime: -8585289080683296685
+    List:
+    - name: radioVolume
+      guid: 323805eb8c97c649a5abf60665126fc7
+      id: 2263952660
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0f887e3eae74a44cb26ebf97c68431f8
+      - ElementName: radioVolume
+        ObjectType: 13
+        guid: 323805eb8c97c649a5abf60665126fc7
+      Path: Game Parameters\Default Work Unit\radioVolume
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -410,7 +424,7 @@ MonoBehaviour:
     m_lastTime: -8585305769418157698
     List: []
   ExpandedFileSystemItemIds: 020000000300000005000000060000000700000031000000320000006400000065000000
-  ExpandedWaapiItemIds: 01000000020000000300000004000000050000000600000007000000190000001a0000001b00000031000000320000006400000065000000
+  ExpandedWaapiItemIds: 010000000200000003000000040000000500000006000000070000001700000018000000190000001a0000001b00000031000000320000006400000065000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

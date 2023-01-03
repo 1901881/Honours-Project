@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{3E7E880F-74AE-4CA4-B26E-BF97C68431F8}" SchemaVersion="103">
 	<GameParameters>
-		<WorkUnit Name="Default Work Unit" ID="{3E7E880F-74AE-4CA4-B26E-BF97C68431F8}" PersistMode="Standalone"/>
+		<WorkUnit Name="Default Work Unit" ID="{3E7E880F-74AE-4CA4-B26E-BF97C68431F8}" PersistMode="Standalone">
+			<ChildrenList>
+				<GameParameter Name="radioVolume" ID="{EB053832-978C-49C6-A5AB-F60665126FC7}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="3"/>
+						<Property Name="Max" Type="Real64" Value="3"/>
+					</PropertyList>
+				</GameParameter>
+			</ChildrenList>
+		</WorkUnit>
 	</GameParameters>
 </WwiseDocument>

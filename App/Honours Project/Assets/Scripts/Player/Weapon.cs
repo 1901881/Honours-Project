@@ -14,7 +14,7 @@ public class Weapon : MonoBehaviour
 
 
     private bool reloaded = true;
-    private float reloadTime = 1.5f;
+    public float reloadTime = 1.5f;
 
     void Update()
     {
