@@ -4,10 +4,12 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
+    public BulletAudio bulletAudioScript;
+
     private Rigidbody2D rb;
     Vector3 lastVelocity;
 
-    private int counter;
+    private int bulletHitCounter;
 
     [SerializeField] private TrailRenderer tr;
 
@@ -38,14 +40,16 @@ public class Bullet : MonoBehaviour
             rb.velocity = direction * Mathf.Max(speed, 0.0f);
             rb.drag += 0.2f;
 
-            counter++;
+            bulletHitCounter++;
 
-            if (counter >= 3)
+            if (bulletHitCounter >= 3)
             {
 
                 Destroy(gameObject);
-                counter = 0;
+                bulletHitCounter = 0;
             }
+
+            bulletAudioScript.PlayBulletCollisionSound(bulletHitCounter, collision.gameObject.tag);
         }
 
     }
@@ -54,7 +58,7 @@ public class Bullet : MonoBehaviour
     {
         yield return new WaitForSecondsRealtime(3.0f);
         Destroy(gameObject);
-        counter = 0;
+        bulletHitCounter = 0;
     }
 }
 

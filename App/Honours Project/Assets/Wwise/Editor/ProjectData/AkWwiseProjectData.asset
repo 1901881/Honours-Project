@@ -123,7 +123,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e012f0fee2933743b43e2928d763f623
     GuidInternal: 
-    m_lastTime: -8585288279238334654
+    m_lastTime: -8585287479435935112
     List:
     - name: Main_SoundBank
       guid: 1fd17201ef5580468616f59cad221366
@@ -151,8 +151,25 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: da09d9ff32957f408ab7df7be7ced7ae
     GuidInternal: 
-    m_lastTime: -8585288279238111783
+    m_lastTime: -8585287588093322879
     List:
+    - name: BulletCollisionPlay_Event
+      guid: a17a8706034ef44ba53c9b5a66fcc51b
+      id: 3124891512
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: da09d9ff32957f408ab7df7be7ced7ae
+      - ElementName: BulletCollisionPlay_Event
+        ObjectType: 3
+        guid: a17a8706034ef44ba53c9b5a66fcc51b
+      Path: Events\Default Work Unit\BulletCollisionPlay_Event
+      maxAttenuation: 25
+      maxDuration: 0.850431
+      minDuration: 0.209342
     - name: Dash_Event
       guid: 95e188bb4070ed45ba868bf3086cb565
       id: 763920020
@@ -267,8 +284,22 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0f887e3eae74a44cb26ebf97c68431f8
     GuidInternal: 
-    m_lastTime: -8585288291600006737
+    m_lastTime: -8585287479435735415
     List:
+    - name: bulletHitCounter
+      guid: c36755ef23eaae45a5a7249ba94dcf7d
+      id: 3153036660
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0f887e3eae74a44cb26ebf97c68431f8
+      - ElementName: bulletHitCounter
+        ObjectType: 13
+        guid: c36755ef23eaae45a5a7249ba94dcf7d
+      Path: Game Parameters\Default Work Unit\bulletHitCounter
     - name: radioVolume
       guid: 323805eb8c97c649a5abf60665126fc7
       id: 2263952660
@@ -309,7 +340,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 6a3e2242b6b9124c80e5d32b00e0ff4e
     GuidInternal: 
-    m_lastTime: -8585292568146061759
+    m_lastTime: -8585287588094151044
     List:
     - name: Material
       guid: 5d88ca3004d9c644a72bd3d80b44674f
@@ -374,6 +405,22 @@ MonoBehaviour:
         - ElementName: Gravel
           ObjectType: 10
           guid: 8b474bb7aad9614abb447d05403fc8c1
+      - name: Metal
+        guid: 0e0f1fd889b9574d97bc5295cb1030e2
+        id: 2473969246
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 6a3e2242b6b9124c80e5d32b00e0ff4e
+        - ElementName: Material
+          ObjectType: 11
+          guid: 5d88ca3004d9c644a72bd3d80b44674f
+        - ElementName: Metal
+          ObjectType: 10
+          guid: 0e0f1fd889b9574d97bc5295cb1030e2
       - name: Water
         guid: 0127a137f0adb24c91f608c20db1218c
         id: 2654748154

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e360a0b1f441a04089a5464a8b72071, type: 3}
+  m_Name: EF5567C3-EA23-45AE-A5A7-249BA94DCF7D
+  m_EditorClassIdentifier: 
+  objectName: bulletHitCounter
+  id: 3153036660
+  guid: EF5567C3-EA23-45AE-A5A7-249BA94DCF7D

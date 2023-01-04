@@ -59,6 +59,6 @@ public class FollowPlayer : MonoBehaviour
 
     public void PlayShoot()
     {
-        shootSound.Post(gameObject);
+        //shootSound.Post(gameObject);
     }
 }
