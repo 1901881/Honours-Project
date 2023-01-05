@@ -1765,14 +1765,38 @@
 								<Property Name="DryLevel" Type="Real32" Value="-96"/>
 								<Property Name="EnableCrossFeed" Type="bool" Value="True"/>
 								<Property Name="EnableFeedback" Type="bool" Value="True"/>
-								<Property Name="FilterFrequency" Type="Real32" Value="835"/>
+								<Property Name="FilterFrequency" Type="Real32" Value="95">
+									<RTPCList>
+										<RTPC Name="" ID="{C7D6274B-86C2-4D77-949C-331ACA5883B8}" ShortID="1047605477">
+											<ReferenceList/>
+										</RTPC>
+									</RTPCList>
+								</Property>
 								<Property Name="FilterGain" Type="Real32" Value="7"/>
 								<Property Name="FilterType" Type="int32" Value="4"/>
 								<Property Name="LeftCrossfeed" Type="Real32" Value="-3"/>
 								<Property Name="LeftDelayTime" Type="Real32" Value="0.29"/>
 								<Property Name="RightCrossfeed" Type="Real32" Value="-3"/>
 								<Property Name="RightDelayTime" Type="Real32" Value="0.43"/>
+								<Property Name="WetLevel" Type="Real32" Value="10"/>
 							</PropertyList>
+							<StateInfo>
+								<StateGroupList>
+									<StateGroupInfo>
+										<StateGroupRef Name="RadioStateGroup" ID="{6E87B08D-C46F-4F5C-84AB-CA4A187F70C4}"/>
+									</StateGroupInfo>
+								</StateGroupList>
+								<CustomStateList>
+									<CustomState>
+										<StateRef Name="Water" ID="{B0F4AC40-98F2-49E7-87E1-DF6007EBB35B}"/>
+										<CustomState Name="" ID="{03D36BB7-6C31-405B-8E35-4246B8D51C36}" ShortID="955323719"/>
+									</CustomState>
+									<CustomState>
+										<StateRef Name="Ground" ID="{1792BAEA-ACAB-4FD9-BA48-91E17301E1AA}"/>
+										<CustomState Name="" ID="{F4642487-13A9-4237-A961-94E388BC26F0}" ShortID="708283738"/>
+									</CustomState>
+								</CustomStateList>
+							</StateInfo>
 						</Effect>
 						<Effect Name="Blue_Distant_Echoes" ID="{ABFA9875-521E-451F-AAB9-AB148847B9C0}" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
 							<PropertyList>

@@ -1,14 +1,19 @@
 Event	ID	Name			Wwise Object Path	Notes
 	763920020	Dash_Event			\Default Work Unit\Dash_Event	
+	1364784840	ShelfDragPause_Event			\Default Work Unit\ShelfDragPause_Event	
 	1429961119	Shoot_Event			\Default Work Unit\Shoot_Event	
 	2335227409	MusicPlay_Event			\Default Work Unit\MusicPlay_Event	
 	2874369812	FootstepPlay_Event			\Default Work Unit\FootstepPlay_Event	
+	3046056998	ShelfDragPlay_Event			\Default Work Unit\ShelfDragPlay_Event	
 	3124891512	BulletCollisionPlay_Event			\Default Work Unit\BulletCollisionPlay_Event	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
+	1239100674	ShelfDirection			\Default Work Unit\ShelfDirection	
 	3865314626	Material			\Default Work Unit\Material	
 
 Switch	ID	Name	Switch Group			Notes
+	1095208245	Horizontal	ShelfDirection			
+	3767416506	Lateral	ShelfDirection			
 	841620460	Concrete	Material			
 	2058049674	Wood	Material			
 	2185786256	Gravel	Material			
@@ -28,6 +33,7 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	279846214	Footstep_Water_1	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Water\Footstep_Water_1_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Water\Footstep_Water_1		5514
 	316846577	Tengo Ritmo (I Got Rhythm)	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Tengo Ritmo (I Got Rhythm)_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\Tengo Ritmo (I Got Rhythm)		2386008
 	327395850	Footstep_Wood_3	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Wood\Footstep_Wood_3_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Wood\Footstep_Wood_3		6060
+	397982048	Shelf_Drag_Horizontal	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Shelf_Drag_2_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\ShelfMovement\Shelf_Drag_Horizontal		6498
 	470815762	Footstep_Gravel_2	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Gravel\Footstep_Gravel_2_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Gravel\Footstep_Gravel_2		4560
 	573747786	Footstep_Gravel_3	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Gravel\Footstep_Gravel_3_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Gravel\Footstep_Gravel_3		5060
 	604556664	Footstep_Grass_3	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Grass\Footstep_Grass_3_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Grass\Footstep_Grass_3		9681
@@ -46,4 +52,5 @@ In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	974048632	Footstep_Grass_2	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Grass\Footstep_Grass_2_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Grass\Footstep_Grass_2		9263
 	975152429	Footstep_Grass_1	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Foosteps\Grass\Footstep_Grass_1_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Grass\Footstep_Grass_1		9894
 	1011342382	Bullet_Collision_Default_3	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Bullet_Collision_Default_3_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\BulletCollision\Default\Bullet_Collision_Default_3		3076
+	1043477418	Shelf_Drag_Lateral	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Windows\SFX\Shelf_Drag_1_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\ShelfMovement\Shelf_Drag_Lateral		6992
 

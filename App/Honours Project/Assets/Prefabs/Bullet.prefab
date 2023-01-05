@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8913369955678749547}
   - component: {fileID: 1697997429269285581}
   - component: {fileID: 3272266669571082212}
+  - component: {fileID: 7766465891652330111}
   - component: {fileID: 6865660003965667445}
   m_Layer: 0
   m_Name: BulletAudio
@@ -86,6 +87,19 @@ MonoBehaviour:
     positionOffset: {x: 0, y: 0, z: 0}
   m_posOffsetData: {fileID: 0}
   listenerMask: 1
+--- !u!114 &7766465891652330111
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 123590014417163370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 168b75b7ab0e07144a10bd04e05127e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Collider: {fileID: 0}
 --- !u!114 &6865660003965667445
 MonoBehaviour:
   m_ObjectHideFlags: 0

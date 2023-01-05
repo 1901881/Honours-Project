@@ -35,8 +35,7 @@ public class PlayerMovement : MonoBehaviour
     private Color originalColor;
 
     //walking
-    /// The Wwise event to trigger a footstep sound.
-    public AK.Wwise.Event footstepSound = new AK.Wwise.Event();
+
     ///	Used to determine when to trigger footstep sounds.
     private bool walking = false;
     ///	Used to determine when to trigger footstep sounds.

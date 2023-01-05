@@ -11,16 +11,16 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2065352947">
+		<SoundBank Id="1355168291" Language="SFX" Hash="599446529">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<IncludedAuxBusses>
-				<AuxBus Id="2584113389" Name="Footstep_Reverb_Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Footstep_Reverb_Bus"/>
-				<AuxBus Id="3527431049" Name="Footstep_Reverb_Bus_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Reverbs\Footstep_Reverb_Bus_01"/>
+				<AuxBus Id="1564656378" Name="Footstep_Echo_Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Aux_Busses\Footstep_Echo_Bus"/>
+				<AuxBus Id="2584113389" Name="Footstep_Reverb_Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Aux_Busses\Footstep_Reverb_Bus"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="89714943">
+		<SoundBank Id="2228651116" Language="SFX" Hash="2034937726">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank</ObjectPath>
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
@@ -29,6 +29,8 @@
 				<Event Id="763920020" Name="Dash_Event" ObjectPath="\Events\Default Work Unit\Dash_Event" DurationType="OneShot" DurationMin="0.874376" DurationMax="0.874376"/>
 				<Event Id="2874369812" Name="FootstepPlay_Event" ObjectPath="\Events\Default Work Unit\FootstepPlay_Event" DurationType="OneShot" DurationMin="0.252517" DurationMax="0.705306"/>
 				<Event Id="2335227409" Name="MusicPlay_Event" ObjectPath="\Events\Default Work Unit\MusicPlay_Event" MaxAttenuation="25." DurationType="Infinite"/>
+				<Event Id="1364784840" Name="ShelfDragPause_Event" ObjectPath="\Events\Default Work Unit\ShelfDragPause_Event" MaxAttenuation="0." DurationType="OneShot" DurationMin="0." DurationMax="0."/>
+				<Event Id="3046056998" Name="ShelfDragPlay_Event" ObjectPath="\Events\Default Work Unit\ShelfDragPlay_Event" DurationType="Infinite"/>
 				<Event Id="1429961119" Name="Shoot_Event" ObjectPath="\Events\Default Work Unit\Shoot_Event" DurationType="OneShot" DurationMin="0.364263" DurationMax="0.364263"/>
 			</IncludedEvents>
 			<IncludedMemoryFiles>
@@ -59,6 +61,10 @@
 				<File Id="327395850" Language="SFX">
 					<ShortName>Foosteps\Wood\Footstep_Wood_3.wav</ShortName>
 					<Path>SFX\Foosteps\Wood\Footstep_Wood_3_3F75BDB9.wem</Path>
+				</File>
+				<File Id="397982048" Language="SFX">
+					<ShortName>Shelf_Drag_2.wav</ShortName>
+					<Path>SFX\Shelf_Drag_2_9EDFC787.wem</Path>
 				</File>
 				<File Id="470815762" Language="SFX">
 					<ShortName>Foosteps\Gravel\Footstep_Gravel_2.wav</ShortName>
@@ -132,12 +138,22 @@
 					<ShortName>Bullet_Collision_Default_3.wav</ShortName>
 					<Path>SFX\Bullet_Collision_Default_3_3F75BDB9.wem</Path>
 				</File>
+				<File Id="1043477418" Language="SFX">
+					<ShortName>Shelf_Drag_1.wav</ShortName>
+					<Path>SFX\Shelf_Drag_1_9EDFC787.wem</Path>
+				</File>
 			</IncludedMemoryFiles>
 			<GameParameters>
 				<GameParameter Id="2263952660" Name="radioVolume" ObjectPath="\Game Parameters\Default Work Unit\radioVolume"/>
 				<GameParameter Id="3153036660" Name="bulletHitCounter" ObjectPath="\Game Parameters\Default Work Unit\bulletHitCounter"/>
 			</GameParameters>
 			<SwitchGroups>
+				<SwitchGroup Id="1239100674" Name="ShelfDirection" ObjectPath="\Switches\Default Work Unit\ShelfDirection" GUID="{C0F2F11E-2E68-4C67-846E-666BCCC99AF3}">
+					<Switches>
+						<Switch Id="3767416506" Name="Lateral" ObjectPath="\Switches\Default Work Unit\ShelfDirection\Lateral" GUID="{8DD5EAA2-D21F-4209-A9B9-4FD90EAC7B4E}"/>
+						<Switch Id="1095208245" Name="Horizontal" ObjectPath="\Switches\Default Work Unit\ShelfDirection\Horizontal" GUID="{F9DF104A-DA54-4B65-AC2D-8D66DCF9C9D8}"/>
+					</Switches>
+				</SwitchGroup>
 				<SwitchGroup Id="3865314626" Name="Material" ObjectPath="\Switches\Default Work Unit\Material" GUID="{30CA885D-D904-44C6-A72B-D3D80B44674F}">
 					<Switches>
 						<Switch Id="841620460" Name="Concrete" ObjectPath="\Switches\Default Work Unit\Material\Concrete" GUID="{5349A313-9596-4B7F-9F40-0B3CAE39B399}"/>

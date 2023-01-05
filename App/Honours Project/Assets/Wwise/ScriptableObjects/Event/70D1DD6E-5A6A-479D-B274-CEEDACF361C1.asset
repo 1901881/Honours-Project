@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b2cc984c5bb8bc646bb66012ad5ab175, type: 3}
-  m_Name: 5D4A61F7-8DD6-4994-B57B-26B988A75126
+  m_Script: {fileID: 11500000, guid: de7c27e8628832c489a7afe74cdd6e8b, type: 3}
+  m_Name: 70D1DD6E-5A6A-479D-B274-CEEDACF361C1
   m_EditorClassIdentifier: 
-  objectName: Footstep_Echo_Bus
-  id: 1564656378
-  guid: 5D4A61F7-8DD6-4994-B57B-26B988A75126
+  objectName: ShelfDragPlay_Event
+  id: 3046056998
+  guid: 70D1DD6E-5A6A-479D-B274-CEEDACF361C1
