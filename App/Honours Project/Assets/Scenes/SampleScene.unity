@@ -5574,11 +5574,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 4949074319811109971, guid: 72fa988267dbbe94fa4e37d43e4ba902, type: 3}
   m_PrefabInstance: {fileID: 756496826}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &218755140 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5757135739253505769, guid: 72fa988267dbbe94fa4e37d43e4ba902, type: 3}
-  m_PrefabInstance: {fileID: 756496826}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &218755143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5592,6 +5587,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   shelfAudioScript: {fileID: 1488561427}
+  shelfVelocityLimit: 0.35
 --- !u!1001 &225297063
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6455,15 +6451,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7905576763914348242, guid: b7e1bf913b8390743ba88058fd7ac074, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7905576763914348242, guid: b7e1bf913b8390743ba88058fd7ac074, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.2622712
+      value: -2.69
       objectReference: {fileID: 0}
     - target: {fileID: 7905576763914348242, guid: b7e1bf913b8390743ba88058fd7ac074, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.6238685
+      value: 5.12
       objectReference: {fileID: 0}
     - target: {fileID: 7905576763914348242, guid: b7e1bf913b8390743ba88058fd7ac074, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6876,7 +6872,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 2
-    m_TransformParent: {fileID: 784385006}
+    m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1503409082298923166, guid: 72fa988267dbbe94fa4e37d43e4ba902, type: 3}
       propertyPath: shelfScript
@@ -6903,20 +6899,24 @@ PrefabInstance:
       value: filledShelf (20)
       objectReference: {fileID: 0}
     - target: {fileID: 4949074319811109971, guid: 72fa988267dbbe94fa4e37d43e4ba902, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4949074319811109971, guid: 72fa988267dbbe94fa4e37d43e4ba902, type: 3}
       propertyPath: m_TagString
       value: Metal
       objectReference: {fileID: 0}
     - target: {fileID: 5757135739253505769, guid: 72fa988267dbbe94fa4e37d43e4ba902, type: 3}
       propertyPath: m_RootOrder
-      value: -1
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5757135739253505769, guid: 72fa988267dbbe94fa4e37d43e4ba902, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 9.56
+      value: 1.4000006
       objectReference: {fileID: 0}
     - target: {fileID: 5757135739253505769, guid: 72fa988267dbbe94fa4e37d43e4ba902, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.58
+      value: 1.09
       objectReference: {fileID: 0}
     - target: {fileID: 5757135739253505769, guid: 72fa988267dbbe94fa4e37d43e4ba902, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7068,7 +7068,6 @@ Transform:
   - {fileID: 1056610299}
   - {fileID: 711813672}
   - {fileID: 480105043}
-  - {fileID: 218755140}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7778,7 +7777,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   minTimeScale: 0.5
   transitionSpeed: 2
+  bulletTimeDuration: 3
   isBulletTime: 0
+  EMPPlay:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: d3864e644a0af7d42927b1a0d3883e08, type: 2}
+  rtpc:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7408aabdaa0b8a94eb5263ddcf4d26ad, type: 2}
 --- !u!1 &1207834234
 GameObject:
   m_ObjectHideFlags: 0
@@ -8114,7 +8122,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1387748924}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.82, y: -0.07000017, z: 0}
+  m_LocalPosition: {x: 8.83, y: 3.36, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -8409,7 +8417,7 @@ Transform:
   - {fileID: 332066014}
   - {fileID: 1774234397}
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1488561427 stripped
 MonoBehaviour:

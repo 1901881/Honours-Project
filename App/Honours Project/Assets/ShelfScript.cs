@@ -8,6 +8,8 @@ public class ShelfScript : MonoBehaviour
 
     private Rigidbody2D rb;//References rigidbody applied to prefab
 
+    public float shelfVelocityLimit = 0.25f;
+
     string dir;
 
     bool Played = false;
@@ -25,8 +27,10 @@ public class ShelfScript : MonoBehaviour
 
     void CheckDirection()
     {
+        Debug.Log(rb.velocity.sqrMagnitude);
+
         //If object is moving
-        if (rb.velocity.magnitude > 0)
+        if (rb.velocity.sqrMagnitude > shelfVelocityLimit)
         {
             float dotPRight = Vector3.Dot(transform.right.normalized, rb.velocity.normalized);
             if (dotPRight > 0.5f || dotPRight < -0.5f)//Check if moving right or left
@@ -55,11 +59,15 @@ public class ShelfScript : MonoBehaviour
             }
             
         }
-        else
+        else if(rb.velocity.sqrMagnitude <= shelfVelocityLimit)
         {
             //pause
-            shelfAudioScript.PauseShelfSound();
-            Played = false;
+            if(Played)
+            {
+                Debug.Log("Paused shelf sound");
+                shelfAudioScript.PauseShelfSound();
+                Played = false;
+            }
         }
        
     }

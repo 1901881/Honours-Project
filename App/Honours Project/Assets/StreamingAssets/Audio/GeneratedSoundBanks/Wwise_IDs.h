@@ -15,7 +15,6 @@ namespace AK
     {
         static const AkUniqueID BULLETCOLLISIONPLAY_EVENT = 3124891512U;
         static const AkUniqueID DASH_EVENT = 763920020U;
-        static const AkUniqueID EMPPLAY_EVENT = 3376568946U;
         static const AkUniqueID FOOTSTEPPLAY_EVENT = 2874369812U;
         static const AkUniqueID MUSICPLAY_EVENT = 2335227409U;
         static const AkUniqueID SHELFDRAGPAUSE_EVENT = 1364784840U;
