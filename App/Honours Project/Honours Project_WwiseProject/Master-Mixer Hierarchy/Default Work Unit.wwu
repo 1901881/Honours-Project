@@ -27,7 +27,7 @@
 									</ReferenceList>
 									<ObjectLists/>
 								</AuxBus>
-								<AuxBus Name="Footstep_Echo_Bus_" ID="{5D4A61F7-8DD6-4994-B57B-26B988A75126}">
+								<AuxBus Name="Footstep_Echo_Bus" ID="{5D4A61F7-8DD6-4994-B57B-26B988A75126}">
 									<PropertyList>
 										<Property Name="BusVolume" Type="Real64">
 											<ValueList>
@@ -39,13 +39,8 @@
 										<Reference Name="Effect0" PluginName="Wwise Delay" CompanyID="0" PluginID="106" PluginType="3">
 											<ObjectRef Name="One_Tap_Half_Second" ID="{B8FE0D3B-7AAB-4344-89FE-177602B7BF19}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 										</Reference>
-									</ReferenceList>
-									<ObjectLists/>
-								</AuxBus>
-								<AuxBus Name="Water_Delay_Bus" ID="{6379F6B9-AFF5-44FB-A44C-EA43D105186F}">
-									<ReferenceList>
-										<Reference Name="Effect0" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
-											<ObjectRef Name="Underwater_Echoes" ID="{3C6B127B-9DAE-4879-A4ED-75DF209310EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										<Reference Name="Effect1" PluginName="Wwise Matrix Reverb" CompanyID="0" PluginID="115" PluginType="3">
+											<ObjectRef Name="Tunnel1" ID="{CC44B890-9865-4157-965F-86FED27BC4C6}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 										</Reference>
 									</ReferenceList>
 									<ObjectLists/>

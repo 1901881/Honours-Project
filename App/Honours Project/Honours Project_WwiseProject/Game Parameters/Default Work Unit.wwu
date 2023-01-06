@@ -15,6 +15,12 @@
 						<Property Name="Max" Type="Real64" Value="3"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="Timescale" ID="{901E7747-7E33-445B-B4DA-744D37A2C75A}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="1"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

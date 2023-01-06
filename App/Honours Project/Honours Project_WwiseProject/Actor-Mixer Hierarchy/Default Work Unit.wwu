@@ -75,6 +75,11 @@
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="UserAuxSendVolume0" Type="Real64">
+							<ValueList>
+								<Value>12</Value>
+							</ValueList>
+						</Property>
 						<Property Name="Volume" Type="Real64">
 							<RTPCList>
 								<RTPC Name="" ID="{886170F5-1705-492F-B9E1-3F74CA6B1ED3}" ShortID="854104905">
@@ -134,10 +139,46 @@
 											</CurveUsageInfo>
 										</VolumeDryUsage>
 										<VolumeWetGameUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry">
+												<Curve Name="VolumeWetGame" ID="{8A92DB74-C35E-4498-91E2-51E29571B511}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="3"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+														</Point>
+														<Point>
+															<XPos>25</XPos>
+															<YPos>-200</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
 										</VolumeWetGameUsage>
 										<VolumeWetUserUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry"/>
+											<CurveUsageInfo Platform="Linked" CurveToUse="UseVolumeDry">
+												<Curve Name="VolumeWetUser" ID="{A56595FC-B308-4F97-AB95-8DAE4417F01A}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="3"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>0</YPos>
+															<Flags>5</Flags>
+														</Point>
+														<Point>
+															<XPos>25</XPos>
+															<YPos>-200</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
 										</VolumeWetUserUsage>
 										<LowPassFilterUsage>
 											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
@@ -157,9 +198,6 @@
 						</Reference>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DD8F3317-607F-4DFC-8345-AA0A1BF4B176}"/>
-						</Reference>
-						<Reference Name="Effect0" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
-							<ObjectRef Name="Underwater_Echoes" ID="{3C6B127B-9DAE-4879-A4ED-75DF209310EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{964E5123-7B63-46FD-ACD8-C72F3513DC0F}"/>
@@ -184,21 +222,6 @@
 							<Property Name="UserAuxSendVolume0"/>
 							<Property Name="Volume"/>
 						</StatePropertyList>
-						<StateGroupList>
-							<StateGroupInfo>
-								<StateGroupRef Name="RadioStateGroup" ID="{6E87B08D-C46F-4F5C-84AB-CA4A187F70C4}"/>
-							</StateGroupInfo>
-						</StateGroupList>
-						<CustomStateList>
-							<CustomState>
-								<StateRef Name="Water" ID="{B0F4AC40-98F2-49E7-87E1-DF6007EBB35B}"/>
-								<CustomState Name="" ID="{7F281E68-AF4A-44B3-BBE1-8B6A361D85ED}" ShortID="741930161"/>
-							</CustomState>
-							<CustomState>
-								<StateRef Name="Ground" ID="{1792BAEA-ACAB-4FD9-BA48-91E17301E1AA}"/>
-								<CustomState Name="" ID="{801D7EBB-0DDB-4B5A-9847-940FC87A71FF}" ShortID="1062770426"/>
-							</CustomState>
-						</CustomStateList>
 					</StateInfo>
 					<ObjectLists/>
 					<ActiveSourceList>
@@ -1180,6 +1203,144 @@
 						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
+				<SwitchContainer Name="ShelfMovement" ID="{1830DB15-9302-460B-80EE-3FC3B04ADDB4}" ShortID="491946495">
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DD8F3317-607F-4DFC-8345-AA0A1BF4B176}"/>
+						</Reference>
+						<Reference Name="DefaultSwitchOrState">
+							<ObjectRef Name="Horizontal" ID="{F9DF104A-DA54-4B65-AC2D-8D66DCF9C9D8}" WorkUnitID="{42223E6A-B9B6-4C12-80E5-D32B00E0FF4E}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{964E5123-7B63-46FD-ACD8-C72F3513DC0F}"/>
+						</Reference>
+						<Reference Name="SwitchGroupOrStateGroup">
+							<ObjectRef Name="ShelfDirection" ID="{C0F2F11E-2E68-4C67-846E-666BCCC99AF3}" WorkUnitID="{42223E6A-B9B6-4C12-80E5-D32B00E0FF4E}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<Sound Name="Shelf_Drag_Lateral" ID="{AC6595F1-01F1-4720-89EC-4BE95AC76DEC}" ShortID="597975157">
+							<PropertyList>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DD8F3317-607F-4DFC-8345-AA0A1BF4B176}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{964E5123-7B63-46FD-ACD8-C72F3513DC0F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Shelf_Drag_1" ID="{E3E2BFD8-8B52-4899-9587-6F44DBB48F2D}">
+									<Language>SFX</Language>
+									<AudioFile>Shelf_Drag_1.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="1043477418"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Shelf_Drag_1" ID="{E3E2BFD8-8B52-4899-9587-6F44DBB48F2D}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+						<Sound Name="Shelf_Drag_Horizontal" ID="{3C4BB633-FC65-40C7-98CB-A0F499A8B019}" ShortID="730376013">
+							<PropertyList>
+								<Property Name="Highpass" Type="int16">
+									<ValueList>
+										<Value>25</Value>
+									</ValueList>
+								</Property>
+								<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+								<Property Name="Lowpass" Type="int16">
+									<ValueList>
+										<Value>25</Value>
+									</ValueList>
+								</Property>
+								<Property Name="Pitch" Type="int32">
+									<ValueList>
+										<Value>100</Value>
+									</ValueList>
+								</Property>
+								<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Conversion">
+									<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DD8F3317-607F-4DFC-8345-AA0A1BF4B176}"/>
+								</Reference>
+								<Reference Name="OutputBus">
+									<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{964E5123-7B63-46FD-ACD8-C72F3513DC0F}"/>
+								</Reference>
+							</ReferenceList>
+							<ChildrenList>
+								<AudioFileSource Name="Shelf_Drag_2" ID="{EA1E975E-0CEE-4BA5-B02B-D0150E9F1A73}">
+									<Language>SFX</Language>
+									<AudioFile>Shelf_Drag_2.wav</AudioFile>
+									<MediaIDList>
+										<MediaID ID="397982048"/>
+									</MediaIDList>
+								</AudioFileSource>
+							</ChildrenList>
+							<ObjectLists/>
+							<ActiveSourceList>
+								<ActiveSource Name="Shelf_Drag_2" ID="{EA1E975E-0CEE-4BA5-B02B-D0150E9F1A73}" Platform="Linked"/>
+							</ActiveSourceList>
+						</Sound>
+					</ChildrenList>
+					<ObjectLists/>
+					<GroupingInfo>
+						<GroupingBehaviorList>
+							<GroupingBehavior>
+								<ItemRef Name="Shelf_Drag_Horizontal" ID="{3C4BB633-FC65-40C7-98CB-A0F499A8B019}"/>
+							</GroupingBehavior>
+							<GroupingBehavior>
+								<ItemRef Name="Shelf_Drag_Lateral" ID="{AC6595F1-01F1-4720-89EC-4BE95AC76DEC}"/>
+							</GroupingBehavior>
+						</GroupingBehaviorList>
+						<GroupingList>
+							<Grouping>
+								<SwitchRef Name="Horizontal" ID="{F9DF104A-DA54-4B65-AC2D-8D66DCF9C9D8}"/>
+								<ItemList>
+									<ItemRef Name="Shelf_Drag_Horizontal" ID="{3C4BB633-FC65-40C7-98CB-A0F499A8B019}"/>
+								</ItemList>
+							</Grouping>
+							<Grouping>
+								<SwitchRef Name="Lateral" ID="{8DD5EAA2-D21F-4209-A9B9-4FD90EAC7B4E}"/>
+								<ItemList>
+									<ItemRef Name="Shelf_Drag_Lateral" ID="{AC6595F1-01F1-4720-89EC-4BE95AC76DEC}"/>
+								</ItemList>
+							</Grouping>
+						</GroupingList>
+					</GroupingInfo>
+				</SwitchContainer>
+				<Sound Name="EMP" ID="{6594BF2A-E9BB-45A1-ACC4-856EE1534B46}" ShortID="450371413">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DD8F3317-607F-4DFC-8345-AA0A1BF4B176}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{964E5123-7B63-46FD-ACD8-C72F3513DC0F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="EMP" ID="{CB25CE83-BED0-4E41-8B14-09C7E70804CF}">
+							<Language>SFX</Language>
+							<AudioFile>EMP.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="10018974"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="EMP" ID="{CB25CE83-BED0-4E41-8B14-09C7E70804CF}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
 			</ChildrenList>
 		</WorkUnit>
 	</AudioObjects>

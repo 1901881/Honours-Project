@@ -7,6 +7,7 @@ Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	2584113389	Footstep_Reverb_Bus			\Default Work Unit\Master Audio Bus\Aux_Busses\Footstep_Reverb_Bus	
 
 Effect plug-ins	ID	Name	Type				Notes
+	702543456	Tunnel1	Wwise Matrix Reverb			
 	1990128658	Room_Medium	Wwise RoomVerb			
 	3487820010	One_Tap_Half_Second	Wwise Delay			
 

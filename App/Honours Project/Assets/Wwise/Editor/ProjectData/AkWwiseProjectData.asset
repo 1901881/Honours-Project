@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 23514e96637bfd46acd8c72f3513dc0f
     GuidInternal: 
-    m_lastTime: -8585287216803701845
+    m_lastTime: -8585285922961966852
     List:
     - name: Aux_Busses
       guid: 18219247d4a5104794704b8450519d34
@@ -57,9 +57,9 @@ MonoBehaviour:
         ObjectType: 2
         guid: 18219247d4a5104794704b8450519d34
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Aux_Busses
-    - name: Footstep_Echo_Bus_
+    - name: Footstep_Echo_Bus
       guid: f7614a5dd68d9449b57b26b988a75126
-      id: 3390631889
+      id: 1564656378
       PathAndIcons:
       - ElementName: Master-Mixer Hierarchy
         ObjectType: 5
@@ -73,10 +73,10 @@ MonoBehaviour:
       - ElementName: Aux_Busses
         ObjectType: 2
         guid: 18219247d4a5104794704b8450519d34
-      - ElementName: Footstep_Echo_Bus_
+      - ElementName: Footstep_Echo_Bus
         ObjectType: 1
         guid: f7614a5dd68d9449b57b26b988a75126
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Aux_Busses\Footstep_Echo_Bus_
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Aux_Busses\Footstep_Echo_Bus
     - name: Footstep_Reverb_Bus
       guid: db9171c3c1d6954dad5f06c70db4079b
       id: 2584113389
@@ -111,26 +111,6 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
-    - name: Water_Delay_Bus
-      guid: b9f67963f5affb44a44cea43d105186f
-      id: 1131962333
-      PathAndIcons:
-      - ElementName: Master-Mixer Hierarchy
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 23514e96637bfd46acd8c72f3513dc0f
-      - ElementName: Master Audio Bus
-        ObjectType: 2
-        guid: d8a41415a61d2a41a17e75ca0c2149f3
-      - ElementName: Aux_Busses
-        ObjectType: 2
-        guid: 18219247d4a5104794704b8450519d34
-      - ElementName: Water_Delay_Bus
-        ObjectType: 1
-        guid: b9f67963f5affb44a44cea43d105186f
-      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Aux_Busses\Water_Delay_Bus
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -143,7 +123,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e012f0fee2933743b43e2928d763f623
     GuidInternal: 
-    m_lastTime: -8585287479435935112
+    m_lastTime: -8585285922963240942
     List:
     - name: Main_SoundBank
       guid: 1fd17201ef5580468616f59cad221366
@@ -171,7 +151,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: da09d9ff32957f408ab7df7be7ced7ae
     GuidInternal: 
-    m_lastTime: -8585287588093322879
+    m_lastTime: -8585285922962599739
     List:
     - name: BulletCollisionPlay_Event
       guid: a17a8706034ef44ba53c9b5a66fcc51b
@@ -241,9 +221,9 @@ MonoBehaviour:
       maxAttenuation: 25
       maxDuration: -1
       minDuration: -1
-    - name: New_Event
-      guid: 9caaecb2dfdf984e9af6975c2528020e
-      id: 3050945240
+    - name: ShelfDragPause_Event
+      guid: c056dff6d7a3ac49ba2a44d140e1fbfe
+      id: 1364784840
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -251,16 +231,16 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: da09d9ff32957f408ab7df7be7ced7ae
-      - ElementName: New_Event
+      - ElementName: ShelfDragPause_Event
         ObjectType: 3
-        guid: 9caaecb2dfdf984e9af6975c2528020e
-      Path: Events\Default Work Unit\New_Event
+        guid: c056dff6d7a3ac49ba2a44d140e1fbfe
+      Path: Events\Default Work Unit\ShelfDragPause_Event
       maxAttenuation: 0
       maxDuration: 0
       minDuration: 0
-    - name: RandomFootstepPlay_Event
-      guid: e33a86b5f5457047a572b24eb832616f
-      id: 1006977509
+    - name: ShelfDragPlay_Event
+      guid: 6eddd1706a5a9d47b274ceedacf361c1
+      id: 3046056998
       PathAndIcons:
       - ElementName: Events
         ObjectType: 5
@@ -268,13 +248,13 @@ MonoBehaviour:
       - ElementName: Default Work Unit
         ObjectType: 12
         guid: da09d9ff32957f408ab7df7be7ced7ae
-      - ElementName: RandomFootstepPlay_Event
+      - ElementName: ShelfDragPlay_Event
         ObjectType: 3
-        guid: e33a86b5f5457047a572b24eb832616f
-      Path: Events\Default Work Unit\RandomFootstepPlay_Event
+        guid: 6eddd1706a5a9d47b274ceedacf361c1
+      Path: Events\Default Work Unit\ShelfDragPlay_Event
       maxAttenuation: 0
-      maxDuration: 0.326531
-      minDuration: 0.252517
+      maxDuration: -1
+      minDuration: -1
     - name: Shoot_Event
       guid: bb6b9b05e3115244a7f418203f60b9bf
       id: 1429961119
@@ -304,7 +284,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0f887e3eae74a44cb26ebf97c68431f8
     GuidInternal: 
-    m_lastTime: -8585287479435735415
+    m_lastTime: -8585285922962280661
     List:
     - name: bulletHitCounter
       guid: c36755ef23eaae45a5a7249ba94dcf7d
@@ -334,6 +314,20 @@ MonoBehaviour:
         ObjectType: 13
         guid: 323805eb8c97c649a5abf60665126fc7
       Path: Game Parameters\Default Work Unit\radioVolume
+    - name: Timescale
+      guid: 47771e90337e5b44b4da744d37a2c75a
+      id: 4070528516
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0f887e3eae74a44cb26ebf97c68431f8
+      - ElementName: Timescale
+        ObjectType: 13
+        guid: 47771e90337e5b44b4da744d37a2c75a
+      Path: Game Parameters\Default Work Unit\Timescale
   StateWwu:
   - PhysicalPath: States\Default Work Unit.wwu
     PathAndIcons:
@@ -346,74 +340,8 @@ MonoBehaviour:
     ParentPath: States\Default Work Unit
     guid: 1eed0c4aa4fb104bbc8552e3d5888a23
     GuidInternal: 
-    m_lastTime: -8585287216803981962
-    List:
-    - name: RadioStateGroup
-      guid: 8db0876e6fc45c4f84abca4a187f70c4
-      id: 3930036290
-      PathAndIcons:
-      - ElementName: States
-        ObjectType: 5
-        guid: 00000000000000000000000000000000
-      - ElementName: Default Work Unit
-        ObjectType: 12
-        guid: 1eed0c4aa4fb104bbc8552e3d5888a23
-      - ElementName: RadioStateGroup
-        ObjectType: 9
-        guid: 8db0876e6fc45c4f84abca4a187f70c4
-      Path: States\Default Work Unit\RadioStateGroup
-      values:
-      - name: Ground
-        guid: eaba9217abacd94fba4891e17301e1aa
-        id: 2528658256
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 1eed0c4aa4fb104bbc8552e3d5888a23
-        - ElementName: RadioStateGroup
-          ObjectType: 9
-          guid: 8db0876e6fc45c4f84abca4a187f70c4
-        - ElementName: Ground
-          ObjectType: 8
-          guid: eaba9217abacd94fba4891e17301e1aa
-      - name: None
-        guid: b8299b17b870e84e882f422dfd7112ef
-        id: 748895195
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 1eed0c4aa4fb104bbc8552e3d5888a23
-        - ElementName: RadioStateGroup
-          ObjectType: 9
-          guid: 8db0876e6fc45c4f84abca4a187f70c4
-        - ElementName: None
-          ObjectType: 8
-          guid: b8299b17b870e84e882f422dfd7112ef
-      - name: Water
-        guid: 40acf4b0f298e74987e1df6007ebb35b
-        id: 2654748154
-        PathAndIcons:
-        - ElementName: States
-          ObjectType: 5
-          guid: 00000000000000000000000000000000
-        - ElementName: Default Work Unit
-          ObjectType: 12
-          guid: 1eed0c4aa4fb104bbc8552e3d5888a23
-        - ElementName: RadioStateGroup
-          ObjectType: 9
-          guid: 8db0876e6fc45c4f84abca4a187f70c4
-        - ElementName: Water
-          ObjectType: 8
-          guid: 40acf4b0f298e74987e1df6007ebb35b
-      ValueGuids: []
-      ValueIcons: []
-      valuesInternal: []
+    m_lastTime: -8585285922962901510
+    List: []
   SwitchWwu:
   - PhysicalPath: Switches\Default Work Unit.wwu
     PathAndIcons:
@@ -426,7 +354,7 @@ MonoBehaviour:
     ParentPath: Switches\Default Work Unit
     guid: 6a3e2242b6b9124c80e5d32b00e0ff4e
     GuidInternal: 
-    m_lastTime: -8585287588094151044
+    m_lastTime: -8585285922963771302
     List:
     - name: Material
       guid: 5d88ca3004d9c644a72bd3d80b44674f
@@ -539,6 +467,56 @@ MonoBehaviour:
         - ElementName: Wood
           ObjectType: 10
           guid: 1a4be74521f6254e8b5611b9d0c436a6
+      ValueGuids: []
+      ValueIcons: []
+      valuesInternal: []
+    - name: ShelfDirection
+      guid: 1ef1f2c0682e674c846e666bccc99af3
+      id: 1239100674
+      PathAndIcons:
+      - ElementName: Switches
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 6a3e2242b6b9124c80e5d32b00e0ff4e
+      - ElementName: ShelfDirection
+        ObjectType: 11
+        guid: 1ef1f2c0682e674c846e666bccc99af3
+      Path: Switches\Default Work Unit\ShelfDirection
+      values:
+      - name: Horizontal
+        guid: 4a10dff954da654bac2d8d66dcf9c9d8
+        id: 1095208245
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 6a3e2242b6b9124c80e5d32b00e0ff4e
+        - ElementName: ShelfDirection
+          ObjectType: 11
+          guid: 1ef1f2c0682e674c846e666bccc99af3
+        - ElementName: Horizontal
+          ObjectType: 10
+          guid: 4a10dff954da654bac2d8d66dcf9c9d8
+      - name: Lateral
+        guid: a2ead58d1fd20942a9b94fd90eac7b4e
+        id: 3767416506
+        PathAndIcons:
+        - ElementName: Switches
+          ObjectType: 5
+          guid: 00000000000000000000000000000000
+        - ElementName: Default Work Unit
+          ObjectType: 12
+          guid: 6a3e2242b6b9124c80e5d32b00e0ff4e
+        - ElementName: ShelfDirection
+          ObjectType: 11
+          guid: 1ef1f2c0682e674c846e666bccc99af3
+        - ElementName: Lateral
+          ObjectType: 10
+          guid: a2ead58d1fd20942a9b94fd90eac7b4e
       ValueGuids: []
       ValueIcons: []
       valuesInternal: []

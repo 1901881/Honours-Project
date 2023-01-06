@@ -13,6 +13,12 @@
 						<Switch Name="Metal" ID="{D81F0F0E-B989-4D57-97BC-5295CB1030E2}"/>
 					</ChildrenList>
 				</SwitchGroup>
+				<SwitchGroup Name="ShelfDirection" ID="{C0F2F11E-2E68-4C67-846E-666BCCC99AF3}">
+					<ChildrenList>
+						<Switch Name="Lateral" ID="{8DD5EAA2-D21F-4209-A9B9-4FD90EAC7B4E}"/>
+						<Switch Name="Horizontal" ID="{F9DF104A-DA54-4B65-AC2D-8D66DCF9C9D8}"/>
+					</ChildrenList>
+				</SwitchGroup>
 			</ChildrenList>
 		</WorkUnit>
 	</Switches>

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de7c27e8628832c489a7afe74cdd6e8b, type: 3}
+  m_Name: 2ED6E5CE-8E5B-414E-A5DB-E36D9900862D
+  m_EditorClassIdentifier: 
+  objectName: EMPPlay_Event
+  id: 3376568946
+  guid: 2ED6E5CE-8E5B-414E-A5DB-E36D9900862D

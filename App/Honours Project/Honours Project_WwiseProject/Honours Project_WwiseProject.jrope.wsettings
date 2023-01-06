@@ -6,12 +6,15 @@
 				<Property Name="AudioFilesImporter\Path" Type="string" Value="C:\Users\jrope\OneDrive - Abertay University\Documents\Uni Year 4\CMP404 - AR\Audio\Wav\"/>
 				<Property Name="Event Action List\{059B6BBB-11E3-4452-A7F4-18203F60B9BF}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{06877AA1-4E03-4BF4-A53C-9B5A66FCC51B}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{0CC547E3-2AA8-4292-A6D0-8AAD9AD30B1B}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{41F831D7-CE0E-4688-986D-57B8829897DC}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{70D1DD6E-5A6A-479D-B274-CEEDACF361C1}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{8ACAC07A-BB0E-431A-8B32-C90422A41C14}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{B2ECAA9C-DFDF-4E98-9AF6-975C2528020E}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{B5863AE3-45F5-4770-A572-B24EB832616F}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{BB88E195-7040-45ED-BA86-8BF3086CB565}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="Event Action List\{E73713F2-6CEE-4E43-BA93-16B3C5C9C0F1}\x64_Expand States" Type="string" Value=""/>
+				<Property Name="Event Action List\{F6DF56C0-A3D7-49AC-BA2A-44D140E1FBFE}\x64_Expand States" Type="string" Value=""/>
 				<Property Name="EventView\FilterMode1" Type="int32" Value="2"/>
 				<Property Name="ExternalSourcesInputPath" Type="string">
 					<ValueList>

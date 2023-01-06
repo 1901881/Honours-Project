@@ -636,6 +636,7 @@
 										<Property Name="FilterTypeBand2" Type="int32" Value="2"/>
 										<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
 										<Property Name="FrequencyBand1" Type="Real32" Value="1000"/>
+										<Property Name="FrequencyBand2" Type="Real32" Value="20"/>
 										<Property Name="FrequencyBand3" Type="Real32" Value="10000"/>
 										<Property Name="OnOffBand1" Type="bool" Value="False"/>
 										<Property Name="OnOffBand3" Type="bool" Value="False"/>
@@ -658,16 +659,16 @@
 										<Property Name="FilterTypeBand2" Type="int32" Value="3"/>
 										<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
 										<Property Name="FrequencyBand1" Type="Real32" Value="500"/>
-										<Property Name="OnOffBand2" Type="bool" Value="False"/>
+										<Property Name="FrequencyBand2" Type="Real32" Value="20000"/>
 									</PropertyList>
 								</Effect>
 								<Effect Name="Dual_Filters_Radio_Comm" ID="{69479ACD-2C87-4007-B83E-55210A3B36B7}" PluginName="Wwise Parametric EQ" CompanyID="0" PluginID="105" PluginType="3">
 									<PropertyList>
 										<Property Name="FilterTypeBand1" Type="int32" Value="1"/>
 										<Property Name="FilterTypeBand3" Type="int32" Value="0"/>
-										<Property Name="FrequencyBand1" Type="Real32" Value="800"/>
-										<Property Name="FrequencyBand2" Type="Real32" Value="3000"/>
-										<Property Name="FrequencyBand3" Type="Real32" Value="4660"/>
+										<Property Name="FrequencyBand1" Type="Real32" Value="20"/>
+										<Property Name="FrequencyBand2" Type="Real32" Value="20"/>
+										<Property Name="FrequencyBand3" Type="Real32" Value="20000"/>
 										<Property Name="GainBand2" Type="Real32" Value="18"/>
 										<Property Name="OutputLevel" Type="Real32" Value="-12"/>
 									</PropertyList>
@@ -1257,17 +1258,17 @@
 								<Effect Name="Room_Medium" ID="{F5C06EC1-E4A4-4332-A7D3-A89E2986B74F}" PluginName="Wwise RoomVerb" CompanyID="0" PluginID="118" PluginType="3">
 									<PropertyList>
 										<Property Name="DecayTime" Type="Real32" Value="1.1"/>
-										<Property Name="Density" Type="Real32" Value="100"/>
-										<Property Name="Diffusion" Type="Real32" Value="46"/>
+										<Property Name="Density" Type="Real32" Value="36"/>
+										<Property Name="Diffusion" Type="Real32" Value="0"/>
 										<Property Name="ERLevel" Type="Real32" Value="-23"/>
 										<Property Name="Filter1Freq" Type="Real32" Value="590"/>
 										<Property Name="Filter3Freq" Type="Real32" Value="8440"/>
 										<Property Name="Filter3Gain" Type="Real32" Value="-4.5"/>
-										<Property Name="HFDamping" Type="Real32" Value="2.7"/>
-										<Property Name="Quality" Type="int32" Value="12"/>
+										<Property Name="HFDamping" Type="Real32" Value="1.75"/>
+										<Property Name="Quality" Type="int32" Value="16"/>
 										<Property Name="ReverbLevel" Type="Real32" Value="-22"/>
 										<Property Name="RoomShape" Type="Real32" Value="55"/>
-										<Property Name="RoomSize" Type="Real32" Value="15"/>
+										<Property Name="RoomSize" Type="Real32" Value="100"/>
 										<Property Name="StereoWidth" Type="Real32" Value="115"/>
 									</PropertyList>
 								</Effect>
@@ -1567,9 +1568,10 @@
 										<Property Name="DelayTime" Type="Real32" Value="10"/>
 										<Property Name="FeedBackLevel" Type="Real32" Value="0.75"/>
 										<Property Name="FeedForwardLevel" Type="Real32" Value="0.5"/>
-										<Property Name="ModDepth" Type="Real32" Value="60"/>
-										<Property Name="ModFrequency" Type="Real32" Value="0.25"/>
+										<Property Name="ModDepth" Type="Real32" Value="58.9"/>
+										<Property Name="ModFrequency" Type="Real32" Value="0.69"/>
 										<Property Name="ModPWM" Type="Real32" Value="0"/>
+										<Property Name="OutputLevel" Type="Real32" Value="-7"/>
 									</PropertyList>
 								</Effect>
 								<Effect Name="Heavy_Metal" ID="{9104321C-9E54-4879-A29A-EF8D46BE9035}" PluginName="Wwise Flanger" CompanyID="0" PluginID="125" PluginType="3">
@@ -1577,7 +1579,7 @@
 										<Property Name="DelayTime" Type="Real32" Value="7"/>
 										<Property Name="FeedBackLevel" Type="Real32" Value="0.95"/>
 										<Property Name="ModDepth" Type="Real32" Value="2"/>
-										<Property Name="ModFrequency" Type="Real32" Value="0.25"/>
+										<Property Name="ModFrequency" Type="Real32" Value="0.36"/>
 										<Property Name="ModPWM" Type="Real32" Value="0"/>
 									</PropertyList>
 								</Effect>
@@ -1765,38 +1767,17 @@
 								<Property Name="DryLevel" Type="Real32" Value="-96"/>
 								<Property Name="EnableCrossFeed" Type="bool" Value="True"/>
 								<Property Name="EnableFeedback" Type="bool" Value="True"/>
-								<Property Name="FilterFrequency" Type="Real32" Value="95">
-									<RTPCList>
-										<RTPC Name="" ID="{C7D6274B-86C2-4D77-949C-331ACA5883B8}" ShortID="1047605477">
-											<ReferenceList/>
-										</RTPC>
-									</RTPCList>
-								</Property>
+								<Property Name="FilterFrequency" Type="Real32" Value="189"/>
 								<Property Name="FilterGain" Type="Real32" Value="7"/>
+								<Property Name="FilterQFactor" Type="Real32" Value="20"/>
 								<Property Name="FilterType" Type="int32" Value="4"/>
+								<Property Name="FrontRearBalance" Type="Real32" Value="-68"/>
 								<Property Name="LeftCrossfeed" Type="Real32" Value="-3"/>
 								<Property Name="LeftDelayTime" Type="Real32" Value="0.29"/>
 								<Property Name="RightCrossfeed" Type="Real32" Value="-3"/>
 								<Property Name="RightDelayTime" Type="Real32" Value="0.43"/>
-								<Property Name="WetLevel" Type="Real32" Value="10"/>
+								<Property Name="WetLevel" Type="Real32" Value="20"/>
 							</PropertyList>
-							<StateInfo>
-								<StateGroupList>
-									<StateGroupInfo>
-										<StateGroupRef Name="RadioStateGroup" ID="{6E87B08D-C46F-4F5C-84AB-CA4A187F70C4}"/>
-									</StateGroupInfo>
-								</StateGroupList>
-								<CustomStateList>
-									<CustomState>
-										<StateRef Name="Water" ID="{B0F4AC40-98F2-49E7-87E1-DF6007EBB35B}"/>
-										<CustomState Name="" ID="{03D36BB7-6C31-405B-8E35-4246B8D51C36}" ShortID="955323719"/>
-									</CustomState>
-									<CustomState>
-										<StateRef Name="Ground" ID="{1792BAEA-ACAB-4FD9-BA48-91E17301E1AA}"/>
-										<CustomState Name="" ID="{F4642487-13A9-4237-A961-94E388BC26F0}" ShortID="708283738"/>
-									</CustomState>
-								</CustomStateList>
-							</StateInfo>
 						</Effect>
 						<Effect Name="Blue_Distant_Echoes" ID="{ABFA9875-521E-451F-AAB9-AB148847B9C0}" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
 							<PropertyList>

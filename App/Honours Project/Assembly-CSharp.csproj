@@ -58,6 +58,7 @@
   <ItemGroup>
     <Compile Include="Assets\ShelfScript.cs" />
     <Compile Include="Assets\Scripts\ScreenShake.cs" />
+    <Compile Include="Assets\Scripts\BulletTime.cs" />
     <Compile Include="Assets\Scripts\Player\BasicEnemy.cs" />
     <Compile Include="Assets\Scripts\Player\Weapon.cs" />
     <Compile Include="Assets\Scripts\Radio.cs" />
@@ -69,7 +70,6 @@
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\ChangeMaterialColour.cs" />
     <Compile Include="Assets\ShelfAudio.cs" />
-    <Compile Include="Assets\Scripts\BulletTime.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\WwiseSettings.xml" />

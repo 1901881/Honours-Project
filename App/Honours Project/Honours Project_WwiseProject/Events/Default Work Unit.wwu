@@ -43,31 +43,6 @@
 						</Action>
 					</ChildrenList>
 				</Event>
-				<Event Name="RandomFootstepPlay_Event" ID="{B5863AE3-45F5-4770-A572-B24EB832616F}">
-					<ChildrenList>
-						<Action Name="" ID="{17F626DD-1191-48A2-BDCA-01D1B02742C7}" ShortID="935285026">
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="RandomFootsteps" ID="{02F4FE7D-7FDB-4F02-B914-107A8EF8D935}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
-				<Event Name="New_Event" ID="{B2ECAA9C-DFDF-4E98-9AF6-975C2528020E}">
-					<ChildrenList>
-						<Action Name="" ID="{FDA2716E-0CEF-4274-842D-234487DCC060}" ShortID="184658465">
-							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="26"/>
-							</PropertyList>
-							<ReferenceList>
-								<Reference Name="Target">
-									<ObjectRef Name="RandomFootsteps" ID="{02F4FE7D-7FDB-4F02-B914-107A8EF8D935}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}"/>
-								</Reference>
-							</ReferenceList>
-						</Action>
-					</ChildrenList>
-				</Event>
 				<Event Name="FootstepPlay_Event" ID="{8ACAC07A-BB0E-431A-8B32-C90422A41C14}">
 					<ChildrenList>
 						<Action Name="" ID="{3BDF039A-2DFD-435E-9467-171AC0FEE57C}" ShortID="484316010">
@@ -85,6 +60,31 @@
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="BulletCollision" ID="{0DEB8984-72C5-4B0F-BBA3-89FC17A17988}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ShelfDragPlay_Event" ID="{70D1DD6E-5A6A-479D-B274-CEEDACF361C1}">
+					<ChildrenList>
+						<Action Name="" ID="{DE306617-1B74-412A-9220-BEEDE55AC08B}" ShortID="465396108">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ShelfMovement" ID="{1830DB15-9302-460B-80EE-3FC3B04ADDB4}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="ShelfDragPause_Event" ID="{F6DF56C0-A3D7-49AC-BA2A-44D140E1FBFE}">
+					<ChildrenList>
+						<Action Name="" ID="{F6789B36-75F2-4800-9DB0-C48910C44803}" ShortID="1053607404">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="7"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="ShelfMovement" ID="{1830DB15-9302-460B-80EE-3FC3B04ADDB4}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

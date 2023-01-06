@@ -1,16 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <WwiseDocument Type="WorkUnit" ID="{4A0CED1E-FBA4-4B10-BC85-52E3D5888A23}" SchemaVersion="103">
 	<States>
-		<WorkUnit Name="Default Work Unit" ID="{4A0CED1E-FBA4-4B10-BC85-52E3D5888A23}" PersistMode="Standalone">
-			<ChildrenList>
-				<StateGroup Name="RadioStateGroup" ID="{6E87B08D-C46F-4F5C-84AB-CA4A187F70C4}">
-					<ChildrenList>
-						<State Name="None" ID="{179B29B8-70B8-4EE8-882F-422DFD7112EF}"/>
-						<State Name="Water" ID="{B0F4AC40-98F2-49E7-87E1-DF6007EBB35B}"/>
-						<State Name="Ground" ID="{1792BAEA-ACAB-4FD9-BA48-91E17301E1AA}"/>
-					</ChildrenList>
-				</StateGroup>
-			</ChildrenList>
-		</WorkUnit>
+		<WorkUnit Name="Default Work Unit" ID="{4A0CED1E-FBA4-4B10-BC85-52E3D5888A23}" PersistMode="Standalone"/>
 	</States>
 </WwiseDocument>

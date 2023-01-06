@@ -6,7 +6,10 @@
 				<SoundBank Name="Main_SoundBank" ID="{0172D11F-55EF-4680-8616-F59CAD221366}">
 					<ObjectInclusionList>
 						<ObjectRef Name="shoot" ID="{7A32F505-6423-4084-82BF-5DE830AD5FD6}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Shelf_Drag_Horizontal" ID="{3C4BB633-FC65-40C7-98CB-A0F499A8B019}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Foosteps" ID="{FCC58427-D727-4480-A41B-5AEECB21C9F1}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="ShelfMovement" ID="{1830DB15-9302-460B-80EE-3FC3B04ADDB4}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="Shelf_Drag_Lateral" ID="{AC6595F1-01F1-4720-89EC-4BE95AC76DEC}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Tengo Ritmo (I Got Rhythm)" ID="{1BB55672-B40F-488D-BF44-B0E36E68D423}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Static_Noise" ID="{5D3ED39C-5428-4944-80BA-0408E3DF20A7}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="BulletCollision" ID="{0DEB8984-72C5-4B0F-BBA3-89FC17A17988}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}" Origin="Manual" Filter="7"/>

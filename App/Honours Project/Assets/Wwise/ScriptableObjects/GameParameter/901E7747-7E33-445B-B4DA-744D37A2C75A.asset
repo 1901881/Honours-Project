@@ -9,9 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de7c27e8628832c489a7afe74cdd6e8b, type: 3}
-  m_Name: B5863AE3-45F5-4770-A572-B24EB832616F
+  m_Script: {fileID: 11500000, guid: 5e360a0b1f441a04089a5464a8b72071, type: 3}
+  m_Name: 901E7747-7E33-445B-B4DA-744D37A2C75A
   m_EditorClassIdentifier: 
-  objectName: RandomFootstepPlay_Event
-  id: 1006977509
-  guid: B5863AE3-45F5-4770-A572-B24EB832616F
+  objectName: Timescale
+  id: 4070528516
+  guid: 901E7747-7E33-445B-B4DA-744D37A2C75A
