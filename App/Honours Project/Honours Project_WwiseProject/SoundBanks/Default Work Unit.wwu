@@ -7,7 +7,9 @@
 					<ObjectInclusionList>
 						<ObjectRef Name="shoot" ID="{7A32F505-6423-4084-82BF-5DE830AD5FD6}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Shelf_Drag_Horizontal" ID="{3C4BB633-FC65-40C7-98CB-A0F499A8B019}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="EMP_During" ID="{8CFD0A3E-95C7-43AE-97A5-0D8B39FC9665}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Foosteps" ID="{FCC58427-D727-4480-A41B-5AEECB21C9F1}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}" Origin="Manual" Filter="7"/>
+						<ObjectRef Name="EMP" ID="{6594BF2A-E9BB-45A1-ACC4-856EE1534B46}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="ShelfMovement" ID="{1830DB15-9302-460B-80EE-3FC3B04ADDB4}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Shelf_Drag_Lateral" ID="{AC6595F1-01F1-4720-89EC-4BE95AC76DEC}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}" Origin="Manual" Filter="7"/>
 						<ObjectRef Name="Tengo Ritmo (I Got Rhythm)" ID="{1BB55672-B40F-488D-BF44-B0E36E68D423}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}" Origin="Manual" Filter="7"/>

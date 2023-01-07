@@ -123,7 +123,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e012f0fee2933743b43e2928d763f623
     GuidInternal: 
-    m_lastTime: -8585285922963240942
+    m_lastTime: -8585285573889183094
     List:
     - name: Main_SoundBank
       guid: 1fd17201ef5580468616f59cad221366
@@ -151,7 +151,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: da09d9ff32957f408ab7df7be7ced7ae
     GuidInternal: 
-    m_lastTime: -8585285922962599739
+    m_lastTime: -8585285573888996373
     List:
     - name: BulletCollisionPlay_Event
       guid: a17a8706034ef44ba53c9b5a66fcc51b
@@ -187,6 +187,40 @@ MonoBehaviour:
       maxAttenuation: 0
       maxDuration: 0.874376
       minDuration: 0.874376
+    - name: EMPPause_Event
+      guid: fc68d53bf46c434b8ac3b2735efe428b
+      id: 392285444
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: da09d9ff32957f408ab7df7be7ced7ae
+      - ElementName: EMPPause_Event
+        ObjectType: 3
+        guid: fc68d53bf46c434b8ac3b2735efe428b
+      Path: Events\Default Work Unit\EMPPause_Event
+      maxAttenuation: 0
+      maxDuration: 0
+      minDuration: 0
+    - name: EMPPlay_Event
+      guid: 3aa26e1c0f5039428900397f84dd5caa
+      id: 3376568946
+      PathAndIcons:
+      - ElementName: Events
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: da09d9ff32957f408ab7df7be7ced7ae
+      - ElementName: EMPPlay_Event
+        ObjectType: 3
+        guid: 3aa26e1c0f5039428900397f84dd5caa
+      Path: Events\Default Work Unit\EMPPlay_Event
+      maxAttenuation: 0
+      maxDuration: -1
+      minDuration: -1
     - name: FootstepPlay_Event
       guid: 7ac0ca8a0ebb1a438b32c90422a41c14
       id: 2874369812
@@ -535,7 +569,7 @@ MonoBehaviour:
     m_lastTime: -8585305769418157698
     List: []
   ExpandedFileSystemItemIds: 020000000300000005000000060000000700000031000000320000006400000065000000
-  ExpandedWaapiItemIds: 0100000002000000030000000400000005000000060000000700000013000000140000001700000018000000190000001a0000001b0000001e0000001f0000003100000032000000330000003400000060000000610000006400000065000000
+  ExpandedWaapiItemIds: 01000000020000000300000004000000050000000600000007000000110000001200000013000000140000001700000018000000190000001a0000001b0000001c0000001e0000001f0000003100000032000000330000003400000060000000610000006400000065000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

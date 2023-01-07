@@ -6,10 +6,12 @@ public class BulletTime : MonoBehaviour
 {
     public float minTimeScale = 0.5f;
     public float transitionSpeed = 1.0f;
-    public float bulletTimeDuration = 3.0f;
+    public float bulletTimeDuration = 2.0f;
+    public float bulletTimeReloadDuration = 1.0f;
     public bool isBulletTime = false;
 
     public AK.Wwise.Event EMPPlay = new AK.Wwise.Event();
+    public AK.Wwise.Event EMPPause = new AK.Wwise.Event();
 
     [SerializeField]
     private AK.Wwise.RTPC rtpc = null;
@@ -29,18 +31,12 @@ public class BulletTime : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
-            Debug.Log("Left shift hit");
-
-            isBulletTime = !isBulletTime;
-
-
-
-
-
-            EMPPlay.Post(gameObject);
-            StartCoroutine("ToggleBulletTime");
-
-
+            //Debug.Log("Left shift hit");            
+            if(!isBulletTime)
+            {
+                isBulletTime = !isBulletTime;
+                StartCoroutine("ToggleBulletTime");
+            }
         }
         
     }
@@ -49,9 +45,9 @@ public class BulletTime : MonoBehaviour
     {
         //string audioEvent = (isBulletTime) ? "EnterBulletTime" : "ExitBulletTime";
         //AkSoundEngine.PostEvent(audioEvent, this.gameObject);
-        
-        
-       
+
+        EMPPlay.Post(gameObject);
+
 
         float t = 0f;
         float startScale = Time.timeScale;
@@ -68,6 +64,18 @@ public class BulletTime : MonoBehaviour
 /*            yield return new WaitForSeconds(bulletTimeDuration);
             isBulletTime = !isBulletTime;
             StartCoroutine("ToggleBulletTime");*/
+        }
+
+        if (isBulletTime)
+        {
+            yield return new WaitForSeconds(bulletTimeDuration);
+            isBulletTime = !isBulletTime;
+            Debug.Log("ending bullet time");
+            StartCoroutine("ToggleBulletTime");
+        }
+        else if(!isBulletTime)
+        {
+            EMPPause.Post(gameObject);
         }
     }
 }

@@ -1317,7 +1317,166 @@
 				</SwitchContainer>
 				<Sound Name="EMP" ID="{6594BF2A-E9BB-45A1-ACC4-856EE1534B46}" ShortID="450371413">
 					<PropertyList>
+						<Property Name="Highpass" Type="int16">
+							<RTPCList>
+								<RTPC Name="" ID="{29616D04-0E19-449F-AE86-E7B7D3B6A8CC}" ShortID="444725889">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Timescale" ID="{901E7747-7E33-445B-B4DA-744D37A2C75A}" WorkUnitID="{3E7E880F-74AE-4CA4-B26E-BF97C68431F8}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{84ABFB91-85ED-4A90-826F-ABCB0D81D4C4}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>51</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>0.51548</XPos>
+												<YPos>48</YPos>
+												<Flags>0</Flags>
+												<SegmentShape>SCurve</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>0.898809523809524</XPos>
+												<YPos>10</YPos>
+												<Flags>0</Flags>
+												<SegmentShape>Exp3</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>27</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="Lowpass" Type="int16">
+							<RTPCList>
+								<RTPC Name="" ID="{AB4CCB69-1865-4EFB-8F52-6426EDE2686C}" ShortID="101786642">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Timescale" ID="{901E7747-7E33-445B-B4DA-744D37A2C75A}" WorkUnitID="{3E7E880F-74AE-4CA4-B26E-BF97C68431F8}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{028A7C5B-89B4-49B0-BD1E-92DE08B9BA3D}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>75</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>0.50595</XPos>
+												<YPos>76</YPos>
+												<Flags>0</Flags>
+												<SegmentShape>SCurve</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>0.9</XPos>
+												<YPos>0</YPos>
+												<Flags>0</Flags>
+												<SegmentShape>Exp3</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>52</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="MakeUpGain" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{440EE102-84D8-43A8-873F-39275EEDC551}" ShortID="881530291">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Timescale" ID="{901E7747-7E33-445B-B4DA-744D37A2C75A}" WorkUnitID="{3E7E880F-74AE-4CA4-B26E-BF97C68431F8}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{343E4A93-513C-4AC8-8B40-A4C4035C5079}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-0.06746</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>0.50357</XPos>
+												<YPos>0.04121</YPos>
+												<Flags>0</Flags>
+												<SegmentShape>Log2</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>0.93096</XPos>
+												<YPos>6.06111</YPos>
+												<Flags>0</Flags>
+												<SegmentShape>Exp2</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>-192</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="Pitch" Type="int32">
+							<RTPCList>
+								<RTPC Name="" ID="{9C78FEEC-4264-4B5C-99E9-5DC8011F7F5C}" ShortID="310454400">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Timescale" ID="{901E7747-7E33-445B-B4DA-744D37A2C75A}" WorkUnitID="{3E7E880F-74AE-4CA4-B26E-BF97C68431F8}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{5D43F89D-3741-4C5A-A876-308E7410A7C5}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="65537"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-967</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>0.50357</XPos>
+												<YPos>-940</YPos>
+												<Flags>0</Flags>
+												<SegmentShape>Exp3</SegmentShape>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>1526</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>5</Value>
+							</ValueList>
+						</Property>
 					</PropertyList>
 					<ReferenceList>
 						<Reference Name="Conversion">
@@ -1339,6 +1498,79 @@
 					<ObjectLists/>
 					<ActiveSourceList>
 						<ActiveSource Name="EMP" ID="{CB25CE83-BED0-4E41-8B14-09C7E70804CF}" Platform="Linked"/>
+					</ActiveSourceList>
+				</Sound>
+				<Sound Name="EMP_During" ID="{8CFD0A3E-95C7-43AE-97A5-0D8B39FC9665}" ShortID="823158336">
+					<PropertyList>
+						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
+						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
+						<Property Name="Volume" Type="Real64">
+							<ValueList>
+								<Value>-12</Value>
+							</ValueList>
+							<RTPCList>
+								<RTPC Name="" ID="{5ABB180A-BC3F-4B06-993E-DF111399ECD0}" ShortID="733436003">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="Timescale" ID="{901E7747-7E33-445B-B4DA-744D37A2C75A}" WorkUnitID="{3E7E880F-74AE-4CA4-B26E-BF97C68431F8}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{81F6AC76-4B51-4DB8-A979-CEEA259B6642}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>0.499</XPos>
+												<YPos>-200</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>0.5</XPos>
+												<YPos>-0.04412</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>0.50219</XPos>
+												<YPos>-200</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>-200</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+					</PropertyList>
+					<ReferenceList>
+						<Reference Name="Conversion">
+							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DD8F3317-607F-4DFC-8345-AA0A1BF4B176}"/>
+						</Reference>
+						<Reference Name="OutputBus">
+							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{964E5123-7B63-46FD-ACD8-C72F3513DC0F}"/>
+						</Reference>
+					</ReferenceList>
+					<ChildrenList>
+						<AudioFileSource Name="EMP_During" ID="{99B03F08-8363-482C-B847-1A5F5AE17744}">
+							<Language>SFX</Language>
+							<AudioFile>EMP_During.wav</AudioFile>
+							<MediaIDList>
+								<MediaID ID="242033175"/>
+							</MediaIDList>
+						</AudioFileSource>
+					</ChildrenList>
+					<ObjectLists/>
+					<ActiveSourceList>
+						<ActiveSource Name="EMP_During" ID="{99B03F08-8363-482C-B847-1A5F5AE17744}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
 			</ChildrenList>

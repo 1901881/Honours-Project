@@ -6950,6 +6950,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5990943893473276560, guid: 72fa988267dbbe94fa4e37d43e4ba902, type: 3}
+      propertyPath: m_TagString
+      value: Metal
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 72fa988267dbbe94fa4e37d43e4ba902, type: 3}
@@ -7778,11 +7782,16 @@ MonoBehaviour:
   minTimeScale: 0.5
   transitionSpeed: 2
   bulletTimeDuration: 3
+  bulletTimeReloadDuration: 1
   isBulletTime: 0
   EMPPlay:
     idInternal: 0
     valueGuidInternal: 
-    WwiseObjectReference: {fileID: 11400000, guid: d3864e644a0af7d42927b1a0d3883e08, type: 2}
+    WwiseObjectReference: {fileID: 11400000, guid: b2a6dd66598f5a944a2de62e54bdb3ea, type: 2}
+  EMPPause:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: c47365cde380d4a4d8026f29873404b2, type: 2}
   rtpc:
     idInternal: 0
     valueGuidInternal: 

@@ -80,11 +80,43 @@
 					<ChildrenList>
 						<Action Name="" ID="{F6789B36-75F2-4800-9DB0-C48910C44803}" ShortID="1053607404">
 							<PropertyList>
-								<Property Name="ActionType" Type="int16" Value="7"/>
+								<Property Name="ActionType" Type="int16" Value="2"/>
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
 									<ObjectRef Name="ShelfMovement" ID="{1830DB15-9302-460B-80EE-3FC3B04ADDB4}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="EMPPlay_Event" ID="{1C6EA23A-500F-4239-8900-397F84DD5CAA}">
+					<ChildrenList>
+						<Action Name="" ID="{9B8AF447-8DDE-414A-BCE5-D5D36847586B}" ShortID="168917388">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EMP" ID="{6594BF2A-E9BB-45A1-ACC4-856EE1534B46}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+						<Action Name="" ID="{5C7EABC9-81A9-4814-8001-7CD28797C295}" ShortID="271488207">
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EMP_During" ID="{8CFD0A3E-95C7-43AE-97A5-0D8B39FC9665}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}"/>
+								</Reference>
+							</ReferenceList>
+						</Action>
+					</ChildrenList>
+				</Event>
+				<Event Name="EMPPause_Event" ID="{3BD568FC-6CF4-4B43-8AC3-B2735EFE428B}">
+					<ChildrenList>
+						<Action Name="" ID="{B7E2FE85-BA97-4A0A-ABF5-D0B9BB783593}" ShortID="402854005">
+							<PropertyList>
+								<Property Name="ActionType" Type="int16" Value="2"/>
+							</PropertyList>
+							<ReferenceList>
+								<Reference Name="Target">
+									<ObjectRef Name="EMP_During" ID="{8CFD0A3E-95C7-43AE-97A5-0D8B39FC9665}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

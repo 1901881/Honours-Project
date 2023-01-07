@@ -27,7 +27,7 @@ public class ShelfScript : MonoBehaviour
 
     void CheckDirection()
     {
-        Debug.Log(rb.velocity.sqrMagnitude);
+        //Debug.Log(rb.velocity.sqrMagnitude);
 
         //If object is moving
         if (rb.velocity.sqrMagnitude > shelfVelocityLimit)
@@ -59,15 +59,12 @@ public class ShelfScript : MonoBehaviour
             }
             
         }
-        else if(rb.velocity.sqrMagnitude <= shelfVelocityLimit)
+        else if(rb.velocity.sqrMagnitude <= shelfVelocityLimit  && Played)
         {
             //pause
-            if(Played)
-            {
-                Debug.Log("Paused shelf sound");
-                shelfAudioScript.PauseShelfSound();
-                Played = false;
-            }
+            //Debug.Log("Paused shelf sound");
+            shelfAudioScript.PauseShelfSound();
+            Played = false;
         }
        
     }

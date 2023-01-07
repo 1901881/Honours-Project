@@ -1,4 +1,5 @@
 Event	ID	Name			Wwise Object Path	Notes
+	392285444	EMPPause_Event			\Default Work Unit\EMPPause_Event	
 	763920020	Dash_Event			\Default Work Unit\Dash_Event	
 	1364784840	ShelfDragPause_Event			\Default Work Unit\ShelfDragPause_Event	
 	1429961119	Shoot_Event			\Default Work Unit\Shoot_Event	
@@ -6,6 +7,7 @@ Event	ID	Name			Wwise Object Path	Notes
 	2874369812	FootstepPlay_Event			\Default Work Unit\FootstepPlay_Event	
 	3046056998	ShelfDragPlay_Event			\Default Work Unit\ShelfDragPlay_Event	
 	3124891512	BulletCollisionPlay_Event			\Default Work Unit\BulletCollisionPlay_Event	
+	3376568946	EMPPlay_Event			\Default Work Unit\EMPPlay_Event	
 
 Switch Group	ID	Name			Wwise Object Path	Notes
 	1239100674	ShelfDirection			\Default Work Unit\ShelfDirection	
@@ -24,11 +26,14 @@ Switch	ID	Name	Switch Group			Notes
 Game Parameter	ID	Name			Wwise Object Path	Notes
 	2263952660	radioVolume			\Default Work Unit\radioVolume	
 	3153036660	bulletHitCounter			\Default Work Unit\bulletHitCounter	
+	4070528516	Timescale			\Default Work Unit\Timescale	
 
 In Memory Audio	ID	Name	Audio source file		Wwise Object Path	Notes	Data Size
 	9077237	Bullet_Collision_Metal_3	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Mac\SFX\Bullet_Collision_Metal_3_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\BulletCollision\Metal\Bullet_Collision_Metal_3		13437
+	10018974	EMP	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Mac\SFX\EMP_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\EMP		16045
 	168156141	Footstep_Water_3	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Mac\SFX\Foosteps\Water\Footstep_Water_3_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Water\Footstep_Water_3		5631
 	188245331	Bullet_Collision_Default_1	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Mac\SFX\Bullet_Collision_Default_1_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\BulletCollision\Default\Bullet_Collision_Default_1		3041
+	242033175	EMP_During	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Mac\SFX\EMP_During_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\EMP_During		47354
 	269696238	Footstep_Concrete_2	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Mac\SFX\Foosteps\Concrete\Footstep_Concrete_2_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Concrete\Footstep_Concrete_2		3724
 	279846214	Footstep_Water_1	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Mac\SFX\Foosteps\Water\Footstep_Water_1_3F75BDB9.wem		\Actor-Mixer Hierarchy\Default Work Unit\Foosteps\Water\Footstep_Water_1		5514
 	316846577	Tengo Ritmo (I Got Rhythm)	C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Honours Project_WwiseProject\.cache\Mac\SFX\Tengo Ritmo (I Got Rhythm)_9EDFC787.wem		\Actor-Mixer Hierarchy\Default Work Unit\Tengo Ritmo (I Got Rhythm)		2386008
