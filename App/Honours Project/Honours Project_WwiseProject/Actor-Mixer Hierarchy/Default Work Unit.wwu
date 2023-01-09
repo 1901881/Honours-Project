@@ -3,7 +3,7 @@
 	<AudioObjects>
 		<WorkUnit Name="Default Work Unit" ID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}" PersistMode="Standalone">
 			<ChildrenList>
-				<Sound Name="shoot" ID="{7A32F505-6423-4084-82BF-5DE830AD5FD6}" ShortID="664751661">
+				<Sound Name="Shoot" ID="{7A32F505-6423-4084-82BF-5DE830AD5FD6}" ShortID="664751661">
 					<PropertyList>
 						<Property Name="Lowpass" Type="int16">
 							<ValueList>
@@ -39,7 +39,7 @@
 						<ActiveSource Name="shoot" ID="{6215EBDC-96B6-4CF7-8EB8-B89D9BA31B94}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<Sound Name="DashTrim" ID="{841A7984-341F-4FC7-B838-27F17DCC2E76}" ShortID="681042182">
+				<Sound Name="Dash" ID="{841A7984-341F-4FC7-B838-27F17DCC2E76}" ShortID="681042182">
 					<PropertyList>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="Volume" Type="Real64">
@@ -76,9 +76,75 @@
 						<Property Name="IsLoopingEnabled" Type="bool" Value="True"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
 						<Property Name="UserAuxSendVolume0" Type="Real64">
-							<ValueList>
-								<Value>12</Value>
-							</ValueList>
+							<RTPCList>
+								<RTPC Name="" ID="{0ABD110E-D543-4B69-9193-67D64387BDD6}" ShortID="1070905414">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="playerHealth" ID="{99318C6D-7CCA-42CD-886E-51D058D34123}" WorkUnitID="{3E7E880F-74AE-4CA4-B26E-BF97C68431F8}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{218192A4-F1D0-420C-8B9B-5498796CE425}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-0</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>0</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>1.001</XPos>
+												<YPos>-200</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>3</XPos>
+												<YPos>-200</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
+						</Property>
+						<Property Name="UserAuxSendVolume1" Type="Real64">
+							<RTPCList>
+								<RTPC Name="" ID="{0B37ED63-02D2-449E-9B7A-D92373DD0F67}" ShortID="531969237">
+									<ReferenceList>
+										<Reference Name="ControlInput">
+											<ObjectRef Name="isRadioInWater" ID="{24B24957-1A6B-4B6B-B5F3-B103272FF6C3}" WorkUnitID="{3E7E880F-74AE-4CA4-B26E-BF97C68431F8}"/>
+										</Reference>
+									</ReferenceList>
+									<Curve Name="" ID="{EF358AC8-11F1-463F-8159-E71F717378CA}">
+										<PropertyList>
+											<Property Name="Flags" Type="int32" Value="3"/>
+										</PropertyList>
+										<PointList>
+											<Point>
+												<XPos>0</XPos>
+												<YPos>-200</YPos>
+												<Flags>5</Flags>
+											</Point>
+											<Point>
+												<XPos>0.999</XPos>
+												<YPos>-200</YPos>
+												<Flags>0</Flags>
+											</Point>
+											<Point>
+												<XPos>1</XPos>
+												<YPos>0</YPos>
+												<Flags>37</Flags>
+											</Point>
+										</PointList>
+									</Curve>
+								</RTPC>
+							</RTPCList>
 						</Property>
 						<Property Name="Volume" Type="Real64">
 							<RTPCList>
@@ -201,6 +267,12 @@
 						</Reference>
 						<Reference Name="OutputBus">
 							<ObjectRef Name="Master Audio Bus" ID="{1514A4D8-1DA6-412A-A17E-75CA0C2149F3}" WorkUnitID="{964E5123-7B63-46FD-ACD8-C72F3513DC0F}"/>
+						</Reference>
+						<Reference Name="UserAuxSend0">
+							<ObjectRef Name="Radio_Bus" ID="{9007B0EA-D3B2-411F-B331-DBD25798BD58}" WorkUnitID="{964E5123-7B63-46FD-ACD8-C72F3513DC0F}"/>
+						</Reference>
+						<Reference Name="UserAuxSend1">
+							<ObjectRef Name="Radio_Bus_01" ID="{5629B0D8-E682-4CE5-8B87-E27FF502763C}" WorkUnitID="{964E5123-7B63-46FD-ACD8-C72F3513DC0F}"/>
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
@@ -890,7 +962,7 @@
 						<ActiveSource Name="Static_Noise" ID="{3A5A6485-F0E2-4D7E-AA3C-312E64CD4107}" Platform="Linked"/>
 					</ActiveSourceList>
 				</Sound>
-				<SwitchContainer Name="BulletCollision" ID="{0DEB8984-72C5-4B0F-BBA3-89FC17A17988}" ShortID="674392988">
+				<SwitchContainer Name="Bullet_Collision" ID="{0DEB8984-72C5-4B0F-BBA3-89FC17A17988}" ShortID="674392988">
 					<PropertyList>
 						<Property Name="3DSpatialization" Type="int16" Value="1"/>
 						<Property Name="UseGameAuxSends" Type="bool" Value="True"/>
@@ -988,7 +1060,7 @@
 						</Reference>
 					</ReferenceList>
 					<ChildrenList>
-						<RandomSequenceContainer Name="Default" ID="{E2EA4245-C6A7-4F25-95B9-075FA19CA3C4}" ShortID="515253031">
+						<RandomSequenceContainer Name="Concrete" ID="{E2EA4245-C6A7-4F25-95B9-075FA19CA3C4}" ShortID="515253031">
 							<PropertyList>
 								<Property Name="Lowpass" Type="int16">
 									<ValueList>
@@ -1181,7 +1253,7 @@
 					<GroupingInfo>
 						<GroupingBehaviorList>
 							<GroupingBehavior>
-								<ItemRef Name="Default" ID="{E2EA4245-C6A7-4F25-95B9-075FA19CA3C4}"/>
+								<ItemRef Name="Concrete" ID="{E2EA4245-C6A7-4F25-95B9-075FA19CA3C4}"/>
 							</GroupingBehavior>
 							<GroupingBehavior>
 								<ItemRef Name="Metal" ID="{20EF4479-34C4-4E46-A4F0-016B47BDB307}"/>
@@ -1197,13 +1269,13 @@
 							<Grouping>
 								<SwitchRef Name="Concrete" ID="{5349A313-9596-4B7F-9F40-0B3CAE39B399}"/>
 								<ItemList>
-									<ItemRef Name="Default" ID="{E2EA4245-C6A7-4F25-95B9-075FA19CA3C4}"/>
+									<ItemRef Name="Concrete" ID="{E2EA4245-C6A7-4F25-95B9-075FA19CA3C4}"/>
 								</ItemList>
 							</Grouping>
 						</GroupingList>
 					</GroupingInfo>
 				</SwitchContainer>
-				<SwitchContainer Name="ShelfMovement" ID="{1830DB15-9302-460B-80EE-3FC3B04ADDB4}" ShortID="491946495">
+				<SwitchContainer Name="Shelf_Movement" ID="{1830DB15-9302-460B-80EE-3FC3B04ADDB4}" ShortID="491946495">
 					<ReferenceList>
 						<Reference Name="Conversion">
 							<ObjectRef Name="Default Conversion Settings" ID="{6D1B890C-9826-4384-BF07-C15223E9FB56}" WorkUnitID="{DD8F3317-607F-4DFC-8345-AA0A1BF4B176}"/>
@@ -1522,23 +1594,21 @@
 										<PointList>
 											<Point>
 												<XPos>0</XPos>
-												<YPos>-200</YPos>
+												<YPos>40.82785</YPos>
 												<Flags>5</Flags>
-											</Point>
-											<Point>
-												<XPos>0.499</XPos>
-												<YPos>-200</YPos>
-												<Flags>0</Flags>
+												<SegmentShape>SCurve</SegmentShape>
 											</Point>
 											<Point>
 												<XPos>0.5</XPos>
 												<YPos>-0.04412</YPos>
 												<Flags>0</Flags>
+												<SegmentShape>Exp3</SegmentShape>
 											</Point>
 											<Point>
-												<XPos>0.50219</XPos>
-												<YPos>-200</YPos>
+												<XPos>0.84348</XPos>
+												<YPos>-6.08085</YPos>
 												<Flags>0</Flags>
+												<SegmentShape>Log3</SegmentShape>
 											</Point>
 											<Point>
 												<XPos>1</XPos>

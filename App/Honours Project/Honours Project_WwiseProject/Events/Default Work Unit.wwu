@@ -8,7 +8,7 @@
 						<Action Name="" ID="{A598D843-0B03-4316-AE27-A3A7CE3110F9}" ShortID="281764775">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="shoot" ID="{7A32F505-6423-4084-82BF-5DE830AD5FD6}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}"/>
+									<ObjectRef Name="Shoot" ID="{7A32F505-6423-4084-82BF-5DE830AD5FD6}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -19,7 +19,7 @@
 						<Action Name="" ID="{B0BE6C3E-4A18-4F3A-911B-B8DD046C8223}" ShortID="64033950">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="DashTrim" ID="{841A7984-341F-4FC7-B838-27F17DCC2E76}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}"/>
+									<ObjectRef Name="Dash" ID="{841A7984-341F-4FC7-B838-27F17DCC2E76}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -59,7 +59,7 @@
 						<Action Name="" ID="{1C5C5450-3B87-4BF3-8E23-3C0CBF38ED60}" ShortID="204228513">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="BulletCollision" ID="{0DEB8984-72C5-4B0F-BBA3-89FC17A17988}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}"/>
+									<ObjectRef Name="Bullet_Collision" ID="{0DEB8984-72C5-4B0F-BBA3-89FC17A17988}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -70,7 +70,7 @@
 						<Action Name="" ID="{DE306617-1B74-412A-9220-BEEDE55AC08B}" ShortID="465396108">
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="ShelfMovement" ID="{1830DB15-9302-460B-80EE-3FC3B04ADDB4}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}"/>
+									<ObjectRef Name="Shelf_Movement" ID="{1830DB15-9302-460B-80EE-3FC3B04ADDB4}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>
@@ -84,7 +84,7 @@
 							</PropertyList>
 							<ReferenceList>
 								<Reference Name="Target">
-									<ObjectRef Name="ShelfMovement" ID="{1830DB15-9302-460B-80EE-3FC3B04ADDB4}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}"/>
+									<ObjectRef Name="Shelf_Movement" ID="{1830DB15-9302-460B-80EE-3FC3B04ADDB4}" WorkUnitID="{6008BCEB-3A1A-48F6-86CD-271B658D512A}"/>
 								</Reference>
 							</ReferenceList>
 						</Action>

@@ -38,7 +38,7 @@ MonoBehaviour:
     ParentPath: Master-Mixer Hierarchy\Default Work Unit
     guid: 23514e96637bfd46acd8c72f3513dc0f
     GuidInternal: 
-    m_lastTime: -8585285922961966852
+    m_lastTime: -8585283879966462054
     List:
     - name: Aux_Busses
       guid: 18219247d4a5104794704b8450519d34
@@ -111,6 +111,26 @@ MonoBehaviour:
         ObjectType: 2
         guid: d8a41415a61d2a41a17e75ca0c2149f3
       Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus
+    - name: Radio_Bus
+      guid: eab00790b2d31f41b331dbd25798bd58
+      id: 3820547317
+      PathAndIcons:
+      - ElementName: Master-Mixer Hierarchy
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 23514e96637bfd46acd8c72f3513dc0f
+      - ElementName: Master Audio Bus
+        ObjectType: 2
+        guid: d8a41415a61d2a41a17e75ca0c2149f3
+      - ElementName: Aux_Busses
+        ObjectType: 2
+        guid: 18219247d4a5104794704b8450519d34
+      - ElementName: Radio_Bus
+        ObjectType: 1
+        guid: eab00790b2d31f41b331dbd25798bd58
+      Path: Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Aux_Busses\Radio_Bus
   BankWwu:
   - PhysicalPath: SoundBanks\Default Work Unit.wwu
     PathAndIcons:
@@ -123,7 +143,7 @@ MonoBehaviour:
     ParentPath: SoundBanks\Default Work Unit
     guid: e012f0fee2933743b43e2928d763f623
     GuidInternal: 
-    m_lastTime: -8585285573889183094
+    m_lastTime: -8585283909150338124
     List:
     - name: Main_SoundBank
       guid: 1fd17201ef5580468616f59cad221366
@@ -151,7 +171,7 @@ MonoBehaviour:
     ParentPath: Events\Default Work Unit
     guid: da09d9ff32957f408ab7df7be7ced7ae
     GuidInternal: 
-    m_lastTime: -8585285573888996373
+    m_lastTime: -8585283909150158492
     List:
     - name: BulletCollisionPlay_Event
       guid: a17a8706034ef44ba53c9b5a66fcc51b
@@ -318,7 +338,7 @@ MonoBehaviour:
     ParentPath: Game Parameters\Default Work Unit
     guid: 0f887e3eae74a44cb26ebf97c68431f8
     GuidInternal: 
-    m_lastTime: -8585285922962280661
+    m_lastTime: -8585283909149988579
     List:
     - name: bulletHitCounter
       guid: c36755ef23eaae45a5a7249ba94dcf7d
@@ -334,6 +354,34 @@ MonoBehaviour:
         ObjectType: 13
         guid: c36755ef23eaae45a5a7249ba94dcf7d
       Path: Game Parameters\Default Work Unit\bulletHitCounter
+    - name: isRadioInWater
+      guid: 5749b2246b1a6b4bb5f3b103272ff6c3
+      id: 2678713084
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0f887e3eae74a44cb26ebf97c68431f8
+      - ElementName: isRadioInWater
+        ObjectType: 13
+        guid: 5749b2246b1a6b4bb5f3b103272ff6c3
+      Path: Game Parameters\Default Work Unit\isRadioInWater
+    - name: playerHealth
+      guid: 6d8c3199ca7ccd42886e51d058d34123
+      id: 151362964
+      PathAndIcons:
+      - ElementName: Game Parameters
+        ObjectType: 5
+        guid: 00000000000000000000000000000000
+      - ElementName: Default Work Unit
+        ObjectType: 12
+        guid: 0f887e3eae74a44cb26ebf97c68431f8
+      - ElementName: playerHealth
+        ObjectType: 13
+        guid: 6d8c3199ca7ccd42886e51d058d34123
+      Path: Game Parameters\Default Work Unit\playerHealth
     - name: radioVolume
       guid: 323805eb8c97c649a5abf60665126fc7
       id: 2263952660
@@ -569,7 +617,7 @@ MonoBehaviour:
     m_lastTime: -8585305769418157698
     List: []
   ExpandedFileSystemItemIds: 020000000300000005000000060000000700000031000000320000006400000065000000
-  ExpandedWaapiItemIds: 01000000020000000300000004000000050000000600000007000000110000001200000013000000140000001700000018000000190000001a0000001b0000001c0000001e0000001f0000003100000032000000330000003400000060000000610000006400000065000000
+  ExpandedWaapiItemIds: 01000000020000000300000004000000050000000600000007000000110000001200000013000000140000001700000018000000190000001a0000001b0000001c0000001d0000001e0000001f0000003100000032000000330000003400000060000000610000006400000065000000
   AutoSyncSelection: 0
   autoPopulateEnabled: 1
   currentDataSource: 0

@@ -6,8 +6,8 @@ public class PlayerMovement : MonoBehaviour
 {
     public Weapon weapon;
     public Camera camera2;
-    public FollowPlayer PlayerAudio;
-
+    public FollowPlayer playerAudioScript;
+    public RadioAudio radioAudioScript;
 
 
     public int speed = 10;
@@ -54,6 +54,9 @@ public class PlayerMovement : MonoBehaviour
 
         SpriteRend = GetComponent<SpriteRenderer>();
         originalColor = SpriteRend.color;
+
+        //playerAudioScript.SetPlayerAudioHealth(health);
+        radioAudioScript.SetPlayerAudioHealth(health);
     }
 
     // Update is called once per frame
@@ -99,7 +102,7 @@ public class PlayerMovement : MonoBehaviour
             if (walkCount > footstepRate)
             {
                 //footstepSound.Post(gameObject);
-                PlayerAudio.PlayFootstep();
+                playerAudioScript.PlayFootstep();
 
                 walkCount = 0.0f;
             }
@@ -165,7 +168,7 @@ public class PlayerMovement : MonoBehaviour
         isDashing = true;
      
         playerBody.AddForce(aimDirection.normalized * dashingPower, ForceMode2D.Impulse);
-        PlayerAudio.PlayDash();
+        playerAudioScript.PlayDash();
 
         tr.emitting = true;
         yield return new WaitForSeconds(dashingTime);
@@ -187,6 +190,9 @@ public class PlayerMovement : MonoBehaviour
         Time.timeScale = 1;
         SpriteRend.color = originalColor;
         health--;
+        //playerAudioScript.SetPlayerAudioHealth(health);
+        radioAudioScript.SetPlayerAudioHealth(health);
+
 
     }
 

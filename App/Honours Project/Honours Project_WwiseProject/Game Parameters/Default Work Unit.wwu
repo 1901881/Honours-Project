@@ -21,6 +21,18 @@
 						<Property Name="Max" Type="Real64" Value="1"/>
 					</PropertyList>
 				</GameParameter>
+				<GameParameter Name="playerHealth" ID="{99318C6D-7CCA-42CD-886E-51D058D34123}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="3"/>
+						<Property Name="Max" Type="Real64" Value="3"/>
+					</PropertyList>
+				</GameParameter>
+				<GameParameter Name="isRadioInWater" ID="{24B24957-1A6B-4B6B-B5F3-B103272FF6C3}">
+					<PropertyList>
+						<Property Name="InitialValue" Type="Real64" Value="0"/>
+						<Property Name="Max" Type="Real64" Value="1"/>
+					</PropertyList>
+				</GameParameter>
 			</ChildrenList>
 		</WorkUnit>
 	</GameParameters>

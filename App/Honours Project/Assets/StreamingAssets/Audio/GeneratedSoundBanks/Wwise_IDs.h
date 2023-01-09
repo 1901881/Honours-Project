@@ -57,6 +57,8 @@ namespace AK
     namespace GAME_PARAMETERS
     {
         static const AkUniqueID BULLETHITCOUNTER = 3153036660U;
+        static const AkUniqueID ISRADIOINWATER = 2678713084U;
+        static const AkUniqueID PLAYERHEALTH = 151362964U;
         static const AkUniqueID RADIOVOLUME = 2263952660U;
         static const AkUniqueID TIMESCALE = 4070528516U;
     } // namespace GAME_PARAMETERS
@@ -77,6 +79,8 @@ namespace AK
     {
         static const AkUniqueID FOOTSTEP_ECHO_BUS = 1564656378U;
         static const AkUniqueID FOOTSTEP_REVERB_BUS = 2584113389U;
+        static const AkUniqueID RADIO_BUS = 3820547317U;
+        static const AkUniqueID RADIO_BUS_01 = 4120635537U;
     } // namespace AUX_BUSSES
 
     namespace AUDIO_DEVICES

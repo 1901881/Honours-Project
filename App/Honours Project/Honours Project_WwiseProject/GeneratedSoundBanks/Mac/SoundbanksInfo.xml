@@ -11,16 +11,18 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="1415354212">
+		<SoundBank Id="1355168291" Language="SFX" Hash="2714795959">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
 			<IncludedAuxBusses>
 				<AuxBus Id="1564656378" Name="Footstep_Echo_Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Aux_Busses\Footstep_Echo_Bus"/>
 				<AuxBus Id="2584113389" Name="Footstep_Reverb_Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Aux_Busses\Footstep_Reverb_Bus"/>
+				<AuxBus Id="3820547317" Name="Radio_Bus" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Aux_Busses\Radio_Bus"/>
+				<AuxBus Id="4120635537" Name="Radio_Bus_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Aux_Busses\Radio_Bus_01"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="4054372563">
+		<SoundBank Id="2228651116" Language="SFX" Hash="917136106">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank</ObjectPath>
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
@@ -154,7 +156,9 @@
 				</File>
 			</IncludedMemoryFiles>
 			<GameParameters>
+				<GameParameter Id="151362964" Name="playerHealth" ObjectPath="\Game Parameters\Default Work Unit\playerHealth"/>
 				<GameParameter Id="2263952660" Name="radioVolume" ObjectPath="\Game Parameters\Default Work Unit\radioVolume"/>
+				<GameParameter Id="2678713084" Name="isRadioInWater" ObjectPath="\Game Parameters\Default Work Unit\isRadioInWater"/>
 				<GameParameter Id="3153036660" Name="bulletHitCounter" ObjectPath="\Game Parameters\Default Work Unit\bulletHitCounter"/>
 				<GameParameter Id="4070528516" Name="Timescale" ObjectPath="\Game Parameters\Default Work Unit\Timescale"/>
 			</GameParameters>

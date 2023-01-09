@@ -42,7 +42,7 @@ public class FollowPlayer : MonoBehaviour
         if (FloorMaterial != LastFloorMaterial)
         {
             AkSoundEngine.SetSwitch("Material", FloorMaterial, gameObject);
-            Debug.Log(FloorMaterial);
+            //Debug.Log(FloorMaterial);
         }
 
     }
@@ -61,4 +61,6 @@ public class FollowPlayer : MonoBehaviour
     {
         shootSound.Post(gameObject);
     }
+
+
 }

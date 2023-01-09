@@ -45,6 +45,22 @@
 									</ReferenceList>
 									<ObjectLists/>
 								</AuxBus>
+								<AuxBus Name="Radio_Bus" ID="{9007B0EA-D3B2-411F-B331-DBD25798BD58}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise Harmonizer" CompanyID="0" PluginID="138" PluginType="3">
+											<ObjectRef Name="Fear_no_Evil" ID="{A1F17D99-0801-4F32-B74E-ADB2D9ACC556}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</AuxBus>
+								<AuxBus Name="Radio_Bus_01" ID="{5629B0D8-E682-4CE5-8B87-E27FF502763C}">
+									<ReferenceList>
+										<Reference Name="Effect0" PluginName="Wwise Stereo Delay" CompanyID="0" PluginID="135" PluginType="3">
+											<ObjectRef Name="Underwater_Echoes" ID="{3C6B127B-9DAE-4879-A4ED-75DF209310EC}" WorkUnitID="{E8613F7D-BAD3-45CD-A3ED-505576F31277}"/>
+										</Reference>
+									</ReferenceList>
+									<ObjectLists/>
+								</AuxBus>
 							</ChildrenList>
 							<ObjectLists/>
 						</Bus>

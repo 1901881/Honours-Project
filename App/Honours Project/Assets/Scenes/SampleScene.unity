@@ -6434,6 +6434,14 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 4449958680943404872, guid: b7e1bf913b8390743ba88058fd7ac074, type: 3}
+      propertyPath: m_LinearDrag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449958680943404872, guid: b7e1bf913b8390743ba88058fd7ac074, type: 3}
+      propertyPath: m_AngularDrag
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4449958680943404872, guid: b7e1bf913b8390743ba88058fd7ac074, type: 3}
       propertyPath: m_Constraints
       value: 0
       objectReference: {fileID: 0}
@@ -6443,7 +6451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7421246653274930280, guid: b7e1bf913b8390743ba88058fd7ac074, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7421246653274930280, guid: b7e1bf913b8390743ba88058fd7ac074, type: 3}
       propertyPath: m_TagString
@@ -6709,8 +6717,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.2882457, y: 2.5023668, z: 1}
-  m_Center: {x: 0.024551786, y: 0.57572556, z: 0}
+  m_Size: {x: 3.2882457, y: 3.8841743, z: 1}
+  m_Center: {x: 0.024551786, y: 1.2666302, z: 0}
 --- !u!54 &542117699
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -7464,6 +7472,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1089962596}
+  - component: {fileID: 1089962602}
   - component: {fileID: 1089962600}
   - component: {fileID: 1089962599}
   - component: {fileID: 1089962598}
@@ -7603,6 +7612,27 @@ MonoBehaviour:
     idInternal: 0
     valueGuidInternal: 
     WwiseObjectReference: {fileID: 11400000, guid: d69d96b9d2a756b4d99e8404dd68b744, type: 2}
+  playerHealthRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: a2a9a1155ed64ce409fc7528dbec2a8e, type: 2}
+  isRadioInWaterRTPC:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 5df4b22861248674c90a7a35dd0f56af, type: 2}
+--- !u!65 &1089962602
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1089962595}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 23.119701, y: 7.86, z: 13.416361}
+  m_Center: {x: 0.07144697, y: 0, z: -7.752222}
 --- !u!4 &1091521849 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5757135739253505769, guid: 72fa988267dbbe94fa4e37d43e4ba902, type: 3}
@@ -9810,6 +9840,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
+      propertyPath: health
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
       propertyPath: camera2
       value: 
       objectReference: {fileID: 519420031}
@@ -9819,6 +9853,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
       propertyPath: PlayerAudio
+      value: 
+      objectReference: {fileID: 1166128520}
+    - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
+      propertyPath: radioAudioScript
+      value: 
+      objectReference: {fileID: 1089962601}
+    - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
+      propertyPath: playerAudioScript
       value: 
       objectReference: {fileID: 1166128520}
     - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}

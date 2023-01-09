@@ -5,9 +5,13 @@ Audio Bus	ID	Name			Wwise Object Path	Notes
 Auxiliary Bus	ID	Name			Wwise Object Path	Notes
 	1564656378	Footstep_Echo_Bus			\Default Work Unit\Master Audio Bus\Aux_Busses\Footstep_Echo_Bus	
 	2584113389	Footstep_Reverb_Bus			\Default Work Unit\Master Audio Bus\Aux_Busses\Footstep_Reverb_Bus	
+	3820547317	Radio_Bus			\Default Work Unit\Master Audio Bus\Aux_Busses\Radio_Bus	
+	4120635537	Radio_Bus_01			\Default Work Unit\Master Audio Bus\Aux_Busses\Radio_Bus_01	
 
 Effect plug-ins	ID	Name	Type				Notes
 	702543456	Tunnel1	Wwise Matrix Reverb			
+	819943492	Fear_no_Evil	Wwise Harmonizer			
+	1110677034	Underwater_Echoes	Wwise Stereo Delay			
 	1990128658	Room_Medium	Wwise RoomVerb			
 	3487820010	One_Tap_Half_Second	Wwise Delay			
 
