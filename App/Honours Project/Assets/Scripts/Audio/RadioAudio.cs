@@ -31,7 +31,6 @@ public class RadioAudio : MonoBehaviour
             SetIsRadioInWater(0);
             Debug.Log(other.gameObject.tag);
         }
-
     }
 
     public void SetRadioAudioHealth(float radioHealth)

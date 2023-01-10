@@ -30,21 +30,19 @@ public class Radio : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            StartCoroutine(Hit());
+           StartCoroutine(Hit());
             Debug.Log("Hit Radio");
         }
     }
 
     IEnumerator Hit()
     {
-        changeMaterialColourScript.ChangeMaterialColourFunc(true);
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(0.08f);
         Time.timeScale = 1;
-        changeMaterialColourScript.ChangeMaterialColourFunc(false);
         radioHealth--;
-        //AkSoundEngine.SetRTPCValue("radioVolume", radioHealth, AK_INVALID_GAME_OBJECT);
         radioAudioScript.SetRadioAudioHealth(radioHealth);
-
     }
+
+
 }

@@ -8,6 +8,10 @@ public class CameraFollow : MonoBehaviour
     public float smoothSpeed = 0.125f;
     public Vector3 offset;
 
+    private void Start()
+    {
+        Screen.SetResolution(600, 400, false);
+    }
 
     private void LateUpdate()//Run After Update
     {

@@ -90,7 +90,7 @@
 										<PointList>
 											<Point>
 												<XPos>0</XPos>
-												<YPos>-0</YPos>
+												<YPos>0</YPos>
 												<Flags>5</Flags>
 											</Point>
 											<Point>
@@ -151,7 +151,7 @@
 								<RTPC Name="" ID="{886170F5-1705-492F-B9E1-3F74CA6B1ED3}" ShortID="854104905">
 									<ReferenceList>
 										<Reference Name="ControlInput">
-											<ObjectRef Name="radioVolume" ID="{EB053832-978C-49C6-A5AB-F60665126FC7}" WorkUnitID="{3E7E880F-74AE-4CA4-B26E-BF97C68431F8}"/>
+											<ObjectRef Name="radioHealth" ID="{EB053832-978C-49C6-A5AB-F60665126FC7}" WorkUnitID="{3E7E880F-74AE-4CA4-B26E-BF97C68431F8}"/>
 										</Reference>
 									</ReferenceList>
 									<Curve Name="" ID="{514A70C4-0DC9-407B-9A54-9D45DC2AD419}">
@@ -180,6 +180,23 @@
 							<Custom>
 								<Attenuation Name="Attenuation (Custom)" ID="{CBD1C3D9-402A-4465-8332-29251F102E12}" ShortID="572295692">
 									<PropertyList>
+										<Property Name="ConeAttenuation" Type="Real64">
+											<ValueList>
+												<Value>-9</Value>
+											</ValueList>
+										</Property>
+										<Property Name="ConeInnerAngle" Type="int32" Value="145"/>
+										<Property Name="ConeLowPassFilterValue" Type="int32">
+											<ValueList>
+												<Value>50</Value>
+											</ValueList>
+										</Property>
+										<Property Name="ConeOuterAngle" Type="int32" Value="280"/>
+										<Property Name="ConeUse" Type="bool">
+											<ValueList>
+												<Value>True</Value>
+											</ValueList>
+										</Property>
 										<Property Name="RadiusMax" Type="Real64" Value="25"/>
 									</PropertyList>
 									<CurveUsageInfoList>
@@ -253,7 +270,25 @@
 											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
 										</HighPassFilterUsage>
 										<SpreadUsage>
-											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
+											<CurveUsageInfo Platform="Linked" CurveToUse="None">
+												<Curve Name="Spread" ID="{F0CD7EB5-F04B-433C-8777-DC0ADDD20C43}">
+													<PropertyList>
+														<Property Name="Flags" Type="int32" Value="1"/>
+													</PropertyList>
+													<PointList>
+														<Point>
+															<XPos>0</XPos>
+															<YPos>100</YPos>
+															<Flags>5</Flags>
+														</Point>
+														<Point>
+															<XPos>25</XPos>
+															<YPos>0</YPos>
+															<Flags>37</Flags>
+														</Point>
+													</PointList>
+												</Curve>
+											</CurveUsageInfo>
 										</SpreadUsage>
 										<FocusUsage>
 											<CurveUsageInfo Platform="Linked" CurveToUse="None"/>
@@ -861,7 +896,7 @@
 								<RTPC Name="" ID="{7FEBEC32-E717-465B-A3F2-C13C102AF9EF}" ShortID="499856132">
 									<ReferenceList>
 										<Reference Name="ControlInput">
-											<ObjectRef Name="radioVolume" ID="{EB053832-978C-49C6-A5AB-F60665126FC7}" WorkUnitID="{3E7E880F-74AE-4CA4-B26E-BF97C68431F8}"/>
+											<ObjectRef Name="radioHealth" ID="{EB053832-978C-49C6-A5AB-F60665126FC7}" WorkUnitID="{3E7E880F-74AE-4CA4-B26E-BF97C68431F8}"/>
 										</Reference>
 									</ReferenceList>
 									<Curve Name="" ID="{C940B9C1-B60D-4F07-9133-1A3297CA0F4E}">
@@ -981,7 +1016,7 @@
 										<PointList>
 											<Point>
 												<XPos>0</XPos>
-												<YPos>-0</YPos>
+												<YPos>0</YPos>
 												<Flags>5</Flags>
 											</Point>
 											<Point>

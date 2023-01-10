@@ -11,7 +11,7 @@
 	<StreamedFiles/>
 	<MediaFilesNotInAnyBank/>
 	<SoundBanks>
-		<SoundBank Id="1355168291" Language="SFX" Hash="2714795959">
+		<SoundBank Id="1355168291" Language="SFX" Hash="100581061">
 			<ObjectPath>Init</ObjectPath>
 			<ShortName>Init</ShortName>
 			<Path>Init.bnk</Path>
@@ -22,7 +22,7 @@
 				<AuxBus Id="4120635537" Name="Radio_Bus_01" ObjectPath="\Master-Mixer Hierarchy\Default Work Unit\Master Audio Bus\Aux_Busses\Radio_Bus_01"/>
 			</IncludedAuxBusses>
 		</SoundBank>
-		<SoundBank Id="2228651116" Language="SFX" Hash="917136106">
+		<SoundBank Id="2228651116" Language="SFX" Hash="623979741">
 			<ObjectPath>\SoundBanks\Default Work Unit\Main_SoundBank</ObjectPath>
 			<ShortName>Main_SoundBank</ShortName>
 			<Path>Main_SoundBank.bnk</Path>
@@ -40,31 +40,31 @@
 			<IncludedMemoryFiles>
 				<File Id="9077237" Language="SFX">
 					<ShortName>Bullet_Collision_Metal_3.wav</ShortName>
-					<Path>SFX\Bullet_Collision_Metal_3_3F75BDB9.wem</Path>
+					<Path>SFX\Bullet_Collision_Metal_3_10C4C929.wem</Path>
 				</File>
 				<File Id="10018974" Language="SFX">
 					<ShortName>EMP.wav</ShortName>
-					<Path>SFX\EMP_9EDFC787.wem</Path>
+					<Path>SFX\EMP_D79FB2B7.wem</Path>
 				</File>
 				<File Id="168156141" Language="SFX">
 					<ShortName>Foosteps\Water\Footstep_Water_3.wav</ShortName>
-					<Path>SFX\Foosteps\Water\Footstep_Water_3_3F75BDB9.wem</Path>
+					<Path>SFX\Foosteps\Water\Footstep_Water_3_10C4C929.wem</Path>
 				</File>
 				<File Id="188245331" Language="SFX">
 					<ShortName>Bullet_Collision_Default_1.wav</ShortName>
-					<Path>SFX\Bullet_Collision_Default_1_3F75BDB9.wem</Path>
+					<Path>SFX\Bullet_Collision_Default_1_10C4C929.wem</Path>
 				</File>
 				<File Id="242033175" Language="SFX">
 					<ShortName>EMP_During.wav</ShortName>
-					<Path>SFX\EMP_During_9EDFC787.wem</Path>
+					<Path>SFX\EMP_During_D79FB2B7.wem</Path>
 				</File>
 				<File Id="269696238" Language="SFX">
 					<ShortName>Foosteps\Concrete\Footstep_Concrete_2.wav</ShortName>
-					<Path>SFX\Foosteps\Concrete\Footstep_Concrete_2_3F75BDB9.wem</Path>
+					<Path>SFX\Foosteps\Concrete\Footstep_Concrete_2_10C4C929.wem</Path>
 				</File>
 				<File Id="279846214" Language="SFX">
 					<ShortName>Foosteps\Water\Footstep_Water_1.wav</ShortName>
-					<Path>SFX\Foosteps\Water\Footstep_Water_1_3F75BDB9.wem</Path>
+					<Path>SFX\Foosteps\Water\Footstep_Water_1_10C4C929.wem</Path>
 				</File>
 				<File Id="316846577" Language="SFX">
 					<ShortName>Tengo Ritmo (I Got Rhythm).wav</ShortName>
@@ -72,95 +72,95 @@
 				</File>
 				<File Id="327395850" Language="SFX">
 					<ShortName>Foosteps\Wood\Footstep_Wood_3.wav</ShortName>
-					<Path>SFX\Foosteps\Wood\Footstep_Wood_3_3F75BDB9.wem</Path>
+					<Path>SFX\Foosteps\Wood\Footstep_Wood_3_10C4C929.wem</Path>
 				</File>
 				<File Id="397982048" Language="SFX">
 					<ShortName>Shelf_Drag_2.wav</ShortName>
-					<Path>SFX\Shelf_Drag_2_9EDFC787.wem</Path>
+					<Path>SFX\Shelf_Drag_2_D79FB2B7.wem</Path>
 				</File>
 				<File Id="470815762" Language="SFX">
 					<ShortName>Foosteps\Gravel\Footstep_Gravel_2.wav</ShortName>
-					<Path>SFX\Foosteps\Gravel\Footstep_Gravel_2_3F75BDB9.wem</Path>
+					<Path>SFX\Foosteps\Gravel\Footstep_Gravel_2_10C4C929.wem</Path>
 				</File>
 				<File Id="573747786" Language="SFX">
 					<ShortName>Foosteps\Gravel\Footstep_Gravel_3.wav</ShortName>
-					<Path>SFX\Foosteps\Gravel\Footstep_Gravel_3_3F75BDB9.wem</Path>
+					<Path>SFX\Foosteps\Gravel\Footstep_Gravel_3_10C4C929.wem</Path>
 				</File>
 				<File Id="604556664" Language="SFX">
 					<ShortName>Foosteps\Grass\Footstep_Grass_3.wav</ShortName>
-					<Path>SFX\Foosteps\Grass\Footstep_Grass_3_3F75BDB9.wem</Path>
+					<Path>SFX\Foosteps\Grass\Footstep_Grass_3_10C4C929.wem</Path>
 				</File>
 				<File Id="629351073" Language="SFX">
 					<ShortName>Foosteps\Wood\Footstep_Wood_2.wav</ShortName>
-					<Path>SFX\Foosteps\Wood\Footstep_Wood_2_3F75BDB9.wem</Path>
+					<Path>SFX\Foosteps\Wood\Footstep_Wood_2_10C4C929.wem</Path>
 				</File>
 				<File Id="686024931" Language="SFX">
 					<ShortName>Foosteps\Concrete\Footstep_Concrete_1.wav</ShortName>
-					<Path>SFX\Foosteps\Concrete\Footstep_Concrete_1_3F75BDB9.wem</Path>
+					<Path>SFX\Foosteps\Concrete\Footstep_Concrete_1_10C4C929.wem</Path>
 				</File>
 				<File Id="724078564" Language="SFX">
 					<ShortName>DashTrim.wav</ShortName>
-					<Path>SFX\DashTrim_3F75BDB9.wem</Path>
+					<Path>SFX\DashTrim_10C4C929.wem</Path>
 				</File>
 				<File Id="747267352" Language="SFX">
 					<ShortName>Foosteps\Gravel\Footstep_Gravel_1.wav</ShortName>
-					<Path>SFX\Foosteps\Gravel\Footstep_Gravel_1_3F75BDB9.wem</Path>
+					<Path>SFX\Foosteps\Gravel\Footstep_Gravel_1_10C4C929.wem</Path>
 				</File>
 				<File Id="767956231" Language="SFX">
 					<ShortName>Bullet_Collision_Metal_2.wav</ShortName>
-					<Path>SFX\Bullet_Collision_Metal_2_3F75BDB9.wem</Path>
+					<Path>SFX\Bullet_Collision_Metal_2_10C4C929.wem</Path>
 				</File>
 				<File Id="777100257" Language="SFX">
 					<ShortName>Bullet_Collision_Metal_1.wav</ShortName>
-					<Path>SFX\Bullet_Collision_Metal_1_3F75BDB9.wem</Path>
+					<Path>SFX\Bullet_Collision_Metal_1_10C4C929.wem</Path>
 				</File>
 				<File Id="828773037" Language="SFX">
 					<ShortName>Static_Noise.wav</ShortName>
-					<Path>SFX\Static_Noise_9EDFC787.wem</Path>
+					<Path>SFX\Static_Noise_D79FB2B7.wem</Path>
 				</File>
 				<File Id="865006348" Language="SFX">
 					<ShortName>Foosteps\Water\Footstep_Water_2.wav</ShortName>
-					<Path>SFX\Foosteps\Water\Footstep_Water_2_3F75BDB9.wem</Path>
+					<Path>SFX\Foosteps\Water\Footstep_Water_2_10C4C929.wem</Path>
 				</File>
 				<File Id="912266567" Language="SFX">
 					<ShortName>Foosteps\Concrete\Footstep_Concrete_3.wav</ShortName>
-					<Path>SFX\Foosteps\Concrete\Footstep_Concrete_3_3F75BDB9.wem</Path>
+					<Path>SFX\Foosteps\Concrete\Footstep_Concrete_3_10C4C929.wem</Path>
 				</File>
 				<File Id="919918530" Language="SFX">
 					<ShortName>shoot.wav</ShortName>
-					<Path>SFX\shoot_3F75BDB9.wem</Path>
+					<Path>SFX\shoot_10C4C929.wem</Path>
 				</File>
 				<File Id="920742534" Language="SFX">
 					<ShortName>Bullet_Collision_Default_2.wav</ShortName>
-					<Path>SFX\Bullet_Collision_Default_2_3F75BDB9.wem</Path>
+					<Path>SFX\Bullet_Collision_Default_2_10C4C929.wem</Path>
 				</File>
 				<File Id="934109307" Language="SFX">
 					<ShortName>Foosteps\Wood\Footstep_Wood_1.wav</ShortName>
-					<Path>SFX\Foosteps\Wood\Footstep_Wood_1_3F75BDB9.wem</Path>
+					<Path>SFX\Foosteps\Wood\Footstep_Wood_1_10C4C929.wem</Path>
 				</File>
 				<File Id="974048632" Language="SFX">
 					<ShortName>Foosteps\Grass\Footstep_Grass_2.wav</ShortName>
-					<Path>SFX\Foosteps\Grass\Footstep_Grass_2_3F75BDB9.wem</Path>
+					<Path>SFX\Foosteps\Grass\Footstep_Grass_2_10C4C929.wem</Path>
 				</File>
 				<File Id="975152429" Language="SFX">
 					<ShortName>Foosteps\Grass\Footstep_Grass_1.wav</ShortName>
-					<Path>SFX\Foosteps\Grass\Footstep_Grass_1_3F75BDB9.wem</Path>
+					<Path>SFX\Foosteps\Grass\Footstep_Grass_1_10C4C929.wem</Path>
 				</File>
 				<File Id="1011342382" Language="SFX">
 					<ShortName>Bullet_Collision_Default_3.wav</ShortName>
-					<Path>SFX\Bullet_Collision_Default_3_3F75BDB9.wem</Path>
+					<Path>SFX\Bullet_Collision_Default_3_10C4C929.wem</Path>
 				</File>
 				<File Id="1043477418" Language="SFX">
 					<ShortName>Shelf_Drag_1.wav</ShortName>
-					<Path>SFX\Shelf_Drag_1_9EDFC787.wem</Path>
+					<Path>SFX\Shelf_Drag_1_D79FB2B7.wem</Path>
 				</File>
 			</IncludedMemoryFiles>
 			<GameParameters>
 				<GameParameter Id="151362964" Name="playerHealth" ObjectPath="\Game Parameters\Default Work Unit\playerHealth"/>
-				<GameParameter Id="2263952660" Name="radioVolume" ObjectPath="\Game Parameters\Default Work Unit\radioVolume"/>
 				<GameParameter Id="2678713084" Name="isRadioInWater" ObjectPath="\Game Parameters\Default Work Unit\isRadioInWater"/>
 				<GameParameter Id="3153036660" Name="bulletHitCounter" ObjectPath="\Game Parameters\Default Work Unit\bulletHitCounter"/>
 				<GameParameter Id="4070528516" Name="Timescale" ObjectPath="\Game Parameters\Default Work Unit\Timescale"/>
+				<GameParameter Id="4216781760" Name="radioHealth" ObjectPath="\Game Parameters\Default Work Unit\radioHealth"/>
 			</GameParameters>
 			<SwitchGroups>
 				<SwitchGroup Id="1239100674" Name="ShelfDirection" ObjectPath="\Switches\Default Work Unit\ShelfDirection" GUID="{C0F2F11E-2E68-4C67-846E-666BCCC99AF3}">

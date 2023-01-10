@@ -59,7 +59,7 @@ namespace AK
         static const AkUniqueID BULLETHITCOUNTER = 3153036660U;
         static const AkUniqueID ISRADIOINWATER = 2678713084U;
         static const AkUniqueID PLAYERHEALTH = 151362964U;
-        static const AkUniqueID RADIOVOLUME = 2263952660U;
+        static const AkUniqueID RADIOHEALTH = 4216781760U;
         static const AkUniqueID TIMESCALE = 4070528516U;
     } // namespace GAME_PARAMETERS
 

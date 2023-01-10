@@ -27,8 +27,6 @@ public class ShelfScript : MonoBehaviour
 
     void CheckDirection()
     {
-        //Debug.Log(rb.velocity.sqrMagnitude);
-
         //If object is moving
         if (rb.velocity.sqrMagnitude > shelfVelocityLimit)
         {
@@ -37,7 +35,6 @@ public class ShelfScript : MonoBehaviour
             {
                 //Horizontal Movement
                 shelfAudioScript.SwitchShelfSound(false);
-                
             }
 
             float dotPUp = Vector3.Dot(transform.up.normalized, rb.velocity.normalized);
@@ -45,12 +42,7 @@ public class ShelfScript : MonoBehaviour
             {
                 //Lateral Movement
                 shelfAudioScript.SwitchShelfSound(true);
-
             }
-
-            /*            Debug.Log(dir);
-                        Debug.Log(dotPRight);
-                        Debug.Log(dotPUp);*/
             
             if(!Played)
             {
@@ -62,7 +54,6 @@ public class ShelfScript : MonoBehaviour
         else if(rb.velocity.sqrMagnitude <= shelfVelocityLimit  && Played)
         {
             //pause
-            //Debug.Log("Paused shelf sound");
             shelfAudioScript.PauseShelfSound();
             Played = false;
         }

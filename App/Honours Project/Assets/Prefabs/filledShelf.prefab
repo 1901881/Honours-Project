@@ -95,9 +95,10 @@ GameObject:
   - component: {fileID: 5757135739253505769}
   - component: {fileID: 7228646534955513373}
   - component: {fileID: 6278190734728236532}
+  - component: {fileID: 218755143}
   m_Layer: 0
   m_Name: filledShelf
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -109,7 +110,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4949074319811109971}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -123,7 +124,7 @@ Transform:
   - {fileID: 965886413897054940}
   - {fileID: 5049048232932656077}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!50 &7228646534955513373
 Rigidbody2D:
@@ -172,6 +173,20 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 4.246488, y: 1.1354258}
   m_EdgeRadius: 0
+--- !u!114 &218755143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4949074319811109971}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b27329b8d45fbc64fb4f5ad95dda1cb0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shelfAudioScript: {fileID: 1503409082298923166}
+  shelfVelocityLimit: 0.05
 --- !u!1 &5990943893473276560
 GameObject:
   m_ObjectHideFlags: 0
@@ -186,7 +201,7 @@ GameObject:
   - component: {fileID: 1503409082298923166}
   m_Layer: 0
   m_Name: ShelfAudio
-  m_TagString: Untagged
+  m_TagString: Metal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -256,6 +271,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 10a8ebdc4a0196644a8a428caa0d3f13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  shelfMoveSoundPlay:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 897056bfaa28df94f85e2f858ede77a5, type: 2}
+  shelfMoveSoundPause:
+    idInternal: 0
+    valueGuidInternal: 
+    WwiseObjectReference: {fileID: 11400000, guid: 7dff391cd2eb8bb4dbb36dcd212396e6, type: 2}
 --- !u!1001 &2129142211216064252
 PrefabInstance:
   m_ObjectHideFlags: 0
