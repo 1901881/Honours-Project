@@ -60,11 +60,3 @@ public class ShelfScript : MonoBehaviour
        
     }
 }
-
-
-
-/*
-think . right is for rghta left
-.up is up and down
-
- */

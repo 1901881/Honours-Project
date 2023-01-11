@@ -15,21 +15,6 @@ public class BulletAudio : MonoBehaviour
         AkSoundEngine.SetSwitch("Material", "Concrete", gameObject);
     }
 
-/*    private void OnTriggerEnter(Collider other)
-    {
-        //Debug.Log("Bullet Collided");
-
-        if (other.gameObject.tag == "Concrete")
-        {
-            AkSoundEngine.SetSwitch("Material", other.gameObject.tag, gameObject);
-            Debug.Log("Bullet Hit Concrete");
-        }
-        else if (other.gameObject.tag == "Metal")
-        {
-            AkSoundEngine.SetSwitch("Material", other.gameObject.tag, gameObject);
-        }
-    }*/
-
     public void PlayBulletCollisionSound(float bulletHitCounter, string tag)
     {
         if (tag == "Metal" || tag == "Concrete")

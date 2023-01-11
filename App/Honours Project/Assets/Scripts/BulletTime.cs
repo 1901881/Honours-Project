@@ -27,7 +27,6 @@ public class BulletTime : MonoBehaviour
     {
         //set rtpc value with time scale
         rtpc.SetValue(gameObject, Time.timeScale);
-        //rtpc.SetValue(gameObject, 0.7f);
 
         if (Input.GetKeyDown(KeyCode.LeftShift))
         {
@@ -43,11 +42,7 @@ public class BulletTime : MonoBehaviour
 
     IEnumerator ToggleBulletTime()
     {
-        //string audioEvent = (isBulletTime) ? "EnterBulletTime" : "ExitBulletTime";
-        //AkSoundEngine.PostEvent(audioEvent, this.gameObject);
-
         EMPPlay.Post(gameObject);
-
 
         float t = 0f;
         float startScale = Time.timeScale;
@@ -61,9 +56,6 @@ public class BulletTime : MonoBehaviour
             Time.timeScale = Mathf.Lerp(startScale, targetScale, t);
             Time.fixedDeltaTime = 0.02f * Time.timeScale;
             yield return null;
-/*            yield return new WaitForSeconds(bulletTimeDuration);
-            isBulletTime = !isBulletTime;
-            StartCoroutine("ToggleBulletTime");*/
         }
 
         if (isBulletTime)

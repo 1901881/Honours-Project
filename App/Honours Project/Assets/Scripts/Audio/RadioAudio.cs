@@ -42,16 +42,12 @@ public class RadioAudio : MonoBehaviour
     {
         Debug.Log(playerHealth);
         playerHealthRTPC.SetValue(gameObject, playerHealth);
-        //playerHealthRTPC.SetGlobalValue(playerHealth);
-        //AkSoundEngine.SetRTPCValue("playerHealth", playerHealth);
     }
 
     public void SetIsRadioInWater(float i)
     {
         
         isRadioInWaterRTPC.SetValue(gameObject, i);
-        //playerHealthRTPC.SetGlobalValue(playerHealth);
-        //AkSoundEngine.SetRTPCValue("playerHealth", playerHealth);
     }
 
 }
