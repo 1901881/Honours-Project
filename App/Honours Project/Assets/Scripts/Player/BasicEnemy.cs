@@ -22,6 +22,9 @@ public class BasicEnemy : MonoBehaviour
     private bool isInChaseRange;
     private bool isInAttackRange;
 
+    private bool isAttacking = false;
+    private float baseSpeed;
+
     //Changing Enemy Color
     private SpriteRenderer SpriteRend;
     private Color originalColor;
@@ -33,6 +36,7 @@ public class BasicEnemy : MonoBehaviour
         SpriteRend = GetComponent<SpriteRenderer>();
         originalColor = SpriteRend.color;
         target = GameObject.FindWithTag("Player").transform;
+        baseSpeed = speed;
     }
 
     // Update is called once per frame
@@ -56,17 +60,21 @@ public class BasicEnemy : MonoBehaviour
 
     private void FixedUpdate()
     {
+        if (isInSightRange)
+        {
+            MoveCharacter(movement);
+        }
         if (isInSightRange && !isInChaseRange)
         {
-            MoveCharacter(movement, speed/3);
+            speed = baseSpeed/2;
         }
         if (isInChaseRange && !isInAttackRange)
         {
-            MoveCharacter(movement, speed);
+           speed = baseSpeed;
         }
-        if(isInAttackRange)
+        if(isInAttackRange && !isAttacking)
         {
-            rb.velocity = Vector2.zero;
+            StartCoroutine(Attack());
         }
     }
 
@@ -76,10 +84,9 @@ public class BasicEnemy : MonoBehaviour
         {
             StartCoroutine(Hit());
         }
-        
     }
 
-    private void MoveCharacter(Vector2 direction, float speed)
+    private void MoveCharacter(Vector2 direction)
     {
         rb.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
     }
@@ -93,6 +100,17 @@ public class BasicEnemy : MonoBehaviour
         SpriteRend.color = originalColor;
         health--;
         
+    }
+
+    IEnumerator Attack()
+    {
+        speed = 0;
+        yield return new WaitForSecondsRealtime(0.5f);
+        speed = baseSpeed * 2;
+        yield return new WaitForSecondsRealtime(0.2f);
+        speed = 0;
+        yield return new WaitForSecondsRealtime(0.2f);
+        speed = baseSpeed / 2;
     }
 
 
