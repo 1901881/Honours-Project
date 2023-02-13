@@ -87,6 +87,17 @@ public class BasicEnemy : MonoBehaviour
         health--;
         
     }
+
+
+
+    private void OnDrawGizmos()//Selected
+    {
+        UnityEditor.Handles.color = Color.green;
+        UnityEditor.Handles.DrawWireDisc(transform.position, transform.forward, checkRadius);
+
+        UnityEditor.Handles.color = Color.red;
+        UnityEditor.Handles.DrawWireDisc(transform.position, transform.forward, attackRadius);
+    }
 }
 
 /*
