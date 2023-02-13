@@ -6,7 +6,8 @@ public class BasicEnemy : MonoBehaviour
 {
     public int health = 3;
     public float speed;
-    public float checkRadius;
+    public float sightRadius;
+    public float chaseRadius;
     public float attackRadius;
 
     public LayerMask whatIsPlayer;
@@ -17,6 +18,7 @@ public class BasicEnemy : MonoBehaviour
     private Vector2 movement;
     public Vector3 direction;
 
+    private bool isInSightRange;
     private bool isInChaseRange;
     private bool isInAttackRange;
 
@@ -41,7 +43,8 @@ public class BasicEnemy : MonoBehaviour
             Destroy(gameObject);
         }
 
-        isInChaseRange = Physics2D.OverlapCircle(transform.position, checkRadius, whatIsPlayer);
+        isInSightRange = Physics2D.OverlapCircle(transform.position, sightRadius, whatIsPlayer);
+        isInChaseRange = Physics2D.OverlapCircle(transform.position, chaseRadius, whatIsPlayer);
         isInAttackRange = Physics2D.OverlapCircle(transform.position, attackRadius, whatIsPlayer);
 
         direction = target.position - transform.position;
@@ -53,9 +56,13 @@ public class BasicEnemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-        if(isInChaseRange && !isInAttackRange)
+        if (isInSightRange && !isInChaseRange)
         {
-            MoveCharacter(movement);
+            MoveCharacter(movement, speed/3);
+        }
+        if (isInChaseRange && !isInAttackRange)
+        {
+            MoveCharacter(movement, speed);
         }
         if(isInAttackRange)
         {
@@ -72,7 +79,7 @@ public class BasicEnemy : MonoBehaviour
         
     }
 
-    private void MoveCharacter(Vector2 direction)
+    private void MoveCharacter(Vector2 direction, float speed)
     {
         rb.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
     }
@@ -93,7 +100,10 @@ public class BasicEnemy : MonoBehaviour
     private void OnDrawGizmos()//Selected
     {
         UnityEditor.Handles.color = Color.green;
-        UnityEditor.Handles.DrawWireDisc(transform.position, transform.forward, checkRadius);
+        UnityEditor.Handles.DrawWireDisc(transform.position, transform.forward, sightRadius);
+
+        UnityEditor.Handles.color = Color.yellow;
+        UnityEditor.Handles.DrawWireDisc(transform.position, transform.forward, chaseRadius);
 
         UnityEditor.Handles.color = Color.red;
         UnityEditor.Handles.DrawWireDisc(transform.position, transform.forward, attackRadius);
