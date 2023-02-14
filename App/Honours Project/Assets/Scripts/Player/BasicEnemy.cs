@@ -13,7 +13,7 @@ public class BasicEnemy : MonoBehaviour
     public LayerMask whatIsPlayer;
 
     
-    private Transform target;
+    private Vector3 target;
     private Rigidbody2D rb;
     private Vector2 movement;
     public Vector3 direction;
@@ -23,11 +23,14 @@ public class BasicEnemy : MonoBehaviour
     private bool isInAttackRange;
 
     private bool isAttacking = false;
+    private bool isPatrolling = false;
     private float baseSpeed;
 
     //Changing Enemy Color
     private SpriteRenderer SpriteRend;
     private Color originalColor;
+
+    float timer = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -35,7 +38,7 @@ public class BasicEnemy : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         SpriteRend = GetComponent<SpriteRenderer>();
         originalColor = SpriteRend.color;
-        target = GameObject.FindWithTag("Player").transform;
+        target = GameObject.FindWithTag("Player").transform.position;
         baseSpeed = speed;
     }
 
@@ -51,7 +54,7 @@ public class BasicEnemy : MonoBehaviour
         isInChaseRange = Physics2D.OverlapCircle(transform.position, chaseRadius, whatIsPlayer);
         isInAttackRange = Physics2D.OverlapCircle(transform.position, attackRadius, whatIsPlayer);
 
-        direction = target.position - transform.position;
+        direction = target - transform.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         direction.Normalize();
         movement = direction;
@@ -65,9 +68,32 @@ public class BasicEnemy : MonoBehaviour
 
     private void FixedUpdate()
     {
-
-        if (isInSightRange)
+        if(!isInSightRange)
         {
+            
+            calcualtePatrolPoint();
+            isPatrolling = true;
+            float distanceToTarget = Vector3.Distance(transform.position, target);
+            float distanceThreshold = 1.0f;
+            if (distanceToTarget >= distanceThreshold)
+            {
+                MoveCharacter();
+            }
+            else
+            {
+                
+                timer += Time.deltaTime;
+                if(timer >= 1.0)
+                {
+                    isPatrolling = false;
+                    timer = 0;
+                }
+                //StartCoroutine(PatrolPause());
+            }
+        }
+        /*if (isInSightRange)
+        {
+            target = GameObject.FindWithTag("Player").transform.position;
             MoveCharacter();
         }
         if (!isAttacking)
@@ -90,7 +116,7 @@ public class BasicEnemy : MonoBehaviour
             {
                 StartCoroutine(Attack());
             }
-        }
+        }*/
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -153,6 +179,16 @@ public class BasicEnemy : MonoBehaviour
         UnityEditor.Handles.color = Color.red;
         UnityEditor.Handles.DrawWireDisc(transform.position, transform.forward, attackRadius);
     }
+
+    private void calcualtePatrolPoint()
+    {
+        if(!isPatrolling)
+        {
+            Vector2 point = Random.insideUnitCircle.normalized * Random.Range(sightRadius-2, sightRadius);//min,max
+            target = point;
+        }
+    }
+
 }
 
 /*
