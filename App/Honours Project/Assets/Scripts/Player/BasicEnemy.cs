@@ -55,26 +55,41 @@ public class BasicEnemy : MonoBehaviour
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         direction.Normalize();
         movement = direction;
-       
+
+    }
+
+    private void MoveCharacter()
+    {
+        rb.MovePosition((Vector2)transform.position + (movement * speed * Time.deltaTime));
     }
 
     private void FixedUpdate()
     {
+
         if (isInSightRange)
         {
-            MoveCharacter(movement);
+            MoveCharacter();
         }
-        if (isInSightRange && !isInChaseRange)
+        if (!isAttacking)
         {
-            speed = baseSpeed/2;
-        }
-        if (isInChaseRange && !isInAttackRange)
-        {
-           speed = baseSpeed;
-        }
-        if(isInAttackRange && !isAttacking)
-        {
-            StartCoroutine(Attack());
+            if (isInSightRange && !isInChaseRange && !isInAttackRange)
+            {
+                if (speed != baseSpeed / 2)
+                {
+                    speed = baseSpeed / 2;
+                }
+            }
+            if (isInChaseRange && !isInAttackRange)
+            {
+                if (speed != baseSpeed)
+                {
+                    speed = baseSpeed;
+                }
+            }
+            if (isInAttackRange)
+            {
+                StartCoroutine(Attack());
+            }
         }
     }
 
@@ -84,12 +99,15 @@ public class BasicEnemy : MonoBehaviour
         {
             StartCoroutine(Hit());
         }
+        if (collision.gameObject.tag == "Player")
+        {
+            StartCoroutine(collision.gameObject.GetComponent<PlayerMovement>().Hit());
+            Debug.Log("hit player");
+            StartCoroutine(AttackPause());
+        }
     }
 
-    private void MoveCharacter(Vector2 direction)
-    {
-        rb.MovePosition((Vector2)transform.position + (direction * speed * Time.deltaTime));
-    }
+  
 
     IEnumerator Hit()
     {
@@ -104,13 +122,22 @@ public class BasicEnemy : MonoBehaviour
 
     IEnumerator Attack()
     {
+        isAttacking = true;
         speed = 0;
         yield return new WaitForSecondsRealtime(0.5f);
         speed = baseSpeed * 2;
-        yield return new WaitForSecondsRealtime(0.2f);
+        yield return new WaitForSecondsRealtime(2.2f);
         speed = 0;
         yield return new WaitForSecondsRealtime(0.2f);
         speed = baseSpeed / 2;
+        isAttacking = false;
+    }
+
+    IEnumerator AttackPause()
+    {
+        speed = 0;
+        yield return new WaitForSecondsRealtime(3.0f);
+        speed = baseSpeed/2;
     }
 
 

@@ -151,7 +151,7 @@ public class PlayerMovement : MonoBehaviour
             Destroy(collision.gameObject);
         }
 
-        if (collision.gameObject.tag == "Bullet" || collision.gameObject.tag == "Enemy")
+        if (collision.gameObject.tag == "Bullet")
         {
             StartCoroutine(Hit());
         }
@@ -182,7 +182,7 @@ public class PlayerMovement : MonoBehaviour
         canDash = true;
     }
 
-    IEnumerator Hit()
+    public IEnumerator Hit()
     {
         SpriteRend.color = Color.white;
         Time.timeScale = 0;
