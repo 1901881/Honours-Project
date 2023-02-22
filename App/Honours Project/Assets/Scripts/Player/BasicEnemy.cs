@@ -91,7 +91,7 @@ public class BasicEnemy : MonoBehaviour
                 //StartCoroutine(PatrolPause());
             }
         }
-        /*if (isInSightRange)
+        if (isInSightRange)
         {
             target = GameObject.FindWithTag("Player").transform.position;
             MoveCharacter();
@@ -116,7 +116,7 @@ public class BasicEnemy : MonoBehaviour
             {
                 StartCoroutine(Attack());
             }
-        }*/
+        }
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -192,5 +192,5 @@ public class BasicEnemy : MonoBehaviour
 }
 
 /*
- made it destroy on collision with bullet
+ 
  */
