@@ -40,7 +40,7 @@ public class RadioAudio : MonoBehaviour
 
     public void SetPlayerAudioHealth(float playerHealth)
     {
-        Debug.Log(playerHealth);
+        //Debug.Log(playerHealth);
         playerHealthRTPC.SetValue(gameObject, playerHealth);
     }
 

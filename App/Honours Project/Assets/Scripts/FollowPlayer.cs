@@ -33,7 +33,7 @@ public class FollowPlayer : MonoBehaviour
     {
         if (other.gameObject.tag == "ReverbZone")
         {
-            Debug.Log("in reverb zone");
+           // Debug.Log("in reverb zone");
         }
 
         LastFloorMaterial = FloorMaterial;
