@@ -542,6 +542,7 @@
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Vector2\Normalize.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Vector3\GetMagnitude.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\NavMeshAgent\SetDestination.cs" />
+    <Compile Include="Assets\Scripts\Player\NavAgentAI.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Rigidbody\SetCenterOfMass.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\String\IsNullOrEmpty.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Decorators\UntilFailure.cs" />
@@ -626,7 +627,6 @@
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Transform\LookAt.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Vector2\ClampMagnitude.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\NavMeshAgent\IsStopped.cs" />
-    <Compile Include="Assets\Scripts\Player\NavAgentAI.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\WwiseSettings.xml" />

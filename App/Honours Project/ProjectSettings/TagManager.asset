@@ -5,11 +5,19 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bullet
+  - ReverbZone
+  - Concrete
+  - Gravel
+  - Grass
+  - Enemy
+  - Water
+  - Wood
+  - Metal
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Background
   - Water
   - UI
   - Bullets
