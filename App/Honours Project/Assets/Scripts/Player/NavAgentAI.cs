@@ -8,7 +8,7 @@ using UnityEditor;
 
 public class NavAgentAI : MonoBehaviour
 {
-    public float seekSpeed;
+/*    public float seekSpeed;
     public float seekViewAngle;
     public float seekViewDistance;
 
@@ -18,10 +18,10 @@ public class NavAgentAI : MonoBehaviour
 
     public float attackSpeed;
     public float attackViewAngle;
-    public float attackViewDistance;
+    public float attackViewDistance;*/
 
     public BehaviorTree behaviorTree;
-
+    public float fleeRadius = 2;
 
     //Changing Enemy Color
     private SpriteRenderer SpriteRend;
@@ -87,6 +87,13 @@ public class NavAgentAI : MonoBehaviour
         health--;
 
     }
+
+    private void OnDrawGizmos()//Selected
+    {
+        UnityEditor.Handles.color = Color.green;
+        UnityEditor.Handles.DrawWireDisc(transform.position, transform.forward, fleeRadius);
+    }
+
 }
 
 /*
