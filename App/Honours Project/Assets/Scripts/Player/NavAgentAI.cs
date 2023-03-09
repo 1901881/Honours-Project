@@ -8,6 +8,9 @@ using UnityEditor;
 using static UnityEngine.GraphicsBuffer;
 using System;
 using System.Linq;
+using System.Runtime.CompilerServices;
+using static UnityEngine.Networking.UnityWebRequest;
+using System.Drawing;
 
 public class NavAgentAI : MonoBehaviour
 {
@@ -28,7 +31,7 @@ public class NavAgentAI : MonoBehaviour
 
     //Changing Enemy Color
     private SpriteRenderer SpriteRend;
-    private Color originalColor;
+    private UnityEngine.Color originalColor;
 
 
     public int health = 3;
@@ -37,6 +40,16 @@ public class NavAgentAI : MonoBehaviour
     public float stressValue;
 
     private Vector3 target;
+
+    public LayerMask whatIsBullet;
+    private bool isInBulletRange;
+    public float bulletRadius;
+    int bulletCounter = 0;
+    int previousBulletCount = 100;
+    float timer = 0;
+
+    public ContactFilter2D contactFilter;
+    Collider2D[] results = new Collider2D[10];
 
     // Start is called before the first frame update
     void Start()
@@ -56,7 +69,8 @@ public class NavAgentAI : MonoBehaviour
             Destroy(gameObject);
         }
 
-        CalculateStress();
+        //CalculateStress();
+        CheckBullets();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -75,7 +89,7 @@ public class NavAgentAI : MonoBehaviour
 
     IEnumerator Hit()
     {
-        SpriteRend.color = Color.white;
+        SpriteRend.color = UnityEngine.Color.white;
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(0.08f);
         Time.timeScale = 1;
@@ -86,8 +100,33 @@ public class NavAgentAI : MonoBehaviour
 
     private void OnDrawGizmos()//Selected
     {
-        UnityEditor.Handles.color = Color.green;
+        UnityEditor.Handles.color = UnityEngine.Color.green;
         UnityEditor.Handles.DrawWireDisc(transform.position, transform.forward, fleeRadius);
+
+        UnityEditor.Handles.color = UnityEngine.Color.yellow;
+        UnityEditor.Handles.DrawWireDisc(transform.position, transform.forward, bulletRadius);
+    }
+
+    void CheckBullets()
+    {
+        var bulletCollisions = Physics2D.OverlapCircle(transform.position, bulletRadius, contactFilter, results);
+
+        if(previousBulletCount < bulletCollisions)
+        {
+            bulletCounter++;
+        }
+        previousBulletCount = bulletCollisions;
+
+        if(bulletCounter > 0)
+        {
+            timer += Time.deltaTime;
+            if (timer > 5)
+            {
+                bulletCounter = 0;
+                timer = 0;
+            }
+        }
+        Debug.Log("Bullets near bot: " + bulletCounter);
     }
 
     void CalculateStress()
@@ -121,6 +160,15 @@ public class NavAgentAI : MonoBehaviour
         float hitFactor = 1;
 
         //just do adds?, maybe speak to salma about this
+        //for now lets not focus on the equation
+        //and just aim to get the results first 
+        //then make the equation after help
+
+        //health can get that
+        //distance - complete
+
+        //bullets
+        //hit factor
 
 
 
