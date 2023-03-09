@@ -48,6 +48,8 @@ public class NavAgentAI : MonoBehaviour
     int previousBulletCount = 100;
     float timer = 0;
 
+    bool recentlyHit = false;
+
     public ContactFilter2D contactFilter;
     Collider2D[] results = new Collider2D[10];
 
@@ -71,6 +73,8 @@ public class NavAgentAI : MonoBehaviour
 
         //CalculateStress();
         CheckBullets();
+
+        Debug.Log(recentlyHit);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -95,6 +99,9 @@ public class NavAgentAI : MonoBehaviour
         Time.timeScale = 1;
         SpriteRend.color = originalColor;
         health--;
+        recentlyHit = true;
+        yield return new WaitForSecondsRealtime(5f);
+        recentlyHit = false;
 
     }
 
@@ -126,7 +133,7 @@ public class NavAgentAI : MonoBehaviour
                 timer = 0;
             }
         }
-        Debug.Log("Bullets near bot: " + bulletCounter);
+        //Debug.Log("Bullets near bot: " + bulletCounter);
     }
 
     void CalculateStress()
