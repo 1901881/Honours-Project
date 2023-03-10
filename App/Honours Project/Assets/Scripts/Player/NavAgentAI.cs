@@ -11,6 +11,7 @@ using System.Linq;
 using System.Runtime.CompilerServices;
 using static UnityEngine.Networking.UnityWebRequest;
 using System.Drawing;
+using System.IO;
 
 public class NavAgentAI : MonoBehaviour
 {
@@ -34,21 +35,29 @@ public class NavAgentAI : MonoBehaviour
     private UnityEngine.Color originalColor;
 
 
-    public int health = 3;
+    public float maxHealth = 3;
+    public float health = 0;
 
     public int stressResponse;
-    public float stressValue;
+   
 
     private Vector3 target;
 
     public LayerMask whatIsBullet;
     private bool isInBulletRange;
     public float bulletRadius;
-    int bulletCounter = 0;
+    
     int previousBulletCount = 100;
     float timer = 0;
 
-    bool recentlyHit = false;
+
+    //public stress variables
+    public float distanceToTarget;
+    public int recentlyHit = 0;
+    public int bulletCounter = 0;
+    public float healthFactor = 0;
+    public float stressValue;
+
 
     public ContactFilter2D contactFilter;
     Collider2D[] results = new Collider2D[10];
@@ -58,6 +67,8 @@ public class NavAgentAI : MonoBehaviour
     {
         SpriteRend = GetComponent<SpriteRenderer>();
         originalColor = SpriteRend.color;
+
+        health = maxHealth;
     }
 
     // Update is called once per frame
@@ -71,10 +82,10 @@ public class NavAgentAI : MonoBehaviour
             Destroy(gameObject);
         }
 
-        //CalculateStress();
+        CalculateStress();
         CheckBullets();
 
-        Debug.Log(recentlyHit);
+        //Debug.Log(recentlyHit);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -99,9 +110,9 @@ public class NavAgentAI : MonoBehaviour
         Time.timeScale = 1;
         SpriteRend.color = originalColor;
         health--;
-        recentlyHit = true;
-        yield return new WaitForSecondsRealtime(5f);
-        recentlyHit = false;
+        recentlyHit = 1;
+        yield return new WaitForSecondsRealtime(10f);
+        recentlyHit = 0;
 
     }
 
@@ -144,13 +155,13 @@ public class NavAgentAI : MonoBehaviour
                  stressValue += 10;
                  healthStress = true;
              }*/
- /*       target = GameObject.FindWithTag("Player").transform.position;
-        float maxDistance = 10.0f;
-        float distanceToTarget = Vector3.Distance(transform.position, target);
-        if (distanceToTarget > maxDistance)
+        target = GameObject.FindWithTag("Player").transform.position;
+        //float maxDistance = 10.0f;
+        distanceToTarget = Vector3.Distance(transform.position, target);
+        if (distanceToTarget <= 0)
         {
-            distanceToTarget = 1;//make it null
-        }*/
+            distanceToTarget = 10;
+        }
         //stress value/
         // x = health * distance to player * bullets near player * stress likeliness
 
@@ -161,10 +172,10 @@ public class NavAgentAI : MonoBehaviour
         //Debug.Log(stressValue);
         //Debug.Log(distanceToTarget);
 
-        float healthFactor = 1;
-        float distanceFactor = 1;
-        float bulletFactor = 1;
-        float hitFactor = 1;
+
+        /*        float distanceFactor = 1;
+                float bulletFactor = 1;
+                float hitFactor = 1;*/
 
         //just do adds?, maybe speak to salma about this
         //for now lets not focus on the equation
@@ -177,54 +188,75 @@ public class NavAgentAI : MonoBehaviour
         //bullets
         //hit factor
 
+        //make health percentage - current health / maximum health
+        //change recently hit to a binary value 0 and 1
 
+        healthFactor = health / maxHealth;
 
-        float stressFortitude = 0;
-        float stressValue = 0;
-
-        stressValue = healthFactor * distanceFactor * bulletFactor * hitFactor;
-
-        if(stressValue >= stressFortitude)
+        if (stressValue == 0)
         {
-            float fightWeighting = 0;
-            float flightWeighting = 0;
-            float freezeWeighting = 0;
-
-            float[] stressWeightings = { fightWeighting, flightWeighting, freezeWeighting};
-            int[] stressCounter = new int[3];//fight, flight, freeze
-
-            int testAmount = 5;
-
-            for (int i = 0; i < stressWeightings.Length; i++)
-            {
-                for (int x = 0; x < testAmount; x++)
-                {
-                    float randomNumber = 0; //1-100
-                    if (randomNumber <= stressWeightings[i])
-                    {
-                        stressCounter[i]++;
-                    }
-                }
-            }
-
-            //check which one is bigger, then return the case
-            int maxIndex = Array.IndexOf(stressCounter, stressCounter.Max());
-
-            switch(maxIndex)
-            {
-                case 0:
-                    Debug.Log("fight");
-                    break;
-                case 1:
-                    Debug.Log("flight");
-                    break;
-                case 2:
-                    Debug.Log("freeze");
-                    break;
-            }
-
+            Debug.Log("stress zero");
         }
 
-       
+        //stressValue = (bulletCounter / distanceToTarget) * (1 - healthFactor) * (1 + recentlyHit);
+        //stressValue = ((bulletCounter / (10 * distanceToTarget)) * 50) * (1 - (healthFactor/100)) * (1 + recentlyHit);
+        //stressValue = ((bulletCounter / (distanceToTarget ** 2)) * 100) * (1 - (healthFactor/10)) * (1 + recentlyHit);
+
+
+
+        //stress = ((bullet_amount / (10 * distance)) * 50) * (1 - (health_percentage / 100)) * (1 + recently_hit)
+        //stress = ((bullet_amount / (10 * distance)) * 100) * (1 - (health_percentage / 10)) * (1 + recently_hit) + 50
+        //stress = ((bullet_amount / (distance ** 2)) * 100) * (1 - (health_percentage / 10)) * (1 + recently_hit) + 50
+
+        //float stressFortitude = 0;
+
+
+        //stressValue = healthFactor * distanceFactor * bulletFactor * hitFactor;
+
+        //Debug.Log("Stress Value: " + stressValue);
+
+
+        /*        if(stressValue >= stressFortitude)
+                {
+                    float fightWeighting = 0;
+                    float flightWeighting = 0;
+                    float freezeWeighting = 0;
+
+                    float[] stressWeightings = { fightWeighting, flightWeighting, freezeWeighting};
+                    int[] stressCounter = new int[3];//fight, flight, freeze
+
+                    int testAmount = 5;
+
+                    for (int i = 0; i < stressWeightings.Length; i++)
+                    {
+                        for (int x = 0; x < testAmount; x++)
+                        {
+                            float randomNumber = 0; //1-100
+                            if (randomNumber <= stressWeightings[i])
+                            {
+                                stressCounter[i]++;
+                            }
+                        }
+                    }
+
+                    //check which one is bigger, then return the case
+                    int maxIndex = Array.IndexOf(stressCounter, stressCounter.Max());
+
+                    switch(maxIndex)
+                    {
+                        case 0:
+                            Debug.Log("fight");
+                            break;
+                        case 1:
+                            Debug.Log("flight");
+                            break;
+                        case 2:
+                            Debug.Log("freeze");
+                            break;
+                    }
+
+                }*/
+
+
     }
 }
