@@ -2202,7 +2202,13 @@ MonoBehaviour:
   recentlyHit: 0
   bulletCounter: 0
   healthFactor: 1
+  distance_stress: 0
+  bullet_stress: 0
   stressValue: 0
+  stressFortitude: 61
+  fightWeighting: 54.3
+  flightWeighting: 15.7
+  freezeWeighting: 33.1
   contactFilter:
     useTriggers: 0
     useLayerMask: 1
