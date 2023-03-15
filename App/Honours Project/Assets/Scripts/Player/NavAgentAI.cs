@@ -103,6 +103,7 @@ public class NavAgentAI : MonoBehaviour
         CheckBullets();
 
         //Debug.Log(recentlyHit);
+        behaviorTree.SetVariableValue("stressResponseRunning", stressResponseRunning);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -223,7 +224,11 @@ public class NavAgentAI : MonoBehaviour
             
             if(!stressResponseRunning)
             {
-               
+                //check which one is bigger, then return the case
+                stressResponseIndex = Array.IndexOf(stressCounter, stressCounter.Max());
+                //set stressResponse index value for behaviour tree.
+                behaviorTree.SetVariableValue("stressResponseIndex", stressResponseIndex);
+
                 stressResponseRunning = true;
 
        /*         timer += Time.deltaTime;
@@ -234,10 +239,8 @@ public class NavAgentAI : MonoBehaviour
                 }*/
             }
 
-            //check which one is bigger, then return the case
-            stressResponseIndex = Array.IndexOf(stressCounter, stressCounter.Max());
-            //set stressResponse index value for behaviour tree.
-            behaviorTree.SetVariableValue("stressResponseIndex", stressResponseIndex);
+         
+
 
         }
 
