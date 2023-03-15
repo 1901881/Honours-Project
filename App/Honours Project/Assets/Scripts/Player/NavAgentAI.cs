@@ -59,6 +59,8 @@ public class NavAgentAI : MonoBehaviour
     public float distance_stress;
     public float bullet_stress;
     public float stressValue;
+    int stressResponseIndex = -1;
+    bool stressResponseRunning = false;
 
     [Range(0.0f, 100.0f)]
     public float stressFortitude = 60;
@@ -82,6 +84,8 @@ public class NavAgentAI : MonoBehaviour
         originalColor = SpriteRend.color;
 
         health = maxHealth;
+
+        behaviorTree.SetVariableValue("stressFortitude", stressFortitude);
     }
 
     // Update is called once per frame
@@ -149,15 +153,7 @@ public class NavAgentAI : MonoBehaviour
         }
         previousBulletCount = bulletCollisions;
 
-   /*     if(bulletCounter > 0)
-        {
-            timer += Time.deltaTime;
-            if (timer > 5)
-            {
-                bulletCounter = 0;
-                timer = 0;
-            }
-        }*/
+
         //Debug.Log("Bullets near bot: " + bulletCounter);
     }
 
@@ -169,6 +165,7 @@ public class NavAgentAI : MonoBehaviour
 
     void CalculateStress()
     {
+        //Player to distance
         target = GameObject.FindWithTag("Player").transform.position;
         distanceToTarget = Vector3.Distance(transform.position, target);
         if (distanceToTarget <= 0)
@@ -183,6 +180,10 @@ public class NavAgentAI : MonoBehaviour
         bullet_stress = (bulletCounter * 0.7f) * 5;
         stressValue = (distance_stress + bullet_stress) * ((1 - (healthFactor/2)) * (2f + recentlyHit));
 
+        //set stress value for behaviour tree
+        behaviorTree.SetVariableValue("stressValue", stressValue);
+
+
         if (stressValue >= stressFortitude)
         {
             float[] stressWeightings = { fightWeighting, flightWeighting, freezeWeighting };
@@ -194,7 +195,6 @@ public class NavAgentAI : MonoBehaviour
             {
                 for (int x = 0; x < testAmount; x++)
                 {
-                    //float randomNumber = 0; //1-100
                     float randomNumber = UnityEngine.Random.Range(0, 100);
                     if (randomNumber <= stressWeightings[i])
                     {
@@ -203,10 +203,10 @@ public class NavAgentAI : MonoBehaviour
                 }
             }
 
-            //check which one is bigger, then return the case
-            int maxIndex = Array.IndexOf(stressCounter, stressCounter.Max());
 
-            switch (maxIndex)
+
+
+            /*switch (stressResponseIndex)
             {
                 case 0:
                     Debug.Log("fight");
@@ -217,8 +217,28 @@ public class NavAgentAI : MonoBehaviour
                 case 2:
                     Debug.Log("freeze");
                     break;
+            }*/
+
+
+            
+            if(!stressResponseRunning)
+            {
+               
+                stressResponseRunning = true;
+
+       /*         timer += Time.deltaTime;
+                if (timer > 10)
+                {
+                    stressResponseRunning = false;
+                    timer = 0;
+                }*/
             }
-           
+
+            //check which one is bigger, then return the case
+            stressResponseIndex = Array.IndexOf(stressCounter, stressCounter.Max());
+            //set stressResponse index value for behaviour tree.
+            behaviorTree.SetVariableValue("stressResponseIndex", stressResponseIndex);
+
         }
 
 
