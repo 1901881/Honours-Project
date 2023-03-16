@@ -59,8 +59,10 @@ public class NavAgentAI : MonoBehaviour
     public float distance_stress;
     public float bullet_stress;
     public float stressValue;
-    int stressResponseIndex = -1;
-    bool stressResponseRunning = false;
+    public  int stressResponseIndex = -1;
+    public bool stressResponseRunning = false;
+
+    
 
     [Range(0.0f, 100.0f)]
     public float stressFortitude = 60;
@@ -73,6 +75,8 @@ public class NavAgentAI : MonoBehaviour
 
     [Range(0.0f, 100.0f)]
     public float freezeWeighting = 0;
+
+    public float[] stressWeightings;
 
     public ContactFilter2D contactFilter;
     Collider2D[] results = new Collider2D[10];
@@ -104,7 +108,9 @@ public class NavAgentAI : MonoBehaviour
 
         //Debug.Log(recentlyHit);
         behaviorTree.SetVariableValue("stressResponseRunning", stressResponseRunning);
-    }
+
+        stressWeightings = new float[] { fightWeighting, flightWeighting, freezeWeighting };
+}
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -184,10 +190,14 @@ public class NavAgentAI : MonoBehaviour
         //set stress value for behaviour tree
         behaviorTree.SetVariableValue("stressValue", stressValue);
 
+        StressResponseCalculation();
+    }
 
+    public void StressResponseCalculation()
+    {
         if (stressValue >= stressFortitude)
         {
-            float[] stressWeightings = { fightWeighting, flightWeighting, freezeWeighting };
+            
             int[] stressCounter = new int[3];//fight, flight, freeze
 
             int testAmount = 5;
@@ -204,10 +214,18 @@ public class NavAgentAI : MonoBehaviour
                 }
             }
 
-
-
-
-            /*switch (stressResponseIndex)
+            if (!stressResponseRunning)
+            {
+                //check which one is bigger, then return the case
+                stressResponseIndex = Array.IndexOf(stressCounter, stressCounter.Max());
+                //set stressResponse index value for behaviour tree.
+                behaviorTree.SetVariableValue("stressResponseIndex", stressResponseIndex);
+                stressResponseRunning = true;
+            }
+        }
+    }
+}
+/*switch (stressResponseIndex)
             {
                 case 0:
                     Debug.Log("fight");
@@ -220,30 +238,9 @@ public class NavAgentAI : MonoBehaviour
                     break;
             }*/
 
-
-            
-            if(!stressResponseRunning)
-            {
-                //check which one is bigger, then return the case
-                stressResponseIndex = Array.IndexOf(stressCounter, stressCounter.Max());
-                //set stressResponse index value for behaviour tree.
-                behaviorTree.SetVariableValue("stressResponseIndex", stressResponseIndex);
-
-                stressResponseRunning = true;
-
-       /*         timer += Time.deltaTime;
-                if (timer > 10)
-                {
-                    stressResponseRunning = false;
-                    timer = 0;
-                }*/
-            }
-
-         
-
-
-        }
-
-
-    }
-}
+/*         timer += Time.deltaTime;
+         if (timer > 10)
+         {
+             stressResponseRunning = false;
+             timer = 0;
+         }*/

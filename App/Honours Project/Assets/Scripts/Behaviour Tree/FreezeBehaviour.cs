@@ -20,7 +20,36 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
 
             if (test > 3)
             {
-                return TaskStatus.Success;
+                int counter = 0;
+
+                //loop through stress weightings
+                for (int i = 0; i < GetComponent<NavAgentAI>().stressWeightings.Length; i++)
+                {
+                    if (GetComponent<NavAgentAI>().stressWeightings[i] != 0)
+                    {
+                        counter++;
+                    }
+                }
+                if (counter >= 2)
+                {
+                    float savedFreezeWeighting = GetComponent<NavAgentAI>().freezeWeighting;
+                    GetComponent<NavAgentAI>().freezeWeighting = 0f;
+
+                    GetComponent<NavAgentAI>().stressResponseRunning = false;
+                    GetComponent<NavAgentAI>().StressResponseCalculation();
+
+                    /*while (GetComponent<NavAgentAI>().stressResponseIndex == 2)//recalc stress response to not be freeze
+                    {
+                        
+                    }*/
+                    return TaskStatus.Success;
+                }
+                else //if the other stress waitings are 0 go back to basic NPC behaviour
+                {
+                    GetComponent<NavAgentAI>().stressResponseRunning = false;
+                    return TaskStatus.Failure;
+                }
+
             }
 
             // We haven't reached the target yet so keep moving towards it
