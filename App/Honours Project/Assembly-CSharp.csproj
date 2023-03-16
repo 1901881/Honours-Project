@@ -627,6 +627,7 @@
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Transform\LookAt.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\Vector2\ClampMagnitude.cs" />
     <Compile Include="Assets\Behavior Designer\Runtime\Tasks\Unity\NavMeshAgent\IsStopped.cs" />
+    <Compile Include="Assets\Scripts\Behaviour Tree\FreezeBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\WwiseSettings.xml" />
