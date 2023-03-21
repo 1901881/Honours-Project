@@ -38,16 +38,12 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
                     GetComponent<NavAgentAI>().stressResponseRunning = false;
                     GetComponent<NavAgentAI>().StressResponseCalculation();
 
-                    /*while (GetComponent<NavAgentAI>().stressResponseIndex == 2)//recalc stress response to not be freeze
-                    {
-                        
-                    }*/
                     return TaskStatus.Success;
                 }
                 else //if the other stress waitings are 0 go back to basic NPC behaviour
                 {
                     GetComponent<NavAgentAI>().stressResponseRunning = false;
-                    return TaskStatus.Failure;
+                    return TaskStatus.Success;
                 }
 
             }

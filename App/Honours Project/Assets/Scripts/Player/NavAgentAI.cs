@@ -107,7 +107,10 @@ public class NavAgentAI : MonoBehaviour
         CheckBullets();
 
         //Debug.Log(recentlyHit);
-        behaviorTree.SetVariableValue("stressResponseRunning", stressResponseRunning);
+        //behaviorTree.SetVariableValue("stressResponseRunning", stressResponseRunning);//do reverse
+        var x = (SharedBool)behaviorTree.GetVariable("stressResponseRunning");
+        stressResponseRunning = x.Value;
+        
 
         stressWeightings = new float[] { fightWeighting, flightWeighting, freezeWeighting };
 }
