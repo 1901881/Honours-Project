@@ -28,6 +28,8 @@ public class NavAgentAI : MonoBehaviour
     public float attackViewDistance;*/
 
     public BehaviorTree behaviorTree;
+    public Sprite hitSprite;
+
     public float fleeRadius = 2;
 
     //Changing Enemy Color
@@ -48,7 +50,7 @@ public class NavAgentAI : MonoBehaviour
     public float bulletRadius;
     
     int previousBulletCount = 100;
-    float timer = 0;
+    //float timer = 0;
 
 
     //public stress variables
@@ -131,11 +133,14 @@ public class NavAgentAI : MonoBehaviour
 
     IEnumerator Hit()
     {
-        SpriteRend.color = UnityEngine.Color.white;
+        Sprite previousSprite = SpriteRend.sprite;
+        SpriteRend.sprite = hitSprite;
+        //SpriteRend.color = UnityEngine.Color.white;
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(0.08f);
         Time.timeScale = 1;
-        SpriteRend.color = originalColor;
+        SpriteRend.sprite = previousSprite;
+        //SpriteRend.color = originalColor;
         health--;
         recentlyHit = 1;
         yield return new WaitForSecondsRealtime(10f);
