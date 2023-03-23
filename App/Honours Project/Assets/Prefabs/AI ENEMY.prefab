@@ -36,7 +36,7 @@ Transform:
   m_Children:
   - {fileID: 3551593887965725841}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3551593886681611603
 SpriteRenderer:
@@ -276,34 +276,34 @@ MonoBehaviour:
         - {fileID: -164691439, guid: 8544feb12949f0a43b7a7a638fd2ed0c, type: 3}
         - {fileID: 3551593886681611615}
         - {fileID: 3551593887965725842}
-        - {fileID: 0}
-        - {fileID: 0}
+        - {fileID: 1401400863688779221, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
+        - {fileID: 1401400863688779221, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
         - {fileID: -803229302, guid: 8544feb12949f0a43b7a7a638fd2ed0c, type: 3}
         - {fileID: -1795372958, guid: 8544feb12949f0a43b7a7a638fd2ed0c, type: 3}
         - {fileID: 1149371809, guid: 8544feb12949f0a43b7a7a638fd2ed0c, type: 3}
         - {fileID: -164691439, guid: 8544feb12949f0a43b7a7a638fd2ed0c, type: 3}
         - {fileID: 3551593886681611615}
         - {fileID: 3551593887965725842}
-        - {fileID: 0}
+        - {fileID: 1401400863688779221, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
         - {fileID: -803229302, guid: 8544feb12949f0a43b7a7a638fd2ed0c, type: 3}
         - {fileID: -1795372958, guid: 8544feb12949f0a43b7a7a638fd2ed0c, type: 3}
         - {fileID: 1149371809, guid: 8544feb12949f0a43b7a7a638fd2ed0c, type: 3}
         - {fileID: -164691439, guid: 8544feb12949f0a43b7a7a638fd2ed0c, type: 3}
         - {fileID: 3551593886681611615}
         - {fileID: 3551593887965725842}
-        - {fileID: 0}
+        - {fileID: 1401400863688779216, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
         - {fileID: -803229302, guid: 8544feb12949f0a43b7a7a638fd2ed0c, type: 3}
         - {fileID: -1795372958, guid: 8544feb12949f0a43b7a7a638fd2ed0c, type: 3}
         - {fileID: 1149371809, guid: 8544feb12949f0a43b7a7a638fd2ed0c, type: 3}
         - {fileID: -164691439, guid: 8544feb12949f0a43b7a7a638fd2ed0c, type: 3}
         - {fileID: 3551593886681611615}
         - {fileID: 3551593887965725842}
-        - {fileID: 0}
-        - {fileID: 0}
-        - {fileID: 0}
-        - {fileID: 0}
-        - {fileID: 0}
-        - {fileID: 0}
+        - {fileID: 1401400863688779221, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
+        - {fileID: 1401400863688779221, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
+        - {fileID: 1401400863688779221, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
+        - {fileID: 1401400863688779221, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
+        - {fileID: 1401400863688779221, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
+        - {fileID: 1401400863688779221, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
         byteData: 
         byteDataArray: 
       Version: 1.7.3
