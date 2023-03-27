@@ -52,7 +52,8 @@ public class NavAgentAI : MonoBehaviour
     public  int stressResponseIndex = -1;
     public bool stressResponseRunning = false;
 
-    
+    public float stressFortitudeDecrease;
+
 
     [Range(0.0f, 100.0f)]
     public float stressFortitude = 60;
@@ -216,6 +217,11 @@ public class NavAgentAI : MonoBehaviour
                 behaviorTree.SetVariableValue("stressResponseIndex", stressResponseIndex);
                 //stressResponseRunning = true; 
                 //((SharedBool)behaviorTree.GetVariable("stressResponseRunning")).SetValue(true);
+                
+                if(stressFortitude >= 10)
+                {
+                    stressFortitude -= stressFortitudeDecrease;
+                }   
             }
         }
     }
