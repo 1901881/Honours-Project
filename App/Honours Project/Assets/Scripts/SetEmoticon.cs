@@ -12,10 +12,11 @@ public class SetEmoticon : Action
 
     public int intValue;
 
-    public NPCEmoticonSwitcher npcEmoticonSwitcherScript;
+    //public NPCEmoticonSwitcher npcEmoticonSwitcherScript;
     public override TaskStatus OnUpdate()
     {
-        npcEmoticonSwitcherScript.SwitchEmote(intValue);
+        gameObject.GetComponent<NPCEmoticonSwitcher>().SwitchEmote(intValue);
+        //npcEmoticonSwitcherScript.SwitchEmote(intValue);
         return TaskStatus.Success;
     }
 }

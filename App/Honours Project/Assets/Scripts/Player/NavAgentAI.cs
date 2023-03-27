@@ -15,18 +15,6 @@ using System.IO;
 
 public class NavAgentAI : MonoBehaviour
 {
-/*    public float seekSpeed;
-    public float seekViewAngle;
-    public float seekViewDistance;
-
-    public float pursueSpeed;
-    public float pursueViewAngle;
-    public float pursueViewDistance;
-
-    public float attackSpeed;
-    public float attackViewAngle;
-    public float attackViewDistance;*/
-
     public BehaviorTree behaviorTree;
     public Sprite hitSprite;
 
@@ -108,11 +96,9 @@ public class NavAgentAI : MonoBehaviour
         CalculateStress();
         CheckBullets();
 
-        //Debug.Log(recentlyHit);
-        //behaviorTree.SetVariableValue("stressResponseRunning", stressResponseRunning);//do reverse
-        var x = (SharedBool)behaviorTree.GetVariable("stressResponseRunning");
-        stressResponseRunning = x.Value;
-        
+     
+        stressResponseRunning = ((SharedBool)behaviorTree.GetVariable("stressResponseRunning")).Value;
+
 
         stressWeightings = new float[] { fightWeighting, flightWeighting, freezeWeighting };
 }
@@ -222,15 +208,23 @@ public class NavAgentAI : MonoBehaviour
                 }
             }
 
-            if (!stressResponseRunning)
+            if (!((SharedBool)behaviorTree.GetVariable("stressResponseRunning")).Value)
             {
                 //check which one is bigger, then return the case
                 stressResponseIndex = Array.IndexOf(stressCounter, stressCounter.Max());
                 //set stressResponse index value for behaviour tree.
                 behaviorTree.SetVariableValue("stressResponseIndex", stressResponseIndex);
-                stressResponseRunning = true;
+                //stressResponseRunning = true; 
+                //((SharedBool)behaviorTree.GetVariable("stressResponseRunning")).SetValue(true);
             }
         }
+    }
+
+    public IEnumerator ResponseWait(float waitTime)
+    {
+        yield return new WaitForSeconds(waitTime);
+        ((SharedBool)behaviorTree.GetVariable("stressResponseRunning")).SetValue(false);
+
     }
 }
 /*switch (stressResponseIndex)

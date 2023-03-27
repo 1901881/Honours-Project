@@ -76,6 +76,7 @@
     <Compile Include="Assets\Scripts\ShelfAudio.cs" />
     <Compile Include="Assets\Scripts\Player\EnemySpawner.cs" />
     <Compile Include="Assets\Scripts\SetEmoticon.cs" />
+    <Compile Include="Assets\Scripts\ResponseReset.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\WwiseSettings.xml" />

@@ -11,8 +11,8 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
         public float speed = 0;
 
         [Tooltip("The GameObject that the agent is pursuing")]
-        public SharedTransform target;
-        
+        public SharedGameObject target;
+
 
         public override TaskStatus OnUpdate()
         {
