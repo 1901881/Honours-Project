@@ -12,6 +12,7 @@ using System.Runtime.CompilerServices;
 using static UnityEngine.Networking.UnityWebRequest;
 using System.Drawing;
 using System.IO;
+using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
 
 public class NavAgentAI : MonoBehaviour
 {
@@ -52,7 +53,7 @@ public class NavAgentAI : MonoBehaviour
     public  int stressResponseIndex = -1;
     public bool stressResponseRunning = false;
 
-    public float stressFortitudeDecrease;
+    public float stressFortitudeDecrease = 0;
 
 
     [Range(0.0f, 100.0f)]
@@ -195,7 +196,7 @@ public class NavAgentAI : MonoBehaviour
             
             int[] stressCounter = new int[3];//fight, flight, freeze
 
-            int testAmount = 5;
+            int testAmount = 50;
 
             for (int i = 0; i < stressWeightings.Length; i++)
             {
@@ -213,8 +214,24 @@ public class NavAgentAI : MonoBehaviour
             {
                 //check which one is bigger, then return the case
                 stressResponseIndex = Array.IndexOf(stressCounter, stressCounter.Max());
-                //set stressResponse index value for behaviour tree.
-                behaviorTree.SetVariableValue("stressResponseIndex", stressResponseIndex);
+
+                //Safety Check so it goes with the only stress response if others have a waiting of 0
+                int counter = 0;
+                for (int i = 0; i < stressWeightings.Length; i++)
+                {
+                    if (GetComponent<NavAgentAI>().stressWeightings[i] != 0)
+                    {
+                        counter++;
+                    }
+                }
+                if (counter == 1)
+                {
+                    stressResponseIndex = Array.IndexOf(stressWeightings, stressWeightings.Max());
+                }
+            }
+
+            //set stressResponse index value for behaviour tree.
+            behaviorTree.SetVariableValue("stressResponseIndex", stressResponseIndex);
                 //stressResponseRunning = true; 
                 //((SharedBool)behaviorTree.GetVariable("stressResponseRunning")).SetValue(true);
                 
@@ -223,7 +240,6 @@ public class NavAgentAI : MonoBehaviour
                     stressFortitude -= stressFortitudeDecrease;
                 }   
             }
-        }
     }
 
     public IEnumerator ResponseWait(float waitTime)
