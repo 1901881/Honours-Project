@@ -10,6 +10,10 @@ public class NPCEmoticonSwitcher : MonoBehaviour
     public Color flightColour;
     public Sprite freezeSprite;
     public Color freezeColour;
+    public Sprite flopSprite;
+    public Color flopColour;
+    public Sprite fawnSprite;
+    public Color fawnColour;
     public Sprite neutralSprite;
     public Color neutralColour;
 
@@ -41,6 +45,14 @@ public class NPCEmoticonSwitcher : MonoBehaviour
             case 3:
                 NPC.gameObject.GetComponent<SpriteRenderer>().sprite = freezeSprite;
                 faceVisor.gameObject.GetComponent<SpriteRenderer>().color = freezeColour;
+                break;
+            case 4:
+                NPC.gameObject.GetComponent<SpriteRenderer>().sprite = flopSprite;
+                faceVisor.gameObject.GetComponent<SpriteRenderer>().color = flopColour;
+                break;
+            case 5:
+                NPC.gameObject.GetComponent<SpriteRenderer>().sprite = fawnSprite;
+                faceVisor.gameObject.GetComponent<SpriteRenderer>().color = fawnColour;
                 break;
             default:
                 NPC.gameObject.GetComponent<SpriteRenderer>().sprite = neutralSprite;

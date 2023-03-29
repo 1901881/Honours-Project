@@ -69,6 +69,12 @@ public class NavAgentAI : MonoBehaviour
     [Range(0.0f, 100.0f)]
     public float freezeWeighting = 0;
 
+    [Range(0.0f, 100.0f)]
+    public float flopWeighting = 0;
+
+    [Range(0.0f, 100.0f)]
+    public float fawnWeighting = 0;
+
     public float[] stressWeightings;
 
     public ContactFilter2D contactFilter;
@@ -93,7 +99,7 @@ public class NavAgentAI : MonoBehaviour
 
         if (health <= 0)
         {
-            Destroy(gameObject);
+            KillNPC();
         }
 
         CalculateStress();
@@ -106,7 +112,7 @@ public class NavAgentAI : MonoBehaviour
         freezeResponseRunning = ((SharedBool)behaviorTree.GetVariable("freezeResponseRunning")).Value;
 
 
-        stressWeightings = new float[] { fightWeighting, flightWeighting, freezeWeighting };
+        stressWeightings = new float[] { fightWeighting, flightWeighting, freezeWeighting, flopWeighting, fawnWeighting };
 }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -196,7 +202,7 @@ public class NavAgentAI : MonoBehaviour
         if (stressValue >= stressFortitude)
         {
             
-            int[] stressCounter = new int[3];//fight, flight, freeze
+            int[] stressCounter = new int[5];//fight, flight, freeze
 
             int testAmount = 50;
 
@@ -262,6 +268,11 @@ public class NavAgentAI : MonoBehaviour
         
         //need to reset freeze response waiting
         //need to set waittime for response
+    }
+
+    public void KillNPC()
+    {
+        Destroy(gameObject);
     }
 }
 /*switch (stressResponseIndex)
