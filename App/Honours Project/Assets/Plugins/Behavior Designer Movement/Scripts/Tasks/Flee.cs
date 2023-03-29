@@ -30,22 +30,29 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
         // Return running if the agent is still fleeing
         public override TaskStatus OnUpdate()
         {
-            if (Vector3.Magnitude(transform.position - target.Value.transform.position) > fleedDistance.Value) {
+            if (Vector3.Magnitude(transform.position - target.Value.transform.position) > fleedDistance.Value)
+            {
                 return TaskStatus.Success;
             }
 
-            if (HasArrived()) {
-                if (!hasMoved) {
+            if (HasArrived())
+            {
+                if (!hasMoved)
+                {
                     return TaskStatus.Failure;
                 }
-                if (!SetDestination(Target())) {
+                if (!SetDestination(Target()))
+                {
                     return TaskStatus.Failure;
                 }
                 hasMoved = false;
-            } else {
+            }
+            else
+            {
                 // If the agent is stuck the task shouldn't continue to return a status of running.
                 var velocityMagnitude = Velocity().sqrMagnitude;
-                if (hasMoved && velocityMagnitude <= 0f) {
+                if (hasMoved && velocityMagnitude <= 0f)
+                {
                     return TaskStatus.Failure;
                 }
                 hasMoved = velocityMagnitude > 0f;
@@ -63,7 +70,8 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
         // Return false if the position isn't valid on the NavMesh.
         protected override bool SetDestination(Vector3 destination)
         {
-            if (!SamplePosition(destination)) {
+            if (!SamplePosition(destination))
+            {
                 return false;
             }
             return base.SetDestination(destination);

@@ -30,7 +30,8 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
         // Return running if the agent hasn't reached the destination yet
         public override TaskStatus OnUpdate()
         {
-            if (HasArrived()) {
+            if (HasArrived())
+            {
                 return TaskStatus.Success;
             }
 
@@ -49,9 +50,12 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
 
             float futurePrediction = 0;
             // Set the future prediction to max prediction if the speed is too small to give an accurate prediction
-            if (speed <= distance / targetDistPrediction.Value) {
+            if (speed <= distance / targetDistPrediction.Value)
+            {
                 futurePrediction = targetDistPrediction.Value;
-            } else {
+            }
+            else
+            {
                 futurePrediction = (distance / speed) * targetDistPredictionMult.Value; // the prediction should be accurate enough
             }
 
