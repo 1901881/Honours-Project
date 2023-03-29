@@ -55,6 +55,7 @@ public class NavAgentAI : MonoBehaviour
 
     public float stressFortitudeDecrease = 0;
 
+    bool freezeResponseRunning = false;
 
     [Range(0.0f, 100.0f)]
     public float stressFortitude = 60;
@@ -96,10 +97,13 @@ public class NavAgentAI : MonoBehaviour
         }
 
         CalculateStress();
+        FreezeResponse();
+        StressResponseCalculation();
         CheckBullets();
 
      
         stressResponseRunning = ((SharedBool)behaviorTree.GetVariable("stressResponseRunning")).Value;
+        freezeResponseRunning = ((SharedBool)behaviorTree.GetVariable("freezeResponseRunning")).Value;
 
 
         stressWeightings = new float[] { fightWeighting, flightWeighting, freezeWeighting };
@@ -185,8 +189,6 @@ public class NavAgentAI : MonoBehaviour
 
         //set stress value for behaviour tree
         behaviorTree.SetVariableValue("stressValue", stressValue);
-
-        StressResponseCalculation();
     }
 
     public void StressResponseCalculation()
@@ -247,6 +249,19 @@ public class NavAgentAI : MonoBehaviour
         yield return new WaitForSeconds(waitTime);
         ((SharedBool)behaviorTree.GetVariable("stressResponseRunning")).SetValue(false);
 
+    }
+
+    public void FreezeResponse()
+    {
+
+        if(freezeResponseRunning)
+        {
+            stressValue = 100; //put after calculation on update?
+            behaviorTree.SetVariableValue("stressValue", stressValue);
+        }
+        
+        //need to reset freeze response waiting
+        //need to set waittime for response
     }
 }
 /*switch (stressResponseIndex)

@@ -9,6 +9,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
     public class FreezeBehaviour : Action
     {
         public float speed = 0;
+        public float distance = 3;
 
         [Tooltip("The GameObject that the agent is pursuing")]
         public SharedGameObject target;
@@ -18,7 +19,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
         {
             float test = Vector3.Magnitude(transform.position - target.Value.transform.position);
 
-            if (test > 3)
+            if (test > distance)
             {
                 int counter = 0;
 

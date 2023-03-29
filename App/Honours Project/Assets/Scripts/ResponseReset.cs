@@ -8,7 +8,7 @@ using BehaviorDesigner.Runtime;
 public class ResponseReset : Action
 {
 
-    public float waitTime = 5;
+    public SharedFloat waitTime = 5;
 
     //public SharedBool stressResponseRunning;
 
@@ -17,7 +17,7 @@ public class ResponseReset : Action
     // Update is called once per frame
     public override TaskStatus OnUpdate()
     {
-        StartCoroutine(gameObject.GetComponent<NavAgentAI>().ResponseWait(waitTime));
+        StartCoroutine(gameObject.GetComponent<NavAgentAI>().ResponseWait(waitTime.Value));
         return TaskStatus.Success;
     }
 }
