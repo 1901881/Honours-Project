@@ -54,13 +54,11 @@
   </PropertyGroup>
   <ItemGroup>
     <Analyzer Include="C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-    <Analyzer Include="C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Assets\Plugins\Behavior Designer\Runtime\BehaviorDesigner.Runtime.dll" />
-    <Analyzer Include="C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Assets\Plugins\Behavior Designer\Editor\BehaviorDesigner.Editor.dll" />
-    <Analyzer Include="C:\Users\jrope\OneDrive - Abertay University\Documents\Fork\Honours-Project\App\Honours Project\Assets\Plugins\AstarPathfindingProject\Plugins\DotNetZip\Pathfinding.Ionic.Zip.Reduced.dll" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\ShelfScript.cs" />
     <Compile Include="Assets\Scripts\ScreenShake.cs" />
+    <Compile Include="Assets\Scripts\Behaviour Tree\FlopBehaviour.cs" />
     <Compile Include="Assets\Scripts\SetEmoticon.cs" />
     <Compile Include="Assets\Scripts\BulletTime.cs" />
     <Compile Include="Assets\Scripts\Player\KillerEnemies.cs" />
@@ -80,7 +78,6 @@
     <Compile Include="Assets\Scripts\ChangeMaterialColour.cs" />
     <Compile Include="Assets\Scripts\ShelfAudio.cs" />
     <Compile Include="Assets\Scripts\Player\EnemySpawner.cs" />
-    <Compile Include="Assets\Scripts\Behaviour Tree\FlopBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\WwiseSettings.xml" />

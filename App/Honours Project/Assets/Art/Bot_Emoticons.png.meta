@@ -211,6 +211,69 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Bot_Emoticons_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 484cd7cfcae536c4587bd4dd0c52dc84
+      internalID: 243807449
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bot_Emoticons_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a7303329c4709e4abd31446002cc916
+      internalID: 465739273
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bot_Emoticons_7
+      rect:
+        serializedVersion: 2
+        x: 224
+        y: 0
+        width: 32
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe0b21cffc265404ba6fd81ee6757ec5
+      internalID: -534659835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -224,6 +287,9 @@ TextureImporter:
     nameFileIdTable:
       Bot_Emoticons_2: -1795372958
       Bot_Emoticons_0: -164691439
+      Bot_Emoticons_6: 465739273
+      Bot_Emoticons_7: -534659835
+      Bot_Emoticons_5: 243807449
       Bot_Emoticons_1: -803229302
       Bot_Emoticons_4: 810137439
       Bot_Emoticons_3: 1149371809
