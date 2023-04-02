@@ -7,17 +7,20 @@ using BehaviorDesigner.Runtime.Tasks.Unity.UnityGameObject;
 
 namespace BehaviorDesigner.Runtime.Tasks.Movement
 {
-    public class FlopBehaviour : Action
+    public class FlopBehaviour : NavMeshMovement
     {
-        public float speed = 0;
-        public float distance = 3;
-
-
         // The time to wait
-        private float waitDuration;
+        public float waitDuration;
+        public float selfDestructProbability = 10;
+
         // The time that the task started to wait.
         private float startTime;
 
+        private float randomNumber;
+
+        private bool flopStressResponseRunning = true;
+        private bool timerRunning = true;
+        
 
         /*
           generate random number 0-1
@@ -29,27 +32,36 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
         {
             // Remember the start time.
             startTime = Time.time;
+            randomNumber = UnityEngine.Random.Range(0, 100);
+            //need it to stop moving
+            Stop();
         }
 
         public override TaskStatus OnUpdate()
         {
-            float randomNumber = UnityEngine.Random.Range(0, 100);
-            if (randomNumber <= 30)
+            if(!flopStressResponseRunning || timerRunning)
             {
-                //explode
-                //need it to shake
-                //then explode
-                Debug.Log("Kaboom");
-                GetComponent<NavAgentAI>().KillNPC();
-            }
-            else
-            {
-                //freeze
-                Debug.Log("freeze waiting");
-                // The task is done waiting if the time waitDuration has elapsed since the task was started.
-                if (startTime + waitDuration < Time.time)
+                if (randomNumber <= selfDestructProbability)
                 {
-                    return TaskStatus.Success;
+                    //explode
+                    //need it to shake
+                    //then explode
+                    flopStressResponseRunning = true;
+                    Debug.Log("Kaboom");
+                    GetComponent<NavAgentAI>().KillNPC();
+                }
+                else
+                {
+                    //freeze
+                    flopStressResponseRunning = true;
+                    timerRunning = true;
+                    Debug.Log("freeze waiting");
+                    // The task is done waiting if the time waitDuration has elapsed since the task was started.
+                    if (startTime + waitDuration < Time.time)
+                    {
+                        Debug.Log("freeze finished");
+                        return TaskStatus.Success;
+                    }
                 }
             }
             // Otherwise we are still waiting.

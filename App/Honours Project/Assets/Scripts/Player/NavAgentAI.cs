@@ -21,6 +21,7 @@ public class NavAgentAI : MonoBehaviour
 
     public float fleeRadius = 2;
 
+    public GameObject explosionPrefab;
     //Changing Enemy Color
     private SpriteRenderer SpriteRend;
     private UnityEngine.Color originalColor;
@@ -272,7 +273,11 @@ public class NavAgentAI : MonoBehaviour
 
     public void KillNPC()
     {
+        //spawn particle effect
+        //GameObject explosion = 
+        Instantiate(explosionPrefab, this.transform.position, this.transform.rotation);
         Destroy(gameObject);
+        //Destroy(explosion);
     }
 }
 /*switch (stressResponseIndex)
