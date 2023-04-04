@@ -16,11 +16,14 @@ using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCou
 
 public class NavAgentAI : MonoBehaviour
 {
+    [HideInInspector]
     public BehaviorTree behaviorTree;
+    [HideInInspector]
     public Sprite hitSprite;
 
     public float fleeRadius = 2;
 
+    [HideInInspector]
     public GameObject explosionPrefab;
     //Changing Enemy Color
     private SpriteRenderer SpriteRend;
@@ -44,6 +47,7 @@ public class NavAgentAI : MonoBehaviour
 
 
     //public stress variables
+    [Header("Stress Value Calculation")]
     public float distanceToTarget;
     public int recentlyHit = 0;
     public int bulletCounter = 0;
@@ -58,8 +62,15 @@ public class NavAgentAI : MonoBehaviour
 
     bool freezeResponseRunning = false;
 
+
+    [Header("Stress Sliders")]
+    [Tooltip("Mental strength of NPC")]
     [Range(0.0f, 100.0f)]
     public float stressFortitude = 60;
+
+    [Space(5)]
+    [HideInInspector]
+    public float[] stressWeightings;
 
     [Range(0.0f, 100.0f)]
     public float fightWeighting = 0;
@@ -76,8 +87,8 @@ public class NavAgentAI : MonoBehaviour
     [Range(0.0f, 100.0f)]
     public float fawnWeighting = 0;
 
-    public float[] stressWeightings;
 
+    [HideInInspector]
     public ContactFilter2D contactFilter;
     Collider2D[] results = new Collider2D[10];
 

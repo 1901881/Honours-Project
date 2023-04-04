@@ -11,7 +11,7 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
     {
         // The time to wait
         public float waitDuration;
-        public float selfDestructProbability = 10;
+        public float selfDestructProbability = 25;
 
         // The time that the task started to wait.
         private float startTime;

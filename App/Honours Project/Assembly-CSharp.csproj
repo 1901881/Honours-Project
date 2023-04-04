@@ -79,6 +79,7 @@
     <Compile Include="Assets\Scripts\ChangeMaterialColour.cs" />
     <Compile Include="Assets\Scripts\ShelfAudio.cs" />
     <Compile Include="Assets\Scripts\Player\EnemySpawner.cs" />
+    <Compile Include="Assets\Scripts\NPCEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\WwiseSettings.xml" />
