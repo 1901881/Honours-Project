@@ -260,6 +260,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletAudioScript: {fileID: 6865660003965667445}
   tr: {fileID: 7248852264461073719}
+  explosionPrefab: {fileID: 4697210208531385865, guid: e8e66f6fc3c3ffd4ea46cb88df9b952f, type: 3}
 --- !u!96 &7248852264461073719
 TrailRenderer:
   serializedVersion: 3

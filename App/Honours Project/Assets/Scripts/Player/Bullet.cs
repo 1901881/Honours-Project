@@ -13,8 +13,13 @@ public class Bullet : MonoBehaviour
 
     [SerializeField] private TrailRenderer tr;
 
+
+    public GameObject explosionPrefab;
+
     private void Start()
     {
+        
+
         rb = GetComponent<Rigidbody2D>();//sets rigid body to variable
         tr.emitting = true;
 
@@ -50,6 +55,8 @@ public class Bullet : MonoBehaviour
             }
 
             bulletAudioScript.PlayBulletCollisionSound(bulletHitCounter, collision.gameObject.tag);
+
+            //Instantiate(explosionPrefab, this.transform.position, this.transform.rotation);
         }
 
     }

@@ -23,9 +23,9 @@ public class PlayerMovement : MonoBehaviour
 
     private bool canDash = true;
     private bool isDashing;
-    private const float dashingPower = 15.2f;
-    private const float dashingTime = 0.3f;
-    private const float dashingCooldown = 1f;
+    public float dashingPower = 100f;
+    public float dashingTime = 0.2f;
+    public float dashingCooldown = 1f;
 
     [SerializeField] private LayerMask groundMask;
     [SerializeField] private TrailRenderer tr;
