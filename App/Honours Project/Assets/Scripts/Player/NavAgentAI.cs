@@ -30,10 +30,12 @@ public class NavAgentAI : MonoBehaviour
     private UnityEngine.Color originalColor;
 
 
-    public float maxHealth = 3;
-    public float health = 0;
+    public enum NPCType { Brawler, ScaredyCat, freeze, flop, Dansel, Custom }
+    [SerializeField] public NPCType npcType = NPCType.Custom;
+    [SerializeField] private float maxHealth = 3;
+    [SerializeField] private float health = 0;
 
-    public int stressResponse;
+   // public int stressResponse;
    
 
     private Vector3 target;
@@ -47,46 +49,40 @@ public class NavAgentAI : MonoBehaviour
 
 
     //public stress variables
-    [Header("Stress Value Calculation")]
-    public float distanceToTarget;
-    public int recentlyHit = 0;
-    public int bulletCounter = 0;
-    public float healthFactor = 0;
-    public float distance_stress;
-    public float bullet_stress;
-    public float stressValue;
-    public  int stressResponseIndex = -1;
-    public bool stressResponseRunning = false;
+    [SerializeField] private float distanceToTarget;
+    [SerializeField] private int recentlyHit = 0;
+    [SerializeField] private int bulletCounter = 0;
+    [SerializeField] private float healthFactor = 0;
+    [SerializeField] private float distance_stress;
+    [SerializeField] private float bullet_stress;
+    [SerializeField] private float stressFortitudeDecrease = 0;
+    [SerializeField] private float stressValue;
+    [SerializeField] private  int stressResponseIndex = -1;
+    [SerializeField] public bool stressResponseRunning = false;
 
-    public float stressFortitudeDecrease = 0;
-
-    bool freezeResponseRunning = false;
+    private bool freezeResponseRunning = false;
 
 
     [Header("Stress Sliders")]
     [Tooltip("Mental strength of NPC")]
-    [Range(0.0f, 100.0f)]
-    public float stressFortitude = 60;
 
-    [Space(5)]
-    [HideInInspector]
     public float[] stressWeightings;
 
+
+    //public stress sliders
     [Range(0.0f, 100.0f)]
-    public float fightWeighting = 0;
+    [SerializeField] private float stressFortitude;
 
     [Range(0.0f, 100.0f)]
-    public float flightWeighting = 0;
-
+    [SerializeField] private float fightWeighting;
     [Range(0.0f, 100.0f)]
-    public float freezeWeighting = 0;
-
+    [SerializeField] private float flightWeighting;
     [Range(0.0f, 100.0f)]
-    public float flopWeighting = 0;
-
+    [SerializeField] public float freezeWeighting;
     [Range(0.0f, 100.0f)]
-    public float fawnWeighting = 0;
-
+    [SerializeField] private float flopWeighting;
+    [Range(0.0f, 100.0f)]
+    [SerializeField] private float fawnWeighting;
 
     [HideInInspector]
     public ContactFilter2D contactFilter;
