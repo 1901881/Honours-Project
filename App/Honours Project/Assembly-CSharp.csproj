@@ -61,6 +61,7 @@
     <Compile Include="Assets\Scripts\Behaviour Tree\FlopBehaviour.cs" />
     <Compile Include="Assets\Scripts\SetEmoticon.cs" />
     <Compile Include="Assets\Scripts\BulletTime.cs" />
+    <Compile Include="Assets\Scripts\Behaviour Tree\FawnBehaviour.cs" />
     <Compile Include="Assets\Scripts\Player\KillerEnemies.cs" />
     <Compile Include="Assets\Scripts\Player\BasicEnemy.cs" />
     <Compile Include="Assets\Scripts\ExplosionScript.cs" />
@@ -80,7 +81,6 @@
     <Compile Include="Assets\Scripts\ChangeMaterialColour.cs" />
     <Compile Include="Assets\Scripts\ShelfAudio.cs" />
     <Compile Include="Assets\Scripts\Player\EnemySpawner.cs" />
-    <Compile Include="Assets\Scripts\Behaviour Tree\FawnBehaviour.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\WwiseSettings.xml" />

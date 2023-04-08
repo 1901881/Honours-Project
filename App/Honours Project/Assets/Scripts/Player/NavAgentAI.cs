@@ -35,8 +35,16 @@ public class NavAgentAI : MonoBehaviour
     [SerializeField] private float maxHealth = 3;
     [SerializeField] private float health = 0;
 
-   // public int stressResponse;
-   
+    [SerializeField] public bool[] typeUpdateVariables = new bool[6];
+    // index 0: brawlerTypeUpdate
+    // index 1: scaredycatTypeUpdate
+    // index 2: freezeTypeUpdate
+    // index 3: flopTypeUpdate
+    // index 4: danselTypeUpdate
+    // index 5: customTypeUpdate
+
+    // public int stressResponse;
+
 
     private Vector3 target;
 
@@ -87,6 +95,8 @@ public class NavAgentAI : MonoBehaviour
     [HideInInspector]
     public ContactFilter2D contactFilter;
     Collider2D[] results = new Collider2D[10];
+
+ 
 
     // Start is called before the first frame update
     void Start()

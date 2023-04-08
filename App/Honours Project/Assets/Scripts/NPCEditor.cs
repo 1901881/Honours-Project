@@ -4,48 +4,12 @@ using UnityEngine;
 [CustomEditor(typeof(NavAgentAI))]
 public class NPCEditor : Editor
 {
-    bool showNPCInfoGroup, showStressWeightingsGroup, showStressCalculationGroup = true;
+    bool showNPCInfoGroup = true;
+    bool showStressWeightingsGroup = true; 
+    bool showStressCalculationGroup = false;
     
 
     NavAgentAI navAgentAI;
-
-    /*
-         [HideInInspector]
-    public BehaviorTree behaviorTree;
-    [HideInInspector]
-    public Sprite hitSprite;
-
-    public float fleeRadius = 2;
-
-    [HideInInspector]
-    public GameObject explosionPrefab;
-    //Changing Enemy Color
-    private SpriteRenderer SpriteRend;
-    private UnityEngine.Color originalColor;
-
-
-    public float maxHealth = 3;
-    public float health = 0;
-
-    public float bulletRadius;
-    
-
-
-    //public stress variables
-    [Header("Stress Value Calculation")]
-    public float distanceToTarget;
-    public int recentlyHit = 0;
-    public int bulletCounter = 0;
-    public float healthFactor = 0;
-    public float distance_stress;
-    public float bullet_stress;
-    public float stressValue;
-    public  int stressResponseIndex = -1; //maybe change using switch to equal string
-    public bool stressResponseRunning = false;
-
-    public float stressFortitudeDecrease = 0;
-
-     */
 
     #region SerializedProperties
     //NPC Info
@@ -73,6 +37,8 @@ public class NPCEditor : Editor
     SerializedProperty stressResponseIndex;
     SerializedProperty stressResponseRunning;
 
+    SerializedProperty typeUpdateVariables;
+
     #endregion
 
     private void OnEnable()
@@ -98,6 +64,8 @@ public class NPCEditor : Editor
         stressValue = serializedObject.FindProperty("stressValue");
         stressResponseIndex = serializedObject.FindProperty("stressResponseIndex");
         stressResponseRunning = serializedObject.FindProperty("stressResponseRunning");
+
+        typeUpdateVariables = serializedObject.FindProperty("typeUpdateVariables");
     }
 
     public override void OnInspectorGUI()
@@ -168,76 +136,81 @@ public class NPCEditor : Editor
      
     }
 
-    private bool[] typeUpdateVariables = new bool[5];
-    // index 0: brawlerTypeUpdate
-    // index 1: scaredycatTypeUpdate
-    // index 2: freezeTypeUpdate
-    // index 3: flopTypeUpdate
-    // index 4: danselTypeUpdate
+    
     private void NPCTypeUpdate()
     {
+        /*bool switched = false;
+        if (!switched)
+        {
+        }*/
+
         switch (navAgentAI.npcType)
         {
             case NavAgentAI.NPCType.Brawler:
-                if (!typeUpdateVariables[0])
+                if (!navAgentAI.typeUpdateVariables[0])
                 {
                     SetStressWeightings(30, 70, 0, 10, 5, 0);
                     SetTypeUpdateVariables(0);
                 }
                 break;
             case NavAgentAI.NPCType.ScaredyCat:
-                if (!typeUpdateVariables[1])
+                if (!navAgentAI.typeUpdateVariables[1])
                 {
                     SetStressWeightings(30, 35, 5, 70, 0, 0);
                     SetTypeUpdateVariables(1);
                 }
                 break;
             case NavAgentAI.NPCType.freeze:
-                if (!typeUpdateVariables[2])
+                if (!navAgentAI.typeUpdateVariables[2])
                 {
                     SetStressWeightings(30, 0, 0, 90, 5, 0);
                     SetTypeUpdateVariables(2);
-                }   
+                }
                 break;
             case NavAgentAI.NPCType.flop:
-                if (!typeUpdateVariables[3])
+                if (!navAgentAI.typeUpdateVariables[3])
                 {
                     SetStressWeightings(30, 0, 0, 10, 80, 0);
                     SetTypeUpdateVariables(3);
-                } 
+                }
                 break;
             case NavAgentAI.NPCType.Dansel:
-                if (!typeUpdateVariables[4])
+                if (!navAgentAI.typeUpdateVariables[4])
                 {
                     SetStressWeightings(60, 0, 0, 10, 5, 80);
                     SetTypeUpdateVariables(4);
                 }
                 break;
             case NavAgentAI.NPCType.Custom:
-                SetAllTypeUpdateVariables(false);
-                SetStressWeightings(0, 0, 0, 0, 0, 0);
+                if (!navAgentAI.typeUpdateVariables[5])
+                {
+                    SetStressWeightings(0, 0, 0, 0, 0, 0);
+                    SetTypeUpdateVariables(5);
+                }
                 break;
             default:
                 SetAllTypeUpdateVariables(false);
                 SetStressWeightings(0, 0, 0, 0, 0, 0);
                 break;
         }
-    }
+    
+
+}
 
     private void SetTypeUpdateVariables(int typeIndex)
     {
-        for (int i = 0; i < typeUpdateVariables.Length; i++)
+        for (int i = 0; i < navAgentAI.typeUpdateVariables.Length; i++)
         {
-            typeUpdateVariables[i] = false;
+            navAgentAI.typeUpdateVariables[i] = false;
         }
-        typeUpdateVariables[typeIndex] = true;
+        navAgentAI.typeUpdateVariables[typeIndex] = true;
     }
 
     private void SetAllTypeUpdateVariables(bool value)
     {
-        for (int i = 0; i < typeUpdateVariables.Length; i++)
+        for (int i = 0; i < navAgentAI.typeUpdateVariables.Length; i++)
         {
-            typeUpdateVariables[i] = false;
+            navAgentAI.typeUpdateVariables[i] = false;
         }
     }
 
