@@ -61,7 +61,7 @@ public class NavAgentAI : MonoBehaviour
     [SerializeField] public bool stressResponseRunning = false;
 
     private bool freezeResponseRunning = false;
-
+    private bool fawnResponseRunning = false;
 
     [Header("Stress Sliders")]
     [Tooltip("Mental strength of NPC")]
@@ -129,11 +129,24 @@ public class NavAgentAI : MonoBehaviour
         {
             StartCoroutine(Hit());
         }
-        if (collision.gameObject.tag == "Player")
+
+        if(!fawnResponseRunning)
         {
-            StartCoroutine(collision.gameObject.GetComponent<PlayerMovement>().Hit());
-            Debug.Log("hit player");
-            //StartCoroutine(AttackPause());
+            if (collision.gameObject.tag == "Player")
+            {
+                StartCoroutine(collision.gameObject.GetComponent<PlayerMovement>().Hit());
+                Debug.Log("hit player");
+                //StartCoroutine(AttackPause());
+            }
+        }
+        else if(fawnResponseRunning)
+        {
+            if (collision.gameObject.tag == "Enemy")
+            {
+                StartCoroutine(collision.gameObject.GetComponent<NavAgentAI>().Hit());
+                Debug.Log("hit NPC");
+                //StartCoroutine(AttackPause());
+            }
         }
     }
 
@@ -276,6 +289,15 @@ public class NavAgentAI : MonoBehaviour
         
         //need to reset freeze response waiting
         //need to set waittime for response
+    }
+
+    public void FawnResponse(bool fawnResponseRunning)
+    {
+        //bool fawnResponseRunning
+        //Wait time
+
+        this.fawnResponseRunning = fawnResponseRunning;
+
     }
 
     public void KillNPC()

@@ -176,9 +176,9 @@ MonoBehaviour:
   hitSprite: {fileID: -534659835, guid: 8544feb12949f0a43b7a7a638fd2ed0c, type: 3}
   fleeRadius: 10
   explosionPrefab: {fileID: 4697210208531385865, guid: e8e66f6fc3c3ffd4ea46cb88df9b952f, type: 3}
+  npcType: 5
   maxHealth: 1
   health: 0
-  stressResponse: 0
   whatIsBullet:
     serializedVersion: 2
     m_Bits: 64
@@ -189,17 +189,17 @@ MonoBehaviour:
   healthFactor: 1
   distance_stress: 0
   bullet_stress: 0
+  stressFortitudeDecrease: 0
   stressValue: 0
   stressResponseIndex: -1
   stressResponseRunning: 0
-  stressFortitudeDecrease: 0
-  stressFortitude: 12.3
+  stressWeightings: []
+  stressFortitude: 0
   fightWeighting: 0
   flightWeighting: 0
-  freezeWeighting: 0.8
-  flopWeighting: 79.4
+  freezeWeighting: 0
+  flopWeighting: 0
   fawnWeighting: 0
-  stressWeightings: []
   contactFilter:
     useTriggers: 0
     useLayerMask: 1
