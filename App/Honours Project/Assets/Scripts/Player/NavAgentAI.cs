@@ -156,6 +156,7 @@ public class NavAgentAI : MonoBehaviour
                 StartCoroutine(collision.gameObject.GetComponent<NavAgentAI>().Hit());
                 Debug.Log("hit NPC");
                 //StartCoroutine(AttackPause());
+                StartCoroutine(Hit());
             }
         }
     }

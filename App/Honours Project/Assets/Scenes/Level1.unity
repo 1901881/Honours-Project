@@ -2605,6 +2605,7 @@ MonoBehaviour:
   npcType: 0
   maxHealth: 3
   health: 30
+  typeUpdateVariables: 0000000000
   whatIsBullet:
     serializedVersion: 2
     m_Bits: 64
@@ -2640,7 +2641,6 @@ MonoBehaviour:
     maxDepth: 0
     minNormalAngle: 0
     maxNormalAngle: 0
-  typeUpdateVariables: 0000000000
 --- !u!114 &522946748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3459,7 +3459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
       propertyPath: fawnWeighting
-      value: 0
+      value: 50.5
       objectReference: {fileID: 0}
     - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
       propertyPath: flopWeighting
@@ -3479,7 +3479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
       propertyPath: stressFortitude
-      value: 0
+      value: 9.5
       objectReference: {fileID: 0}
     - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
       propertyPath: stressFortitudeDecrease
@@ -3492,6 +3492,10 @@ PrefabInstance:
     - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
       propertyPath: typeUpdateVariables.Array.data[0]
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
+      propertyPath: typeUpdateVariables.Array.data[5]
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3551593886681611602, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
       propertyPath: m_RootOrder
@@ -3560,12 +3564,12 @@ PrefabInstance:
         Emoticon","Instant":true,"Int32intValue":2},{"Type":"BehaviorDesigner.Runtime.Tasks.Movement.FreezeBehaviour","NodeData":{"Offset":"(252.276337,218.392151)","ColorIndex":4},"ID":38,"Name":"Freeze
         Behaviour","Instant":true,"Singlespeed":5,"Singledistance":3,"SharedGameObjecttarget":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"Player","IsShared":true,"GameObjectmValue":3}},{"Type":"BehaviorDesigner.Runtime.Tasks.Wait","NodeData":{"Offset":"(383.207642,218.763519)","ColorIndex":4},"ID":39,"Name":"Wait","Instant":true,"SharedFloatwaitTime":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":2},"SharedBoolrandomWait":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedFloatrandomWaitMin":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedFloatrandomWaitMax":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1}},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.Math.SetBool","NodeData":{"Offset":"(500.000122,230)","ColorIndex":4},"ID":40,"Name":"Set
         Bool","Instant":true,"SharedBoolboolValue":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolstoreResult":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"freezeResponseRunning","IsShared":true,"BooleanmValue":false}},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.Math.SetFloat","NodeData":{"Offset":"(606.304443,226.044922)","ColorIndex":4},"ID":41,"Name":"Set
-        Float","Instant":true,"SharedFloatfloatValue":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":0},"SharedFloatstoreResult":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"responseResetWaitTime","IsShared":true,"SinglemValue":0}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(1747.9165,159.166626)","ColorIndex":4},"ID":42,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.Math.IntComparison","NodeData":{"Offset":"(-50,110)","ColorIndex":4},"ID":43,"Name":"Int
+        Float","Instant":true,"SharedFloatfloatValue":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":0},"SharedFloatstoreResult":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"responseResetWaitTime","IsShared":true,"SinglemValue":0}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(1605.05957,159.166626)","ColorIndex":4},"ID":42,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.Math.IntComparison","NodeData":{"Offset":"(-50,110)","ColorIndex":4},"ID":43,"Name":"Int
         Comparison","Instant":true,"Operationoperation":"EqualTo","SharedIntinteger1":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":"stressResponseIndex","IsShared":true,"Int32mValue":-1},"SharedIntinteger2":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":3}},{"Type":"BehaviorDesigner.Runtime.Tasks.Log","NodeData":{"Offset":"(60,110)","ColorIndex":4},"ID":44,"Name":"Log","Instant":true,"SharedStringtext":{"Type":"BehaviorDesigner.Runtime.SharedString","Name":null,"StringmValue":"Flop"},"SharedBoollogError":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedBoollogTime":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false}},{"Type":"SetEmoticon","NodeData":{"Offset":"(181.875,114.375)","ColorIndex":4},"ID":45,"Name":"Set
         Emoticon","Instant":true,"Int32intValue":3},{"Type":"BehaviorDesigner.Runtime.Tasks.Movement.FlopBehaviour","NodeData":{"Offset":"(263.240356,241.221191)"},"ID":46,"Name":"Flop
         Behaviour","Instant":true,"SinglewaitDuration":3,"SingleselfDestructProbability":10,"SharedFloatspeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":10},"SharedFloatangularSpeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":120},"SharedFloatarriveDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":0.2},"SharedBoolstopOnTaskEnd":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolupdateRotation":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true}},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.Math.SetBool","NodeData":{"Offset":"(383.155029,103.157593)","ColorIndex":7},"ID":47,"Name":"Set
         Bool","Instant":true,"SharedBoolboolValue":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedBoolstoreResult":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":"freezeResponseRunning","IsShared":true,"BooleanmValue":false}},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.Math.SetFloat","NodeData":{"Offset":"(493.155029,103.157593)","ColorIndex":7},"ID":48,"Name":"Set
-        Float","Instant":true,"SharedFloatfloatValue":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":5},"SharedFloatstoreResult":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"responseResetWaitTime","IsShared":true,"SinglemValue":0}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(2648.862,149.166626)","ColorIndex":4},"ID":49,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.Math.IntComparison","NodeData":{"Offset":"(-50,110)","ColorIndex":4},"ID":50,"Name":"Int
+        Float","Instant":true,"SharedFloatfloatValue":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":5},"SharedFloatstoreResult":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":"responseResetWaitTime","IsShared":true,"SinglemValue":0}}]},{"Type":"BehaviorDesigner.Runtime.Tasks.Sequence","NodeData":{"Offset":"(2506.005,149.166626)","ColorIndex":4},"ID":49,"Name":"Sequence","Instant":true,"AbortTypeabortType":"None","Children":[{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.Math.IntComparison","NodeData":{"Offset":"(-50,110)","ColorIndex":4},"ID":50,"Name":"Int
         Comparison","Instant":true,"Operationoperation":"EqualTo","SharedIntinteger1":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":"stressResponseIndex","IsShared":true,"Int32mValue":-1},"SharedIntinteger2":{"Type":"BehaviorDesigner.Runtime.SharedInt","Name":null,"Int32mValue":4}},{"Type":"BehaviorDesigner.Runtime.Tasks.Log","NodeData":{"Offset":"(60,110)","ColorIndex":4},"ID":51,"Name":"Log","Instant":true,"SharedStringtext":{"Type":"BehaviorDesigner.Runtime.SharedString","Name":null,"StringmValue":"Fawn"},"SharedBoollogError":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false},"SharedBoollogTime":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":false}},{"Type":"SetEmoticon","NodeData":{"Offset":"(173.598557,114.375)","ColorIndex":4},"ID":52,"Name":"Set
         Emoticon","Instant":true,"Int32intValue":4},{"Type":"BehaviorDesigner.Runtime.Tasks.Movement.FawnBehaviour","NodeData":{"Offset":"(285.138824,200.400635)"},"ID":53,"Name":"Fawn
         Behaviour","Instant":true},{"Type":"BehaviorDesigner.Runtime.Tasks.Movement.Follow","NodeData":{"Offset":"(459.999268,212.284775)"},"ID":54,"Name":"Follow","Instant":true,"SharedGameObjecttarget":{"Type":"BehaviorDesigner.Runtime.SharedGameObject","Name":"Player","IsShared":true,"GameObjectmValue":4},"SharedFloatmoveDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":2},"SharedFloatspeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":10},"SharedFloatangularSpeed":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":120},"SharedFloatarriveDistance":{"Type":"BehaviorDesigner.Runtime.SharedFloat","Name":null,"SinglemValue":1},"SharedBoolstopOnTaskEnd":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true},"SharedBoolupdateRotation":{"Type":"BehaviorDesigner.Runtime.SharedBool","Name":null,"BooleanmValue":true}},{"Type":"BehaviorDesigner.Runtime.Tasks.Unity.Math.SetBool","NodeData":{"Offset":"(641.9355,109.210083)","ColorIndex":7},"ID":55,"Name":"Set
