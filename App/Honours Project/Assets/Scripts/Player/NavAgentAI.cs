@@ -64,7 +64,7 @@ public class NavAgentAI : MonoBehaviour
     [SerializeField] private float distance_stress;
     [SerializeField] private float bullet_stress;
     [SerializeField] private float stressFortitudeDecrease = 0;
-    [SerializeField] private float stressValue;
+    [SerializeField] public float stressValue;
     [SerializeField] private  int stressResponseIndex = -1;
     [SerializeField] public bool stressResponseRunning = false;
 

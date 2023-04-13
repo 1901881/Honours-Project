@@ -15,6 +15,7 @@ public class Weapon : MonoBehaviour
 
     private bool reloaded = true;
     public float reloadTime = 1.5f;
+    public float stressRadarValue;
 
     void Update()
     {
@@ -24,8 +25,9 @@ public class Weapon : MonoBehaviour
             {
                 StartCoroutine(FireWait());
             }
-
         }
+
+        StressValueRaycast();
     }
 
     public void Fire()
@@ -52,5 +54,19 @@ public class Weapon : MonoBehaviour
         }
         yield return new WaitForSeconds(reloadTime);
         reloaded = true;
+    }
+
+    private void StressValueRaycast()
+    {
+        // Cast a ray straight down.
+        RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector2.up);
+        // If it hits something...
+        if (hit.collider != null)
+        {
+            if (hit.collider.gameObject.tag == "Enemy")
+            {
+                stressRadarValue = hit.collider.gameObject.GetComponent<NavAgentAI>().stressValue;
+            }
+        }
     }
 }
