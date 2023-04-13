@@ -156,7 +156,7 @@ public class NPCEditor : Editor
             case NavAgentAI.NPCType.ScaredyCat:
                 if (!navAgentAI.typeUpdateVariables[1])
                 {
-                    SetStressWeightings(30, 35, 5, 70, 0, 0);
+                    SetStressWeightings(30, 10, 70, 30, 0, 0);
                     SetTypeUpdateVariables(1);
                 }
                 break;
