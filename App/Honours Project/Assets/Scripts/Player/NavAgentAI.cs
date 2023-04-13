@@ -178,7 +178,7 @@ public class NavAgentAI : MonoBehaviour
 
     }
 
-    private void OnDrawGizmos()//Selected
+    private void OnSelectedDrawGizmos()//Selected
     {
         UnityEditor.Handles.color = UnityEngine.Color.green;
         UnityEditor.Handles.DrawWireDisc(transform.position, transform.forward, fleeRadius);
