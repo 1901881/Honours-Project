@@ -320,22 +320,3 @@ public class NavAgentAI : MonoBehaviour
         //Destroy(explosion);
     }
 }
-/*switch (stressResponseIndex)
-            {
-                case 0:
-                    Debug.Log("fight");
-                    break;
-                case 1:
-                    Debug.Log("flight");
-                    break;
-                case 2:
-                    Debug.Log("freeze");
-                    break;
-            }*/
-
-/*         timer += Time.deltaTime;
-         if (timer > 10)
-         {
-             stressResponseRunning = false;
-             timer = 0;
-         }*/

@@ -5,7 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Weapon weapon;
-    public Camera camera2;
+    //public Camera camera2;
     public FollowPlayer playerAudioScript;
     public RadioAudio radioAudioScript;
 
@@ -213,6 +213,4 @@ public class PlayerMovement : MonoBehaviour
             QuitGame();
         }
     }
-
-
 }
