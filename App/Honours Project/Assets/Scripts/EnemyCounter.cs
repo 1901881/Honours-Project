@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class EnemyCounter : MonoBehaviour
 {
@@ -25,5 +26,23 @@ public class EnemyCounter : MonoBehaviour
 
         enemyCountText.text = enemies.Length.ToString();
         enemyCountMaxText.text = maxEnemies.ToString();
+
+        if(enemies.Length == 0)
+        {
+            if(SceneManager.GetActiveScene().buildIndex == 6)
+            {
+                Debug.Log("You Win");
+            }
+            else
+            {
+                StartCoroutine(LoadLevel());
+            }
+        }
+    }
+
+    IEnumerator LoadLevel()
+    {
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 }
