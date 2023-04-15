@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Burst.CompilerServices;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
@@ -60,6 +61,7 @@ public class MainMenu : MonoBehaviour
         if (hit.collider.gameObject.name == "PlayButton")
         {
             Debug.Log("Hit Play Button");
+            SceneManager.LoadScene(2);
         }
 
         if (hit.collider.gameObject.name == "QuitButton")
@@ -90,6 +92,32 @@ public class MainMenu : MonoBehaviour
         if (hit.collider.gameObject.name == "1")
         {
             Debug.Log("Load Level 1");
+            //Lvl_1_StressBot
+            SceneManager.LoadScene("Lvl_1_StressBot");
+        }
+        if (hit.collider.gameObject.name == "2")
+        {
+            Debug.Log("Load Level 2");
+            //Lvl_1_StressBot
+            SceneManager.LoadScene("Lvl_2_StressBot");
+        }
+        if (hit.collider.gameObject.name == "3")
+        {
+            Debug.Log("Load Level 3");
+            //Lvl_1_StressBot
+            SceneManager.LoadScene("Lvl_3_StressBot");
+        }
+        if (hit.collider.gameObject.name == "4")
+        {
+            Debug.Log("Load Level 4");
+            //Lvl_1_StressBot
+            SceneManager.LoadScene("Lvl_4_StressBot");
+        }
+        if (hit.collider.gameObject.name == "5")
+        {
+            Debug.Log("Load Level 5");
+            //Lvl_1_StressBot
+            SceneManager.LoadScene("Lvl_5_StressBot");
         }
     }
 }

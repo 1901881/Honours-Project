@@ -8,4 +8,22 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 1a702b81b7ee7e944aeec13a88d80f04
+  - enabled: 1
+    path: Assets/Scenes/Stress Bot Levels/Lvl_1_StressBot.unity
+    guid: be8082c705c1a9b4c95cef7d1b163a61
+  - enabled: 1
+    path: Assets/Scenes/Stress Bot Levels/Lvl_2_StressBot.unity
+    guid: a250e6dfe31593a48b8df6ea3ef87f9b
+  - enabled: 1
+    path: Assets/Scenes/Stress Bot Levels/Lvl_3_StressBot.unity
+    guid: 29efdcada4ccf1a47b4ad68049358514
+  - enabled: 1
+    path: Assets/Scenes/Stress Bot Levels/Lvl_4_StressBot.unity
+    guid: 61e60974ab4b2eb4bac06f23785217de
+  - enabled: 1
+    path: Assets/Scenes/Stress Bot Levels/Lvl_5_StressBot.unity
+    guid: d9e69de062d3a5c4dbef01cf2f94813b
   m_configObjects: {}
