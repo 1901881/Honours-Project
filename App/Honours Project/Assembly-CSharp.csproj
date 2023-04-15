@@ -79,12 +79,12 @@
     <Compile Include="Assets\Scripts\Player\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\HealthBar.cs" />
     <Compile Include="Assets\Scripts\EnemyCounter.cs" />
+    <Compile Include="Assets\Scripts\MainMenu.cs" />
     <Compile Include="Assets\Scripts\Player\NavAgentAI.cs" />
     <Compile Include="Assets\Scripts\ResponseReset.cs" />
     <Compile Include="Assets\Scripts\ChangeMaterialColour.cs" />
     <Compile Include="Assets\Scripts\ShelfAudio.cs" />
     <Compile Include="Assets\Scripts\Player\EnemySpawner.cs" />
-    <Compile Include="Assets\Scripts\MainMenu.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
