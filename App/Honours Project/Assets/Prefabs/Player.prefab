@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1401400863664897269}
   - component: {fileID: 1401400863664897266}
   - component: {fileID: 1401400863664897267}
+  - component: {fileID: 1793300790}
   m_Layer: 8
   m_Name: Weapon
   m_TagString: Untagged
@@ -100,11 +101,32 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 2639465550292782159, guid: 22238f8eb0f85b34087d34878d262e4a, type: 3}
   firePoint: {fileID: 1401400864241269210}
-  gunAnimator: {fileID: 0}
+  gunAnimator: {fileID: 1793300790}
   fireForce: 20
-  bulletNum: 3
-  PlayerAudio: {fileID: 0}
-  reloadTime: 1.5
+  bulletNum: 1
+  PlayerAudio: {fileID: 6663655279430410768}
+  reloadTime: 0.5
+  stressRadarValue: 0
+--- !u!95 &1793300790
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1401400863664897268}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: dbd8a90717e013b42ad0cbce3a621efc, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1401400863688779221
 GameObject:
   m_ObjectHideFlags: 0
@@ -119,7 +141,6 @@ GameObject:
   - component: {fileID: 1401400863688779218}
   - component: {fileID: 1401400863688779217}
   - component: {fileID: 1401400863688779231}
-  - component: {fileID: 1401400863688779228}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -142,7 +163,7 @@ Transform:
   - {fileID: 1401400863664897269}
   - {fileID: 8501068334184415209}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1401400863688779219
 SpriteRenderer:
@@ -224,7 +245,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 5
+  m_Mass: 10
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -246,13 +267,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   weapon: {fileID: 1401400863664897267}
-  camera2: {fileID: 0}
-  playerAudioScript: {fileID: 0}
+  playerAudioScript: {fileID: 6663655279430410768}
   radioAudioScript: {fileID: 0}
+  explosionPrefab: {fileID: 4697210208531385865, guid: e8e66f6fc3c3ffd4ea46cb88df9b952f, type: 3}
   speed: 6
-  health: 3
-  DeathTime: 5
-  dashingPower: 100
+  health: 1
+  DeathTime: 1000
+  dashingPower: 200
   dashingTime: 0.2
   dashingCooldown: 1
   groundMask:
@@ -371,26 +392,6 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 0
   m_ApplyActiveColorSpace: 0
---- !u!95 &1401400863688779228
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1401400863688779221}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dbf06ce51f89f0c4d8af3d3bcd61f22a, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1401400864241269213
 GameObject:
   m_ObjectHideFlags: 0

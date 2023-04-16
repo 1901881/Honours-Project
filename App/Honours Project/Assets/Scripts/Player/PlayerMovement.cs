@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour
     //public Camera camera2;
     public FollowPlayer playerAudioScript;
     public RadioAudio radioAudioScript;
-
+    public GameObject explosionPrefab;
 
     public int speed = 10;
     public int health = 10;
@@ -62,11 +62,7 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Converts mouse position into world position
-        var mousePos = Input.mousePosition;
-        mousePos.z = -Camera.main.transform.position.z;
-        mousePosInWorld = Camera.main.ScreenToWorldPoint(mousePos);
-        aimDirection = new Vector2(mousePosInWorld.x, mousePosInWorld.y) - playerBody.position;
+   
 
         //Aim();
 
@@ -117,7 +113,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (health <= 0)
         {
-            QuitGame();
+            KillPlayer();
             //Destroy(gameObject);
         }
 
@@ -140,7 +136,13 @@ public class PlayerMovement : MonoBehaviour
         float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90.0f;
         playerBody.rotation = aimAngle;
 
-        DeathTimer();
+        //Converts mouse position into world position
+        var mousePos = Input.mousePosition;
+        mousePos.z = -Camera.main.transform.position.z;
+        mousePosInWorld = Camera.main.ScreenToWorldPoint(mousePos);
+        aimDirection = new Vector2(mousePosInWorld.x, mousePosInWorld.y) - playerBody.position;
+
+        //DeathTimer();
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
@@ -196,12 +198,28 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-    public void QuitGame()
+    public void KillPlayer()
     {
-    #if UNITY_EDITOR
-            UnityEditor.EditorApplication.isPlaying = false;
-    #endif
-            Application.Quit();
+
+        Instantiate(explosionPrefab, this.transform.position, this.transform.rotation);
+        //Destroy(gameObject);
+        gameObject.SetActive(false);
+
+        //get HUD
+        GameObject.FindObjectOfType<HUDManager>().GameOver();
+
+        //get all of class enemies // self destruct
+        /*GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
+        foreach (GameObject enemy in enemies)
+        {
+            enemy.GetComponent<NavAgentAI>().KillNPC();
+        }*/
+
+
+        /*       #if UNITY_EDITOR
+                   UnityEditor.EditorApplication.isPlaying = false;
+               #endif
+                       Application.Quit();*/
     }
 
     public void DeathTimer()
@@ -210,7 +228,7 @@ public class PlayerMovement : MonoBehaviour
         if(Timer >= DeathTime)
         {
             Timer = 0;
-            QuitGame();
+            KillPlayer();
         }
     }
 }

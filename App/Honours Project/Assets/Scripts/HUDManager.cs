@@ -8,6 +8,7 @@ public class HUDManager : MonoBehaviour
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject overlayHUD;
     [SerializeField] GameObject levelSelect;
+    [SerializeField] GameObject gameOver;
 
     // Start is called before the first frame update
     void Start()
@@ -15,6 +16,7 @@ public class HUDManager : MonoBehaviour
         pauseMenu.SetActive(false);
         overlayHUD.SetActive(true);
         levelSelect.SetActive(false);
+        gameOver.SetActive(false);
     }
 
     // Update is called once per frame
@@ -31,6 +33,7 @@ public class HUDManager : MonoBehaviour
         pauseMenu.SetActive(true);
         overlayHUD.SetActive(false);
         levelSelect.SetActive(false);
+        gameOver.SetActive(false);
         Time.timeScale = 0;
     }
 
@@ -39,6 +42,7 @@ public class HUDManager : MonoBehaviour
         pauseMenu.SetActive(false);
         overlayHUD.SetActive(true);
         levelSelect.SetActive(false);
+        gameOver.SetActive(false);
         Time.timeScale = 1;
     }
 
@@ -52,12 +56,14 @@ public class HUDManager : MonoBehaviour
     {
         pauseMenu.SetActive(false);
         levelSelect.SetActive(true);
+        gameOver.SetActive(false);
     }
 
     public void BackArrowClicked()
     {
         pauseMenu.SetActive(true);
         levelSelect.SetActive(false);
+        gameOver.SetActive(false);
     }
 
     public void LevelLoader(int level)
@@ -68,7 +74,24 @@ public class HUDManager : MonoBehaviour
 
     public void QuitClicked()
     {
+        #if UNITY_EDITOR
+                UnityEditor.EditorApplication.isPlaying = false;
+        #endif
+                Application.Quit();
+    }
 
+    public void GameOver()
+    {
+        Debug.Log("Game Over");
+        pauseMenu.SetActive(false);
+        overlayHUD.SetActive(false);
+        levelSelect.SetActive(false);
+        gameOver.SetActive(true);
+    }
+
+    public void Restart()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
     //play clicked

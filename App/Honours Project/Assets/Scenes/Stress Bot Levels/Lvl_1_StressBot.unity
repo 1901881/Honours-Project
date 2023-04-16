@@ -427,7 +427,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ecc524792fea44991191fcb5f259da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1907443461}
   smoothSpeed: 0.7
   offset: {x: 0, y: 0, z: -14}
 --- !u!114 &93817571
@@ -2699,17 +2698,6 @@ MonoBehaviour:
   m_UseMeshPrefab: {fileID: 0}
   m_CompressBounds: 0
   m_OverrideVector: {x: 1, y: 1, z: 1}
---- !u!114 &1166128520 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6663655279430410768, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-  m_PrefabInstance: {fileID: 1401400865101211078}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c935deec1bfb32041b8de3d4c9b5d116, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1207834234
 GameObject:
   m_ObjectHideFlags: 0
@@ -3984,31 +3972,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3277983114645204200, guid: 7dc0f4c3f3953c34a86d924e838aad33, type: 3}
   m_PrefabInstance: {fileID: 962888037}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1793300786 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1401400863664897268, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-  m_PrefabInstance: {fileID: 1401400865101211078}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &1793300790
-Animator:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1793300786}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: dbd8a90717e013b42ad0cbce3a621efc, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_StabilizeFeet: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!4 &1907443461 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1401400863688779216, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
@@ -4396,42 +4359,6 @@ PrefabInstance:
     serializedVersion: 2
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1401400863664897267, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-      propertyPath: bulletNum
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1401400863664897267, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-      propertyPath: reloadTime
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1401400863664897267, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-      propertyPath: PlayerAudio
-      value: 
-      objectReference: {fileID: 1166128520}
-    - target: {fileID: 1401400863664897267, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-      propertyPath: gunAnimator
-      value: 
-      objectReference: {fileID: 1793300790}
-    - target: {fileID: 1401400863664897267, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-      propertyPath: shootSound.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: 64496edc22c8e30419bef0097f64e912, type: 2}
-    - target: {fileID: 1401400863664897269, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.196875
-      objectReference: {fileID: 0}
-    - target: {fileID: 1401400863664897269, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.45712504
-      objectReference: {fileID: 0}
-    - target: {fileID: 1401400863664897269, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1401400863664897269, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.787
-      objectReference: {fileID: 0}
     - target: {fileID: 1401400863688779216, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -4477,63 +4404,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-      propertyPath: speed
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-      propertyPath: health
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-      propertyPath: camera2
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-      propertyPath: DeathTime
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-      propertyPath: PlayerAudio
-      value: 
-      objectReference: {fileID: 1166128520}
-    - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-      propertyPath: dashingTime
-      value: 0.2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-      propertyPath: dashingPower
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
       propertyPath: radioAudioScript
       value: 
       objectReference: {fileID: 1089962601}
-    - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-      propertyPath: playerAudioScript
-      value: 
-      objectReference: {fileID: 1166128520}
-    - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-      propertyPath: dashSound.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: 454f4e5a974564f48b0413dfbb602d84, type: 2}
-    - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-      propertyPath: footstepSound.WwiseObjectReference
-      value: 
-      objectReference: {fileID: 11400000, guid: 64dfa37b9312d9046bf130ab46d5dc77, type: 2}
-    - target: {fileID: 1401400863688779218, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-      propertyPath: m_Mass
-      value: 10
-      objectReference: {fileID: 0}
     - target: {fileID: 1401400863688779221, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1401400863688779221, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 1401400863688779228, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
+    m_RemovedComponents: []
     m_AddedGameObjects: []
   m_SourcePrefab: {fileID: 100100000, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
 --- !u!1001 &3277983114312910282

@@ -4,9 +4,14 @@ using UnityEngine;
 
 public class CameraFollow : MonoBehaviour
 {
-    public Transform target;
+    private Transform target;
     public float smoothSpeed = 0.125f;
     public Vector3 offset;
+
+    private void Start()
+    {
+        target = GameObject.FindObjectOfType<PlayerMovement>().transform;
+    }
 
     private void LateUpdate()//Run After Update
     {
