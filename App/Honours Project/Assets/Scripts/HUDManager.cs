@@ -89,7 +89,11 @@ public class HUDManager : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    public IEnumerator GameOver()
+    public void GameOver()
+    {
+        StartCoroutine(GameOverTimer());
+    }
+    public IEnumerator GameOverTimer()
     {
         yield return new WaitForSeconds(0.4f);
         gameOverText.SetActive(true);

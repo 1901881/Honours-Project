@@ -202,24 +202,12 @@ public class PlayerMovement : MonoBehaviour
     {
 
         Instantiate(explosionPrefab, this.transform.position, this.transform.rotation);
-        //Destroy(gameObject);
+        GameObject.FindObjectOfType<HUDManager>().GameOver();
         gameObject.SetActive(false);
 
+        
         //get HUD
-        StartCoroutine(GameObject.FindObjectOfType<HUDManager>().GameOver());
-            
-        //get all of class enemies // self destruct
-        /*GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        foreach (GameObject enemy in enemies)
-        {
-            enemy.GetComponent<NavAgentAI>().KillNPC();
-        }*/
 
-
-        /*       #if UNITY_EDITOR
-                   UnityEditor.EditorApplication.isPlaying = false;
-               #endif
-                       Application.Quit();*/
     }
 
     public void DeathTimer()

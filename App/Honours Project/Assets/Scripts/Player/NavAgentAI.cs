@@ -97,7 +97,7 @@ public class NavAgentAI : MonoBehaviour
     public ContactFilter2D contactFilter;
     Collider2D[] results = new Collider2D[10];
 
- 
+    private GameObject player;
 
     // Start is called before the first frame update
     void Start()
@@ -108,6 +108,8 @@ public class NavAgentAI : MonoBehaviour
         health = maxHealth;
 
         behaviorTree.SetVariableValue("stressFortitude", stressFortitude);
+
+        player = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame
@@ -212,22 +214,25 @@ public class NavAgentAI : MonoBehaviour
     void CalculateStress()
     {
         //Player to distance
-        target = GameObject.FindWithTag("Player").transform.position;
-        distanceToTarget = Vector3.Distance(transform.position, target);
-        if (distanceToTarget <= 0)
+        if(player.activeSelf)
         {
-            distanceToTarget = 10;
+            target = player.transform.position;
+            distanceToTarget = Vector3.Distance(transform.position, target);
+            if (distanceToTarget <= 0)
+            {
+                distanceToTarget = 10;
+            }
+
+
+            healthFactor = health / maxHealth;
+
+            distance_stress = (1 / distanceToTarget) * 30;
+            bullet_stress = (bulletCounter * 0.7f) * 5;
+            stressValue = (distance_stress + bullet_stress) * ((1 - (healthFactor / 2)) * (2f + recentlyHit));
+
+            //set stress value for behaviour tree
+            behaviorTree.SetVariableValue("stressValue", stressValue);
         }
-
-
-        healthFactor = health / maxHealth;
-
-        distance_stress = (1 / distanceToTarget) * 30;
-        bullet_stress = (bulletCounter * 0.7f) * 5;
-        stressValue = (distance_stress + bullet_stress) * ((1 - (healthFactor/2)) * (2f + recentlyHit));
-
-        //set stress value for behaviour tree
-        behaviorTree.SetVariableValue("stressValue", stressValue);
     }
 
     public void StressResponseCalculation()
