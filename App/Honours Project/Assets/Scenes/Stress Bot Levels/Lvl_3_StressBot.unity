@@ -278,7 +278,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ecc524792fea44991191fcb5f259da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1907443461}
   smoothSpeed: 0.7
   offset: {x: 0, y: 0, z: -14}
 --- !u!114 &93817571
@@ -1394,6 +1393,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
+      propertyPath: maxHealth
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
       propertyPath: flopWeighting
       value: 0
       objectReference: {fileID: 0}
@@ -1737,6 +1740,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
+      propertyPath: maxHealth
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
       propertyPath: flopWeighting
       value: 5
       objectReference: {fileID: 0}
@@ -1754,7 +1761,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
       propertyPath: stressFortitude
-      value: 14.26
+      value: 38.1
       objectReference: {fileID: 0}
     - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
       propertyPath: typeUpdateVariables.Array.data[0]
@@ -2033,6 +2040,10 @@ PrefabInstance:
     - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
       propertyPath: npcType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
+      propertyPath: maxHealth
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
       propertyPath: flopWeighting
@@ -2572,6 +2583,10 @@ PrefabInstance:
     - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
       propertyPath: npcType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
+      propertyPath: maxHealth
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
       propertyPath: flopWeighting
@@ -3443,11 +3458,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3551593886681611602, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
   m_PrefabInstance: {fileID: 1055732788}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1907443461 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 1401400863688779216, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
-  m_PrefabInstance: {fileID: 1401400865101211078}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1923620385
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3459,6 +3469,10 @@ PrefabInstance:
     - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
       propertyPath: npcType
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
+      propertyPath: maxHealth
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
       propertyPath: flopWeighting
@@ -4191,7 +4205,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
       propertyPath: health
-      value: 15
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1401400863688779217, guid: 69a6d8cf1f193f14fbf76456869cffa5, type: 3}
       propertyPath: camera2

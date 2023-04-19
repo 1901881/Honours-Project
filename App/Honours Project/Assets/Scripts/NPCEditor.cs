@@ -16,6 +16,7 @@ public class NPCEditor : Editor
     SerializedProperty npcType;
     SerializedProperty maxHealth;
     SerializedProperty health;
+    SerializedProperty stressResponseEnabled;
 
     //stress sliders
     SerializedProperty stressFortitude;
@@ -46,6 +47,7 @@ public class NPCEditor : Editor
         npcType = serializedObject.FindProperty("npcType");
         maxHealth = serializedObject.FindProperty("maxHealth");
         health = serializedObject.FindProperty("health");
+        stressResponseEnabled = serializedObject.FindProperty("stressResponseEnabled");
 
         stressFortitude = serializedObject.FindProperty("stressFortitude");
         fightWeighting = serializedObject.FindProperty("fightWeighting");
@@ -97,6 +99,7 @@ public class NPCEditor : Editor
         {
             EditorGUILayout.PropertyField(maxHealth);
             EditorGUILayout.PropertyField(health);
+            EditorGUILayout.PropertyField(stressResponseEnabled);
         }
         EditorGUILayout.EndFoldoutHeaderGroup();
     }

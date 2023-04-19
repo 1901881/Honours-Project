@@ -206,8 +206,8 @@ public class PlayerMovement : MonoBehaviour
         gameObject.SetActive(false);
 
         //get HUD
-        GameObject.FindObjectOfType<HUDManager>().GameOver();
-
+        StartCoroutine(GameObject.FindObjectOfType<HUDManager>().GameOver());
+            
         //get all of class enemies // self destruct
         /*GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
         foreach (GameObject enemy in enemies)

@@ -31,18 +31,18 @@ public class EnemyCounter : MonoBehaviour
         {
             if(SceneManager.GetActiveScene().buildIndex == 6)
             {
-                Debug.Log("You Win");
+                StartCoroutine(GameObject.FindObjectOfType<HUDManager>().YouWin());
             }
             else
             {
-                StartCoroutine(LoadLevel());
+                StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));
             }
         }
     }
 
-    IEnumerator LoadLevel()
+    IEnumerator LoadLevel(int levelNum)
     {
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(levelNum);
     }
 }

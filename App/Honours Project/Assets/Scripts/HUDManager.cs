@@ -9,6 +9,8 @@ public class HUDManager : MonoBehaviour
     [SerializeField] GameObject overlayHUD;
     [SerializeField] GameObject levelSelect;
     [SerializeField] GameObject gameOver;
+    [SerializeField] GameObject gameOverText;
+    [SerializeField] GameObject youWinText;
 
     // Start is called before the first frame update
     void Start()
@@ -17,6 +19,8 @@ public class HUDManager : MonoBehaviour
         overlayHUD.SetActive(true);
         levelSelect.SetActive(false);
         gameOver.SetActive(false);
+        gameOverText.SetActive(false);
+        youWinText.SetActive(false);
     }
 
     // Update is called once per frame
@@ -80,24 +84,32 @@ public class HUDManager : MonoBehaviour
                 Application.Quit();
     }
 
-    public void GameOver()
+    public void Restart()
     {
-        Debug.Log("Game Over");
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public IEnumerator GameOver()
+    {
+        yield return new WaitForSeconds(0.4f);
+        gameOverText.SetActive(true);
+        yield return new WaitForSeconds(1.75f);
+        gameOverText.SetActive(false);
+
         pauseMenu.SetActive(false);
         overlayHUD.SetActive(false);
         levelSelect.SetActive(false);
         gameOver.SetActive(true);
     }
 
-    public void Restart()
+    public IEnumerator YouWin()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        yield return new WaitForSeconds(0.4f);
+        youWinText.SetActive(true);
+        yield return new WaitForSeconds(1.75f);
+        youWinText.SetActive(false);
+
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(1);
     }
-
-    //play clicked
-    //level select clicked
-    //home clicked
-    //quit clciked
-
-    //level numms
 }

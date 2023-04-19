@@ -34,6 +34,7 @@ public class NavAgentAI : MonoBehaviour
     [SerializeField] public NPCType npcType = NPCType.Custom;
     [SerializeField] private float maxHealth = 3;
     [SerializeField] private float health = 0;
+    [SerializeField] private bool stressResponseEnabled = true;
 
     [SerializeField] public bool[] typeUpdateVariables = new bool[6];
     // index 0: brawlerTypeUpdate
@@ -231,55 +232,58 @@ public class NavAgentAI : MonoBehaviour
 
     public void StressResponseCalculation()
     {
-        if (stressValue >= stressFortitude)
+        if (stressResponseEnabled) 
         {
-            
-            int[] stressCounter = new int[5];//fight, flight, freeze
-
-            int testAmount = 50;
-
-            for (int i = 0; i < stressWeightings.Length; i++)
+            if (stressValue >= stressFortitude)
             {
-                for (int x = 0; x < testAmount; x++)
-                {
-                    float randomNumber = UnityEngine.Random.Range(0, 100);
-                    if (randomNumber <= stressWeightings[i])
-                    {
-                        stressCounter[i]++;
-                    }
-                }
-            }
 
-            if (!((SharedBool)behaviorTree.GetVariable("stressResponseRunning")).Value)
-            {
-                //check which one is bigger, then return the case
-                stressResponseIndex = Array.IndexOf(stressCounter, stressCounter.Max());
+                int[] stressCounter = new int[5];//fight, flight, freeze
 
-                //Safety Check so it goes with the only stress response if others have a waiting of 0
-                int counter = 0;
+                int testAmount = 50;
+
                 for (int i = 0; i < stressWeightings.Length; i++)
                 {
-                    if (GetComponent<NavAgentAI>().stressWeightings[i] != 0)
+                    for (int x = 0; x < testAmount; x++)
                     {
-                        counter++;
+                        float randomNumber = UnityEngine.Random.Range(0, 100);
+                        if (randomNumber <= stressWeightings[i])
+                        {
+                            stressCounter[i]++;
+                        }
                     }
                 }
-                if (counter == 1)
-                {
-                    stressResponseIndex = Array.IndexOf(stressWeightings, stressWeightings.Max());
-                }
-            }
 
-            //set stressResponse index value for behaviour tree.
-            behaviorTree.SetVariableValue("stressResponseIndex", stressResponseIndex);
+                if (!((SharedBool)behaviorTree.GetVariable("stressResponseRunning")).Value)
+                {
+                    //check which one is bigger, then return the case
+                    stressResponseIndex = Array.IndexOf(stressCounter, stressCounter.Max());
+
+                    //Safety Check so it goes with the only stress response if others have a waiting of 0
+                    int counter = 0;
+                    for (int i = 0; i < stressWeightings.Length; i++)
+                    {
+                        if (GetComponent<NavAgentAI>().stressWeightings[i] != 0)
+                        {
+                            counter++;
+                        }
+                    }
+                    if (counter == 1)
+                    {
+                        stressResponseIndex = Array.IndexOf(stressWeightings, stressWeightings.Max());
+                    }
+                }
+
+                //set stressResponse index value for behaviour tree.
+                behaviorTree.SetVariableValue("stressResponseIndex", stressResponseIndex);
                 //stressResponseRunning = true; 
                 //((SharedBool)behaviorTree.GetVariable("stressResponseRunning")).SetValue(true);
-                
-                if(stressFortitude >= 10)
+
+                if (stressFortitude >= 10)
                 {
                     stressFortitude -= stressFortitudeDecrease;
-                }   
+                }
             }
+        }
     }
 
     public IEnumerator ResponseWait(float waitTime)
