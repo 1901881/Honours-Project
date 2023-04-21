@@ -1876,7 +1876,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
       propertyPath: stressFortitude
-      value: 12.1
+      value: 8.1
       objectReference: {fileID: 0}
     - target: {fileID: 3551593886681611600, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
       propertyPath: typeUpdateVariables.Array.data[1]
@@ -1908,7 +1908,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3551593886681611602, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -16.57
+      value: -17.5
       objectReference: {fileID: 0}
     - target: {fileID: 3551593886681611602, guid: acc020d7ae89c694799c1e6970df02d2, type: 3}
       propertyPath: m_LocalPosition.z

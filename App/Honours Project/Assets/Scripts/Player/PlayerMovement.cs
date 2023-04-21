@@ -132,17 +132,28 @@ public class PlayerMovement : MonoBehaviour
         Vector2 newPosition = playerBody.position + delta;
         playerBody.MovePosition(newPosition);
 
-        aimDirection = new Vector2(mousePosInWorld.x, mousePosInWorld.y) - playerBody.position;
-        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90.0f;
-        playerBody.rotation = aimAngle;
+        Aim();
+
+        //DeathTimer();
+    }
+
+    private void Aim()
+    {
+
 
         //Converts mouse position into world position
         var mousePos = Input.mousePosition;
         mousePos.z = -Camera.main.transform.position.z;
         mousePosInWorld = Camera.main.ScreenToWorldPoint(mousePos);
         aimDirection = new Vector2(mousePosInWorld.x, mousePosInWorld.y) - playerBody.position;
+        float aimAngle = Mathf.Atan2(aimDirection.y, aimDirection.x) * Mathf.Rad2Deg - 90.0f;
+        playerBody.rotation = aimAngle;
 
-        //DeathTimer();
+  /*      //controller
+        float HorizontalAxis = Input.GetAxis("HorizontalRightStick");
+        float VerticalAxis = Input.GetAxis("VerticalRightStick");
+        float controllerAimAngle =  -Mathf.Atan2(HorizontalAxis, VerticalAxis) * -180.0f/Mathf.PI + 90f;
+        playerBody.rotation = controllerAimAngle;*/
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
