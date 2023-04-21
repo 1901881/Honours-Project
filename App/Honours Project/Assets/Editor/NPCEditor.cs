@@ -1,7 +1,5 @@
-using UnityEngine;
-#if UNITY_EDITOR // => Ignore from here to next endif if not in editor
 using UnityEditor;
-
+using UnityEngine;
 
 [CustomEditor(typeof(NavAgentAI))]
 public class NPCEditor : Editor
@@ -228,5 +226,4 @@ public class NPCEditor : Editor
         this.flopWeighting.floatValue = flopWeighting;
         this.fawnWeighting.floatValue = fawnWeighting;
     }                                                       
-}
-#endif
+}                                                           

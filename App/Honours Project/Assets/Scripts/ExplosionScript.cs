@@ -36,9 +36,11 @@ public class ExplosionScript : MonoBehaviour
         }
     }
 
+#if UNITY_EDITOR // => Ignore from here to next endif if not in editor
     private void OnDrawGizmos()//Selected
     {
         UnityEditor.Handles.color = UnityEngine.Color.yellow;
         UnityEditor.Handles.DrawWireDisc(transform.position, transform.forward, radius);
     }
+#endif
 }

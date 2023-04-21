@@ -97,9 +97,32 @@ public class HUDManager : MonoBehaviour
     {
         yield return new WaitForSeconds(0.4f);
         gameOverText.SetActive(true);
-        yield return new WaitForSeconds(1.75f);
+        yield return new WaitForSeconds(0.03f);
+        gameOverText.SetActive(false);
+        yield return new WaitForSeconds(0.02f);
+        gameOverText.SetActive(true);
+        yield return new WaitForSeconds(0.02f);
+        gameOverText.SetActive(false);
+        yield return new WaitForSeconds(0.03f);
+        gameOverText.SetActive(true);
+        yield return new WaitForSeconds(0.03f);
+        gameOverText.SetActive(false);
+        yield return new WaitForSeconds(0.02f);
+        gameOverText.SetActive(true);
+
+        yield return new WaitForSeconds(1.25f);
+
+        gameOverText.SetActive(false);
+        yield return new WaitForSeconds(0.03f);
+        gameOverText.SetActive(true);
+        yield return new WaitForSeconds(0.03f);
+        gameOverText.SetActive(false);
+        yield return new WaitForSeconds(0.03f);
+        gameOverText.SetActive(true);
+        yield return new WaitForSeconds(0.03f);
         gameOverText.SetActive(false);
 
+        yield return new WaitForSeconds(0.4f);
         pauseMenu.SetActive(false);
         overlayHUD.SetActive(false);
         levelSelect.SetActive(false);
@@ -114,6 +137,6 @@ public class HUDManager : MonoBehaviour
         youWinText.SetActive(false);
 
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("MainMenu");
     }
 }

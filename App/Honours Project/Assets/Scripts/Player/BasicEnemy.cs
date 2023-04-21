@@ -167,7 +167,7 @@ public class BasicEnemy : MonoBehaviour
     }
 
 
-
+#if UNITY_EDITOR // => Ignore from here to next endif if not in editor
     private void OnDrawGizmos()//Selected
     {
         UnityEditor.Handles.color = Color.green;
@@ -179,6 +179,7 @@ public class BasicEnemy : MonoBehaviour
         UnityEditor.Handles.color = Color.red;
         UnityEditor.Handles.DrawWireDisc(transform.position, transform.forward, attackRadius);
     }
+#endif
 
     private void calcualtePatrolPoint()
     {

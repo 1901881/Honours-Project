@@ -29,6 +29,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AK.Wwise.Unity.Timeline.Edi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PackageToolsEditor", "PackageToolsEditor.csproj", "{9F3EB0E2-9A45-984D-7F53-52CB4BEFAF68}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp-Editor", "Assembly-CSharp-Editor.csproj", "{628DAB48-1D03-B080-FF02-65CB9D626A40}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -91,6 +93,10 @@ Global
 		{9F3EB0E2-9A45-984D-7F53-52CB4BEFAF68}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9F3EB0E2-9A45-984D-7F53-52CB4BEFAF68}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9F3EB0E2-9A45-984D-7F53-52CB4BEFAF68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{628DAB48-1D03-B080-FF02-65CB9D626A40}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{628DAB48-1D03-B080-FF02-65CB9D626A40}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{628DAB48-1D03-B080-FF02-65CB9D626A40}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{628DAB48-1D03-B080-FF02-65CB9D626A40}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

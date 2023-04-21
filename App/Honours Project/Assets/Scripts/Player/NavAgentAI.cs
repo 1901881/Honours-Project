@@ -12,7 +12,10 @@ using System.Runtime.CompilerServices;
 using static UnityEngine.Networking.UnityWebRequest;
 using System.Drawing;
 using System.IO;
+
+#if UNITY_EDITOR // => Ignore from here to next endif if not in editor
 using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
+#endif
 
 public class NavAgentAI : MonoBehaviour
 {
@@ -181,6 +184,7 @@ public class NavAgentAI : MonoBehaviour
 
     }
 
+#if UNITY_EDITOR // => Ignore from here to next endif if not in editor
     private void OnSelectedDrawGizmos()//Selected
     {
         UnityEditor.Handles.color = UnityEngine.Color.green;
@@ -189,6 +193,7 @@ public class NavAgentAI : MonoBehaviour
         UnityEditor.Handles.color = UnityEngine.Color.yellow;
         UnityEditor.Handles.DrawWireDisc(transform.position, transform.forward, bulletRadius);
     }
+#endif
 
     void CheckBullets()
     {

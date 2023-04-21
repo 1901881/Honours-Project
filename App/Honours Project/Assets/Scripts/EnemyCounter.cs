@@ -29,7 +29,7 @@ public class EnemyCounter : MonoBehaviour
 
         if(enemies.Length == 0)
         {
-            if(SceneManager.GetActiveScene().buildIndex == 6)
+            if(SceneManager.GetActiveScene().name == "Lvl_5_StressBot")
             {
                 StartCoroutine(GameObject.FindObjectOfType<HUDManager>().YouWin());
             }
