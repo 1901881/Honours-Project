@@ -26,4 +26,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Stress Bot Levels/Lvl_5_StressBot.unity
     guid: d9e69de062d3a5c4dbef01cf2f94813b
+  - enabled: 1
+    path: Assets/Scenes/Basic Bot Levels/Lvl_1_BasicBot.unity
+    guid: b4814af60a6c33f4db195bc10fb1ba6f
+  - enabled: 1
+    path: Assets/Scenes/Basic Bot Levels/Lvl_2_BasicBot.unity
+    guid: b3c7624f14da9634492b82d62ead43e1
+  - enabled: 1
+    path: Assets/Scenes/Basic Bot Levels/Lvl_3_BasicBot.unity
+    guid: e389f2eb36100264cae0be798d2cb9a2
+  - enabled: 1
+    path: Assets/Scenes/Basic Bot Levels/Lvl_4_BasicBot.unity
+    guid: 55df9a5784a75224482412aa3296c50c
+  - enabled: 1
+    path: Assets/Scenes/Basic Bot Levels/Lvl_5_BasicBot.unity
+    guid: 7560064f19e40b048a6b74a15012454d
   m_configObjects: {}

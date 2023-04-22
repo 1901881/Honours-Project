@@ -21,6 +21,8 @@ public class HUDManager : MonoBehaviour
         gameOver.SetActive(false);
         gameOverText.SetActive(false);
         youWinText.SetActive(false);
+
+        AudioListener.pause = true;
     }
 
     // Update is called once per frame

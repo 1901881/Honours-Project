@@ -312,7 +312,9 @@ public static class AkCallbackManager
 							}
 
 							if (AkMonitoringCallbackInfo.errorLevel == AkMonitorErrorLevel.ErrorLevel_Error)
-								UnityEngine.Debug.LogError(msg);
+							{
+								//UnityEngine.Debug.LogError(msg);
+							}
 							else
 								UnityEngine.Debug.Log(msg);
 						}

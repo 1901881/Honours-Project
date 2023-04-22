@@ -33,6 +33,10 @@ public class EnemyCounter : MonoBehaviour
             {
                 StartCoroutine(GameObject.FindObjectOfType<HUDManager>().YouWin());
             }
+            if (SceneManager.GetActiveScene().name == "Lvl_5_BasicBot")
+            {
+                StartCoroutine(GameObject.FindObjectOfType<HUDManager>().YouWin());
+            }
             else
             {
                 StartCoroutine(LoadLevel(SceneManager.GetActiveScene().buildIndex + 1));

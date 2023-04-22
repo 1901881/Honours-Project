@@ -427,7 +427,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ecc524792fea44991191fcb5f259da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1907443461}
   smoothSpeed: 0.7
   offset: {x: 0, y: 0, z: -11}
 --- !u!114 &93817571
@@ -1655,7 +1654,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b7ecc524792fea44991191fcb5f259da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 1907443461}
   smoothSpeed: 1
   offset: {x: 0, y: 0, z: 0}
 --- !u!114 &519420034
@@ -1872,6 +1870,7 @@ MonoBehaviour:
   npcType: 0
   maxHealth: 3
   health: 30
+  stressResponseEnabled: 1
   typeUpdateVariables: 0000000000
   whatIsBullet:
     serializedVersion: 2

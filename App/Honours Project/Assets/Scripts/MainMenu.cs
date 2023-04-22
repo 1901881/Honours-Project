@@ -78,12 +78,12 @@ public class MainMenu : MonoBehaviour
 
                 if (test1Update)
                 {
-                    MenuButtonUpdate(hit, 2, "Test1Buttons", "Test1Numbers");
-                    LevelButtonUpdate(hit, "Test1Buttons", "Test1Numbers", 1, 2, 3, 4, 5);
+                    MenuButtonUpdate(hit, 6, "Test1Buttons", "Test1Numbers");
+                    LevelButtonUpdate(hit, "Test1Buttons", "Test1Numbers", 6, 7, 8, 9, 10);
                 }
                 if (test2Update)
                 {
-                    MenuButtonUpdate(hit, 2, "Test2Buttons", "Test2Numbers");
+                    MenuButtonUpdate(hit, 1, "Test2Buttons", "Test2Numbers");
                     LevelButtonUpdate(hit, "Test2Buttons", "Test2Numbers", 1, 2, 3, 4, 5);
                 }
             }
