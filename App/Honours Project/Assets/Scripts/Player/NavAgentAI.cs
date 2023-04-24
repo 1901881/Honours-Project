@@ -47,17 +47,12 @@ public class NavAgentAI : MonoBehaviour
     // index 4: danselTypeUpdate
     // index 5: customTypeUpdate
 
-    // public int stressResponse;
-
-
     private Vector3 target;
 
+    //Bullet Calc for stress response
     public LayerMask whatIsBullet;
-    private bool isInBulletRange;
     public float bulletRadius;
-    
     int previousBulletCount = 100;
-    //float timer = 0;
 
 
     //public stress variables
@@ -74,12 +69,11 @@ public class NavAgentAI : MonoBehaviour
 
     private bool freezeResponseRunning = false;
     private bool fawnResponseRunning = false;
+    private bool stressDecreased = false;
 
     [Header("Stress Sliders")]
     [Tooltip("Mental strength of NPC")]
-
     public float[] stressWeightings;
-
 
     //public stress sliders
     [Range(0.0f, 100.0f)]
@@ -119,7 +113,6 @@ public class NavAgentAI : MonoBehaviour
     void Update()
     {
         transform.SetPositionAndRotation(transform.position, new Quaternion( 0f, 0f, transform.rotation.z, transform.rotation.w));
-        //transform.rotation = Quaternion.Euler(0, 0, transform.rotation.eulerAngles.z);
 
         if (health <= 0)
         {
@@ -130,11 +123,10 @@ public class NavAgentAI : MonoBehaviour
         FreezeResponse();
         StressResponseCalculation();
         CheckBullets();
-
      
+        //set stress variables
         stressResponseRunning = ((SharedBool)behaviorTree.GetVariable("stressResponseRunning")).Value;
         freezeResponseRunning = ((SharedBool)behaviorTree.GetVariable("freezeResponseRunning")).Value;
-
 
         stressWeightings = new float[] { fightWeighting, flightWeighting, freezeWeighting, flopWeighting, fawnWeighting };
 }
@@ -161,7 +153,6 @@ public class NavAgentAI : MonoBehaviour
             {
                 StartCoroutine(collision.gameObject.GetComponent<NavAgentAI>().Hit());
                 Debug.Log("hit NPC");
-                //StartCoroutine(AttackPause());
                 StartCoroutine(Hit());
             }
         }
@@ -171,12 +162,10 @@ public class NavAgentAI : MonoBehaviour
     {
         Sprite previousSprite = SpriteRend.sprite;
         SpriteRend.sprite = hitSprite;
-        //SpriteRend.color = UnityEngine.Color.white;
         Time.timeScale = 0;
         yield return new WaitForSecondsRealtime(0.08f);
         Time.timeScale = 1;
         SpriteRend.sprite = previousSprite;
-        //SpriteRend.color = originalColor;
         health--;
         recentlyHit = 1;
         yield return new WaitForSecondsRealtime(10f);
@@ -195,6 +184,7 @@ public class NavAgentAI : MonoBehaviour
     }
 #endif
 
+    //Generates cicle around player if a bullet enter it the counter goes up
     void CheckBullets()
     {
         var bulletCollisions = Physics2D.OverlapCircle(transform.position, bulletRadius, contactFilter, results);
@@ -205,31 +195,30 @@ public class NavAgentAI : MonoBehaviour
             StartCoroutine(DecreaseBulletCount());
         }
         previousBulletCount = bulletCollisions;
-
-
-        //Debug.Log("Bullets near bot: " + bulletCounter);
     }
 
+    //When the bullet counter goes up it is removed from the counter after a set time
+    //This stops stacking making the stress value too high
     IEnumerator DecreaseBulletCount()
     {
         yield return new WaitForSeconds(5.0f);
         bulletCounter--;
     }
 
+    //Uses NPC distance from player, Health of NPC, Amount of bullets near player
+    //and if the player has been recently hit to calculate the stress value
     void CalculateStress()
     {
-        //Player to distance
-        if(player.activeSelf)
+        if(player.activeSelf)//if player is alive run
         {
-            target = player.transform.position;
-            distanceToTarget = Vector3.Distance(transform.position, target);
+            target = player.transform.position;//get player position
+            distanceToTarget = Vector3.Distance(transform.position, target);//calculate distance between player and NPC
             if (distanceToTarget <= 0)
             {
                 distanceToTarget = 10;
             }
 
-
-            healthFactor = health / maxHealth;
+            healthFactor = health / maxHealth;//turns health into percentage
 
             distance_stress = (1 / distanceToTarget) * 30;
             bullet_stress = (bulletCounter * 0.7f) * 5;
@@ -244,13 +233,13 @@ public class NavAgentAI : MonoBehaviour
     {
         if (stressResponseEnabled) 
         {
-            if (stressValue >= stressFortitude)
+            if (stressValue >= stressFortitude)//if stress value surpasses stress fortitude run
             {
-
-                int[] stressCounter = new int[5];//fight, flight, freeze
+                int[] stressCounter = new int[5];//fight, flight, freeze, flop, fawn
 
                 int testAmount = 50;
 
+                //Loops through stress weightings and checks it against a random number, if number is within stress weighting range add to the counter.
                 for (int i = 0; i < stressWeightings.Length; i++)
                 {
                     for (int x = 0; x < testAmount; x++)
@@ -265,7 +254,7 @@ public class NavAgentAI : MonoBehaviour
 
                 if (!((SharedBool)behaviorTree.GetVariable("stressResponseRunning")).Value)
                 {
-                    //check which one is bigger, then return the case
+                    //gets the stress weighting index with the biggest counter
                     stressResponseIndex = Array.IndexOf(stressCounter, stressCounter.Max());
 
                     //Safety Check so it goes with the only stress response if others have a waiting of 0
@@ -285,17 +274,22 @@ public class NavAgentAI : MonoBehaviour
 
                 //set stressResponse index value for behaviour tree.
                 behaviorTree.SetVariableValue("stressResponseIndex", stressResponseIndex);
-                //stressResponseRunning = true; 
-                //((SharedBool)behaviorTree.GetVariable("stressResponseRunning")).SetValue(true);
-
+                
+                //Stress fortitude of NPC decreases after first stress response
+                //does not decrease if already below 10
                 if (stressFortitude >= 10)
                 {
-                    stressFortitude -= stressFortitudeDecrease;
+                    if(!stressDecreased)
+                    {
+                        stressFortitude -= stressFortitudeDecrease;
+                        stressDecreased = true;
+                    }
                 }
             }
         }
     }
 
+    //Sets stressResponseRunning to false after set time - Used as a timer before a new stress response can be performed
     public IEnumerator ResponseWait(float waitTime)
     {
         yield return new WaitForSeconds(waitTime);
@@ -303,34 +297,27 @@ public class NavAgentAI : MonoBehaviour
 
     }
 
+    //Sets stress value to be 100 after freeze response so that another response is immediately played
     public void FreezeResponse()
     {
-
         if(freezeResponseRunning)
         {
             stressValue = 100; //put after calculation on update?
             behaviorTree.SetVariableValue("stressValue", stressValue);
         }
-        
-        //need to reset freeze response waiting
-        //need to set waittime for response
     }
 
+    //Sets bool when fawn response played to adjust collision code
     public void FawnResponse(bool fawnResponseRunning)
     {
-        //bool fawnResponseRunning
-        //Wait time
-
         this.fawnResponseRunning = fawnResponseRunning;
 
     }
 
+    //Destroys NPC and plays explosion effect
     public void KillNPC()
     {
-        //spawn particle effect
-        //GameObject explosion = 
         Instantiate(explosionPrefab, this.transform.position, this.transform.rotation);
         Destroy(gameObject);
-        //Destroy(explosion);
     }
 }

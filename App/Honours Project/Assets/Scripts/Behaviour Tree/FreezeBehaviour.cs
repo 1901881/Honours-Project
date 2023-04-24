@@ -6,20 +6,23 @@ using BehaviorDesigner.Runtime;
 
 namespace BehaviorDesigner.Runtime.Tasks.Movement
 {
+    //The freeze behaviour makes the NPC jolt back from the player
+    //then selects another stress response to perform.
     public class FreezeBehaviour : Action
     {
+        //Jolt back variables
         public float speed = 0;
         public float distance = 3;
 
-        [Tooltip("The GameObject that the agent is pursuing")]
+        [Tooltip("The GameObject that the agent is evading")]
         public SharedGameObject target;
 
 
         public override TaskStatus OnUpdate()
         {
-            float test = Vector3.Magnitude(transform.position - target.Value.transform.position);
+            float NPCPosition = Vector3.Magnitude(transform.position - target.Value.transform.position);
 
-            if (test > distance)
+            if (NPCPosition > distance)
             {
                 int counter = 0;
 
@@ -31,10 +34,10 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
                         counter++;
                     }
                 }
-                if (counter >= 2)
+                if (counter >= 2)//if theres another stress response weighting with a value higher than 0 rerun the stress response calculation
                 {
                     float savedFreezeWeighting = GetComponent<NavAgentAI>().freezeWeighting;
-                    GetComponent<NavAgentAI>().freezeWeighting = 0f;
+                    GetComponent<NavAgentAI>().freezeWeighting = 0f;//set to 0 so a different stress response plays
 
                     GetComponent<NavAgentAI>().stressResponseRunning = false;
                     GetComponent<NavAgentAI>().StressResponseCalculation();

@@ -1685,6 +1685,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7738863648349852014, guid: de787bebc9a45584487f2c785870fb80, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 9151145881261387235, guid: de787bebc9a45584487f2c785870fb80, type: 3}
       propertyPath: m_Name
       value: HUD

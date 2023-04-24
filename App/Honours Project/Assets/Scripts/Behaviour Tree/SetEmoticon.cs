@@ -4,19 +4,16 @@ using UnityEngine;
 using BehaviorDesigner.Runtime.Tasks;
 using BehaviorDesigner.Runtime;
 
-[TaskDescription("0 - Default, 1 - Fight, 2 - Flight, 3 - Freeze")]
+[TaskDescription("0 - Fight, 1 - Flight, 2 - Freeze, 3 - Flop, 4 - Fawn, 5 - Neutral")]
+
+//Sets the NPCs emoticon
 public class SetEmoticon : Action
 {
-    /*[System.NonSerializedAttribute()]
-    [Tooltip("The bool value to set")]*/
-
     public int intValue;
 
-    //public NPCEmoticonSwitcher npcEmoticonSwitcherScript;
     public override TaskStatus OnUpdate()
     {
         gameObject.GetComponent<NPCEmoticonSwitcher>().SwitchEmote(intValue);
-        //npcEmoticonSwitcherScript.SwitchEmote(intValue);
         return TaskStatus.Success;
     }
 }

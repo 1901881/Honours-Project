@@ -7,6 +7,7 @@ using BehaviorDesigner.Runtime.Tasks.Unity.UnityGameObject;
 
 namespace BehaviorDesigner.Runtime.Tasks.Movement
 {
+    [TaskDescription("Freezes NPC for set time, has a chance to explode")]
     public class FlopBehaviour : NavMeshMovement
     {
         // The time to wait
@@ -20,39 +21,28 @@ namespace BehaviorDesigner.Runtime.Tasks.Movement
 
         private bool flopStressResponseRunning = true;
         private bool timerRunning = true;
-        
-
-        /*
-          generate random number 0-1
-            
-            if 0 - copy wait behaviour for random amount of time between a range
-         */
 
         public override void OnStart()
         {
-            // Remember the start time.
             startTime = Time.time;
             randomNumber = UnityEngine.Random.Range(0, 100);
-            //need it to stop moving
-            Stop();
+            Stop(); //stops NPC from moving
         }
 
         public override TaskStatus OnUpdate()
         {
             if(!flopStressResponseRunning || timerRunning)
             {
+                //Self Destruct check
                 if (randomNumber <= selfDestructProbability)
                 {
-                    //explode
-                    //need it to shake
-                    //then explode
                     flopStressResponseRunning = true;
                     Debug.Log("Kaboom");
                     GetComponent<NavAgentAI>().KillNPC();
                 }
                 else
                 {
-                    //freeze
+                    //Freeze for set time
                     flopStressResponseRunning = true;
                     timerRunning = true;
                     Debug.Log("freeze waiting");
