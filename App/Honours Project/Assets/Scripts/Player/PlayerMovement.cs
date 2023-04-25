@@ -5,7 +5,6 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     public Weapon weapon;
-    //public Camera camera2;
     public FollowPlayer playerAudioScript;
     public RadioAudio radioAudioScript;
     public GameObject explosionPrefab;
@@ -55,16 +54,12 @@ public class PlayerMovement : MonoBehaviour
         SpriteRend = GetComponent<SpriteRenderer>();
         originalColor = SpriteRend.color;
 
-        //playerAudioScript.SetPlayerAudioHealth(health);
         radioAudioScript.SetPlayerAudioHealth(health);
     }
 
     // Update is called once per frame
     void Update()
     {
-   
-
-        //Aim();
 
         if (isDashing)
         {
@@ -72,10 +67,7 @@ public class PlayerMovement : MonoBehaviour
         }
 
         //sets variable to user input, no input = 0
-        inputMovement = new Vector2(
-            Input.GetAxisRaw("Horizontal"),
-            Input.GetAxisRaw("Vertical")
-            );
+        inputMovement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
 
         //////////////////////////////////////////////////////////////////////
         ///Walking
@@ -110,14 +102,10 @@ public class PlayerMovement : MonoBehaviour
             StartCoroutine(Dash());
         }
 
-
         if (health <= 0)
         {
             KillPlayer();
-            //Destroy(gameObject);
         }
-
-        
     }
 
     private void FixedUpdate()//update that runs on a fixed cycle
@@ -133,14 +121,11 @@ public class PlayerMovement : MonoBehaviour
         playerBody.MovePosition(newPosition);
 
         Aim();
-
         //DeathTimer();
     }
 
     private void Aim()
     {
-
-
         //Converts mouse position into world position
         var mousePos = Input.mousePosition;
         mousePos.z = -Camera.main.transform.position.z;
@@ -211,14 +196,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void KillPlayer()
     {
-
         Instantiate(explosionPrefab, this.transform.position, this.transform.rotation);
         GameObject.FindObjectOfType<HUDManager>().GameOver();
         gameObject.SetActive(false);
-
-        
-        //get HUD
-
     }
 
     public void DeathTimer()
