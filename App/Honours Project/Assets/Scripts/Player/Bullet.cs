@@ -13,7 +13,6 @@ public class Bullet : MonoBehaviour
 
     [SerializeField] private TrailRenderer tr;
 
-
     public GameObject explosionPrefab;
 
     private void Start()
